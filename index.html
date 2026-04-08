@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>酒井紀子 | ポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" id="theme-css" href="style-warm.css">
+  <style>
+    .theme-switcher {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+    .theme-btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: 'Noto Sans JP', sans-serif;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .theme-btn:hover { opacity: 1; }
+    .theme-btn.active { opacity: 1; font-weight: bold; }
+    .theme-btn.white { background: #fff; color: #333; border: 1px solid #ccc; }
+    .theme-btn.dark  { background: #1a1a1a; color: #aaa; border: 1px solid #333; }
+    .theme-btn.warm  { background: #fff8f3; color: #c07a4a; border: 1px solid #ddd0c8; }
+    .lang-switch {
+      position: fixed;
+      top: 16px;
+      right: 24px;
+      z-index: 100;
+    }
+    .lang-switch a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: white;
+    }
+    .lang-switch a:hover { color: #333; border-color: #999; }
+    .header__fuku {
+      font-size: 14px;
+      font-weight: 400;
+      color: #888;
+      margin-left: 4px;
+      letter-spacing: normal;
+    }
+    .header__subname {
+      font-size: 12px;
+      color: #888;
+      margin-top: 2px;
+      font-weight: 400;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 言語切り替え -->
+  <div class="lang-switch">
+    <a href="index_en.html">🇺🇸 English</a>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <h1 class="header__name">酒井 梟<span class="header__fuku">(Fuku Sakai)</span></h1>
+      <p class="header__subname">（本名：酒井 紀子）</p>
+      <p class="header__title">ライター / AIコンテンツディレクター / コミュニティデザイナー</p>
+      <p class="header__location"><i class="fas fa-map-marker-alt"></i> 高知県四万十町</p>
+    </div>
+  </header>
+
+  <!-- 自己紹介 -->
+  <section class="section about">
+    <div class="container">
+      <h2 class="section__heading">About</h2>
+      <p class="about__text">
+        高知県四万十町を拠点に、ライター・AIコンテンツディレクター・コミュニティデザイナーとして活動しています。<br class="pc-only">
+        10年以上のライティング・広報紙制作・コミュニティデザインの経験をベースに、<br class="pc-only">
+        最新のAI技術を掛け合わせた「伝わるコンテンツ」を届けています。
+      </p>
+
+      <div class="about__values">
+        <div class="value-item">
+          <i class="fas fa-feather-alt"></i>
+          <div>
+            <strong>伝わる日本語</strong>
+            <span>10年以上のSNS・広報紙制作で培った編集力。読んだ人の「共感」を生み、読者に「一歩」を踏み出すきっかけを届けるライティングを大切にしています。</span>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-robot"></i>
+          <div>
+            <strong>AI × 人間の品質</strong>
+            <span>Claude (Claude Code)・Gemini (Antigravity)・ChatGPTを実務活用。AIの効率性と、人間ならではの表現力を両立させた制作を得意としています。</span>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-seedling"></i>
+          <div>
+            <strong>地域への深い理解</strong>
+            <span>移住16年目。行政や教育の現場を行き来してきた経験から、多様な立場（住民・行政・民間など）に寄り添った「翻訳」と「設計」を心掛けています。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- スキル -->
+  <section class="section skills">
+    <div class="container">
+      <h2 class="section__heading">Skills</h2>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <i class="fas fa-pen-nib"></i>
+          <h3>取材・ライティング</h3>
+          <p>10年以上</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-newspaper"></i>
+          <h3>編集・DTP</h3>
+          <p>10年以上</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-robot"></i>
+          <h3>AI活用コンテンツ制作</h3>
+          <p>Claude・Gemini・ChatGPT<br><span style="font-size: 11px; color: #999;">Claude Code・Antigravity</span></p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-sitemap"></i>
+          <h3>Webディレクション</h3>
+          <p>MVP設計・情報設計</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-terminal"></i>
+          <h3>プロンプトエンジニアリング</h3>
+          <p>ワークフロー構築</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-users"></i>
+          <h3>コミュニティデザイン</h3>
+          <p>行政・教育・地域支援</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-code"></i>
+          <h3>技術スタック</h3>
+          <p>Cloudflare / GitHub / GAS</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-palette"></i>
+          <h3>ビジュアルデザイン</h3>
+          <p>DTP・広報物制作</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ポートフォリオ -->
+  <section class="section works">
+    <div class="container">
+      <h2 class="section__heading">Works</h2>
+      <div class="works__grid">
+
+        <!-- FIORE -->
+        <a href="https://fiore-site.pages.dev/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card__number">01</div>
+          <h3 class="work-card__title">伊酒屋FIORE Webサイト</h3>
+          <p class="work-card__desc">
+            インスタ運用メインのオーナーのニーズに合わせた、更新不要・メンテナンスフリーの静的サイトをAI活用でディレクション・実装。SNS連携を前提とした情報設計が特徴。クライアントのビジネスの「仕組み」を理解した上での、柔軟な情報設計を行いました。
+          </p>
+          <div class="work-card__tags">
+            <span>Webディレクション</span>
+            <span>静的サイト</span>
+            <span>AI活用</span>
+            <span>Cloudflare Pages</span>
+          </div>
+          <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- 議会ナビ -->
+        <a href="https://tetiteti36-wq.github.io/shimantochou-gikai/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card__number">02</div>
+          <h3 class="work-card__title">議会ナビ（四万十町議会）</h3>
+          <p class="work-card__desc">
+            公式HPの更新を自動検知し、情報の同期・LINE通知まで行うフルオートのシビックテックサイト。住民からのアプローチのしやすさという観点から設計・実装まで一貫して担当。技術主導ではなく、「住民の使いやすさ」から逆算したシステムを形にしました。
+          </p>
+          <div class="work-card__tags">
+            <span>シビックテック</span>
+            <span>自動化</span>
+            <span>GAS / LINE通知</span>
+            <span>GitHub Pages</span>
+          </div>
+          <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- 育つ会とおわ -->
+        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card__number">03</div>
+          <h3 class="work-card__title">育つ会とおわ 広報紙アーカイブ</h3>
+          <p class="work-card__desc">
+            計60号の広報紙PDF（両面）のデータ容量を極限まで圧縮することで、大量ファイルでも軽快に閲覧できるアーカイブサイトを実現。どんなITリテラシーの端末環境からでも、スムーズに情報にアクセスできるバリアフリーなUX設計です。
+          </p>
+          <div class="work-card__tags">
+            <span>UX設計</span>
+            <span>アーカイブ</span>
+            <span>パフォーマンス最適化</span>
+            <span>Cloudflare Workers</span>
+          </div>
+          <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 経歴 -->
+  <section class="section career">
+    <div class="container">
+      <h2 class="section__heading">Career</h2>
+      <div class="career__list">
+        <div class="career-item">
+          <div class="career-item__label">現在</div>
+          <div class="career-item__content">
+            <strong>フリーランスライター / AIコンテンツディレクター</strong>
+            <p>地域広報紙の編集やSNS発信をはじめ、Webサイトのディレクション・開発を行っています。また、自動化システム（GAS＋LINE通知等）の構築や運用、API設計にも対応可能です。</p>
+          </div>
+        </div>
+        <div class="career-item">
+          <div class="career-item__label">10年以上</div>
+          <div class="career-item__content">
+            <strong>コミュニティデザイナー / 社会教育委員</strong>
+            <p>移住16年目。子育ちサークルを10年主宰・運営。現在は町社会教育委員長に就任。地域団体の代表として、行政委託事業「空き施設を活用した図書・公園機能の提供」を企画・運営しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- コンタクト -->
+  <section class="section contact">
+    <div class="container">
+      <h2 class="section__heading">Contact</h2>
+      <p class="contact__text">ご依頼・ご相談はお気軽にどうぞ。</p>
+      <div class="contact__links">
+        <a href="https://crowdworks.jp/public/employees/6761730" target="_blank" rel="noopener" class="contact__btn">
+          <i class="fas fa-briefcase"></i> CrowdWorks
+        </a>
+        <a href="https://www.linkedin.com/in/%E7%B4%80%E5%AD%90-%E9%85%92%E4%BA%95-b8b3573b9/" target="_blank" rel="noopener" class="contact__btn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- テーマ切り替えボタン -->
+  <div class="theme-switcher">
+    <button class="theme-btn white" onclick="setTheme('style.css', this)">⬜ シンプル白</button>
+    <button class="theme-btn dark"  onclick="setTheme('style-dark.css', this)">⬛ ダーク</button>
+    <button class="theme-btn warm active"  onclick="setTheme('style-warm.css', this)">🟤 温かみ</button>
+  </div>
+
+  <script>
+    function setTheme(css, btn) {
+      document.getElementById('theme-css').href = css;
+      document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 酒井紀子</p>
+    </div>
+  </footer>
+
+</body>
+</html>

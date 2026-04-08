@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noriko Sakai | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" id="theme-css" href="style-warm.css">
+  <style>
+    .theme-switcher {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+    .theme-btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: 'Noto Sans JP', sans-serif;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .theme-btn:hover { opacity: 1; }
+    .theme-btn.active { opacity: 1; font-weight: bold; }
+    .theme-btn.white { background: #fff; color: #333; border: 1px solid #ccc; }
+    .theme-btn.dark  { background: #1a1a1a; color: #aaa; border: 1px solid #333; }
+    .theme-btn.warm  { background: #fff8f3; color: #c07a4a; border: 1px solid #ddd0c8; }
+    .lang-switch {
+      position: fixed;
+      top: 16px;
+      right: 24px;
+      z-index: 100;
+    }
+    .lang-switch a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: white;
+    }
+    .lang-switch a:hover { color: #333; border-color: #999; }
+  </style>
+</head>
+<body>
+
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="index.html">🇯🇵 日本語</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="header__name">Noriko Sakai</h1>
+      <p class="header__title">Writer / AI Content Director / Community Designer</p>
+      <p class="header__location"><i class="fas fa-map-marker-alt"></i> Shimanto, Kochi, Japan (Full Remote)</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="section about">
+    <div class="container">
+      <h2 class="section__heading">About</h2>
+      <p class="about__text">
+        Based in Shimanto, Kochi — one of Japan's last pristine river towns — I work as a writer, AI content director, and community designer.<br class="pc-only">
+        With 10+ years of experience in writing, editorial production, and community design, I combine deep local knowledge with cutting-edge AI tools to create content that truly resonates.
+      </p>
+
+      <div class="about__values">
+        <div class="value-item">
+          <i class="fas fa-feather-alt"></i>
+          <div>
+            <strong>Japanese Writing That Connects</strong>
+            <span>10+ years of SNS publishing and community newsletter production. I write Japanese that moves people — from empathy to action — with warmth and cultural precision.</span>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-robot"></i>
+          <div>
+            <strong>AI × Human Quality</strong>
+            <span>Daily hands-on use of Claude (Claude Code), Gemini (Antigravity), and ChatGPT in real workflows. I combine AI efficiency with human editorial judgment to deliver content that feels alive.</span>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-seedling"></i>
+          <div>
+            <strong>Rooted in Community</strong>
+            <span>16 years embedded in rural Japan — navigating local government, schools, and grassroots organizations. I "translate" complex ideas across different stakeholders with empathy and clarity.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills">
+    <div class="container">
+      <h2 class="section__heading">Skills</h2>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <i class="fas fa-pen-nib"></i>
+          <h3>Writing & Editing</h3>
+          <p>10+ years</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-newspaper"></i>
+          <h3>Editorial & DTP</h3>
+          <p>10+ years</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-robot"></i>
+          <h3>AI-Assisted Content</h3>
+          <p>Claude · Gemini · ChatGPT<br><span style="font-size: 11px; color: #999;">Claude Code · Antigravity</span></p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-sitemap"></i>
+          <h3>Web Direction</h3>
+          <p>MVP Design · Information Architecture</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-terminal"></i>
+          <h3>Prompt Engineering</h3>
+          <p>Workflow Automation</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-users"></i>
+          <h3>Community Design</h3>
+          <p>Civic · Education · Local Gov</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-code"></i>
+          <h3>Tech Stack</h3>
+          <p>Cloudflare / GitHub / GAS</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-palette"></i>
+          <h3>Visual Design</h3>
+          <p>DTP · Print Production</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section works">
+    <div class="container">
+      <h2 class="section__heading">Works</h2>
+      <div class="works__grid">
+
+        <!-- FIORE -->
+        <a href="https://fiore-site.pages.dev/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card__number">01</div>
+          <h3 class="work-card__title">Izakaya FIORE — Business Website</h3>
+          <p class="work-card__desc">
+            A zero-maintenance static site designed for an Instagram-first restaurant owner. Directed and built using AI-assisted workflows (Vibe Coding). The information architecture was designed around the client's real business model — not just templated content.
+          </p>
+          <div class="work-card__tags">
+            <span>Web Direction</span>
+            <span>Static Site</span>
+            <span>AI-Assisted Build</span>
+            <span>Cloudflare Pages</span>
+          </div>
+          <span class="work-card__link">View Site <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- 議会ナビ -->
+        <a href="https://tetiteti36-wq.github.io/shimantochou-gikai/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card__number">02</div>
+          <h3 class="work-card__title">Shimanto Town Council Navigator — Civic Tech</h3>
+          <p class="work-card__desc">
+            A civic tech platform that auto-detects official council updates, syncs content, and delivers LINE notifications to residents — fully automated. Designed not from a tech-first perspective, but from the question: "How can local residents actually access their local government?"
+          </p>
+          <div class="work-card__tags">
+            <span>Civic Tech</span>
+            <span>Automation</span>
+            <span>GAS / LINE Notify</span>
+            <span>GitHub Pages</span>
+          </div>
+          <span class="work-card__link">View Site <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- 育つ会とおわ -->
+        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card__number">03</div>
+          <h3 class="work-card__title">Sodatsukaitowa — Community Newsletter Archive</h3>
+          <p class="work-card__desc">
+            A web archive of 60+ issues of a community newsletter (double-sided PDFs), with aggressive file size optimization for smooth access even on low-spec devices. Designed for barrier-free UX — anyone in the community, regardless of device or digital literacy, can access 3 years of local history.
+          </p>
+          <div class="work-card__tags">
+            <span>UX Design</span>
+            <span>Digital Archive</span>
+            <span>Performance Optimization</span>
+            <span>Cloudflare Workers</span>
+          </div>
+          <span class="work-card__link">View Site <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section class="section career">
+    <div class="container">
+      <h2 class="section__heading">Career</h2>
+      <div class="career__list">
+        <div class="career-item">
+          <div class="career-item__label">Present</div>
+          <div class="career-item__content">
+            <strong>Freelance Writer / AI Content Director</strong>
+            <p>Community newsletter editing, SNS content production, and web direction using AI-assisted workflows. Also builds automation systems (Google Apps Script + LINE notifications) and handles information architecture for MVP web projects.</p>
+          </div>
+        </div>
+        <div class="career-item">
+          <div class="career-item__label">10+ Years</div>
+          <div class="career-item__content">
+            <strong>Community Designer / Social Education Commissioner</strong>
+            <p>16 years as a resident of Shimanto. Founded and led a parenting community circle for 10 years. Currently serving as Chair of Shimanto Town Social Education Committee. As representative of a local nonprofit, planning and operating a government-commissioned project to repurpose a former nursery school as a community library and park space.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact">
+    <div class="container">
+      <h2 class="section__heading">Contact</h2>
+      <p class="contact__text">Open to freelance projects, collaborations, and remote opportunities.</p>
+      <div class="contact__links">
+        <a href="https://crowdworks.jp/public/employees/6761730" target="_blank" rel="noopener" class="contact__btn">
+          <i class="fas fa-briefcase"></i> CrowdWorks
+        </a>
+        <a href="https://www.linkedin.com/in/%E7%B4%80%E5%AD%90-%E9%85%92%E4%BA%95-b8b3573b9/" target="_blank" rel="noopener" class="contact__btn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <button class="theme-btn white" onclick="setTheme('style.css', this)">⬜ Light</button>
+    <button class="theme-btn dark"  onclick="setTheme('style-dark.css', this)">⬛ Dark</button>
+    <button class="theme-btn warm active"  onclick="setTheme('style-warm.css', this)">🟤 Warm</button>
+  </div>
+
+  <script>
+    function setTheme(css, btn) {
+      document.getElementById('theme-css').href = css;
+      document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Noriko Sakai</p>
+    </div>
+  </footer>
+
+</body>
+</html>
