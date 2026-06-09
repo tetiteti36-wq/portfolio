@@ -208,6 +208,18 @@ body {
   transform: translateX(4px);
 }
 
+/* URL調整中カード */
+.work-card--local {
+  opacity: 0.82;
+  border-style: dashed;
+}
+
+.work-card__link--wip {
+  font-size: 12px;
+  color: #aaa;
+  font-style: italic;
+}
+
 /* ===== Contact ===== */
 .contact {
   background: #fff8f3;
@@ -361,25 +373,4 @@ body {
   .work-card__title {
     font-size: 16px;
   }
-}
-
-
-/* Gallery mini */
-.gallery-mini {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  padding: 0 24px 32px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.gallery-mini__img {
-  width: calc(100% / 3);
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 6px;
-}
-@media (max-width: 768px) {
-  .gallery-mini { flex-direction: column; }
-  .gallery-mini__img { width: 100%; }
 }
