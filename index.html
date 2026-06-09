@@ -3,88 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>酒井紀子 | ポートフォリオ</title>
+  <title>酒井梟 (Fuku Sakai) | ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" id="theme-css" href="style-warm.css">
-  <style>
-    .theme-switcher {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      z-index: 100;
-    }
-    .theme-btn {
-      padding: 8px 14px;
-      border: none;
-      border-radius: 6px;
-      font-size: 12px;
-      font-family: 'Noto Sans JP', sans-serif;
-      cursor: pointer;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-      white-space: nowrap;
-    }
-    .theme-btn:hover { opacity: 1; }
-    .theme-btn.active { opacity: 1; font-weight: bold; }
-    .theme-btn.white { background: #fff; color: #333; border: 1px solid #ccc; }
-    .theme-btn.dark  { background: #1a1a1a; color: #aaa; border: 1px solid #333; }
-    .theme-btn.warm  { background: #fff8f3; color: #c07a4a; border: 1px solid #ddd0c8; }
-    .lang-switch {
-      position: fixed;
-      top: 16px;
-      right: 24px;
-      z-index: 100;
-    }
-    .lang-switch a {
-      font-size: 13px;
-      color: #888;
-      text-decoration: none;
-      padding: 4px 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background: white;
-    }
-    .lang-switch a:hover { color: #333; border-color: #999; }
-    .header__fuku {
-      font-size: 14px;
-      font-weight: 400;
-      color: #888;
-      margin-left: 4px;
-      letter-spacing: normal;
-    }
-    .header__subname {
-      font-size: 12px;
-      color: #888;
-      margin-top: 2px;
-      font-weight: 400;
-      display: block;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- 言語切り替え -->
-  <div class="lang-switch">
-    <a href="index_en.html">🇺🇸 English</a>
-  </div>
+  <!-- 固定ナビ -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <span class="nav-name">酒井 梟</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#career">Career</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="index_en.html" class="nav-lang">🇺🇸 EN</a>
+        <div class="theme-switcher-inline">
+          <button class="theme-btn white" onclick="setTheme('style.css',this)" title="シンプル白">⬜</button>
+          <button class="theme-btn dark"  onclick="setTheme('style-dark.css',this)" title="ダーク">⬛</button>
+          <button class="theme-btn warm active" onclick="setTheme('style-warm.css',this)" title="温かみ">🟤</button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header" id="top">
     <div class="container">
-      <h1 class="header__name">酒井 梟<span class="header__fuku">(Fuku Sakai)</span></h1>
-      <p class="header__subname">（本名：酒井 紀子）</p>
+      <h1 class="header__name">酒井 梟<span class="header__fuku"> (Fuku Sakai)</span></h1>
+      <p class="header__subname">本名：酒井 紀子</p>
       <p class="header__title">ライター / AIコンテンツディレクター / コミュニティデザイナー</p>
       <p class="header__location"><i class="fas fa-map-marker-alt"></i> 高知県四万十町</p>
     </div>
   </header>
 
-  <!-- 自己紹介 -->
-  <section class="section about">
+  <!-- About -->
+  <section class="section about" id="about">
     <div class="container">
       <h2 class="section__heading">About</h2>
       <p class="about__text">
@@ -92,13 +51,12 @@
         10年以上のライティング・広報紙制作・コミュニティデザインの経験をベースに、<br class="pc-only">
         最新のAI技術を掛け合わせた「伝わるコンテンツ」を届けています。
       </p>
-
       <div class="about__values">
         <div class="value-item">
           <i class="fas fa-feather-alt"></i>
           <div>
             <strong>伝わる日本語</strong>
-            <span>10年以上のSNS・広報紙制作で培った編集力。読んだ人の「共感」を生み、読者に「一歩」を踏み出すきっかけを届けるライティングを大切にしています。</span>
+            <span>10年以上のSNS・広報紙制作で培った編集力。読んだ人の「共感」を生み、「一歩」を踏み出すきっかけを届けるライティングを大切にしています。</span>
           </div>
         </div>
         <div class="value-item">
@@ -112,283 +70,225 @@
           <i class="fas fa-seedling"></i>
           <div>
             <strong>地域への深い理解</strong>
-            <span>移住16年目。行政や教育の現場を行き来してきた経験から、多様な立場（住民・行政・民間など）に寄り添った「翻訳」と「設計」を心掛けています。</span>
+            <span>移住16年目。行政や教育の現場を行き来してきた経験から、多様な立場に寄り添った「翻訳」と「設計」を心掛けています。</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- スキル -->
-  <section class="section skills">
-    <div class="container">
-      <h2 class="section__heading">Skills</h2>
+      <!-- スキルグリッド -->
       <div class="skills__grid">
-        <div class="skill-card">
-          <i class="fas fa-pen-nib"></i>
-          <h3>取材・ライティング</h3>
-          <p>10年以上</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-newspaper"></i>
-          <h3>編集・DTP</h3>
-          <p>10年以上</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-robot"></i>
-          <h3>AI活用コンテンツ制作</h3>
-          <p>Claude・Gemini・ChatGPT<br><span style="font-size: 11px; color: #999;">Claude Code・Antigravity</span></p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-sitemap"></i>
-          <h3>Webディレクション</h3>
-          <p>MVP設計・情報設計</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-terminal"></i>
-          <h3>プロンプトエンジニアリング</h3>
-          <p>ワークフロー構築</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-users"></i>
-          <h3>コミュニティデザイン</h3>
-          <p>行政・教育・地域支援</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-code"></i>
-          <h3>技術スタック</h3>
-          <p>Cloudflare / GitHub / GAS</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-palette"></i>
-          <h3>ビジュアルデザイン</h3>
-          <p>DTP・広報物制作</p>
-        </div>
+        <div class="skill-card"><i class="fas fa-pen-nib"></i><h3>取材・ライティング</h3><p>10年以上</p></div>
+        <div class="skill-card"><i class="fas fa-newspaper"></i><h3>編集・DTP</h3><p>10年以上</p></div>
+        <div class="skill-card"><i class="fas fa-robot"></i><h3>AI活用コンテンツ</h3><p>Claude・Gemini・GPT</p></div>
+        <div class="skill-card"><i class="fas fa-sitemap"></i><h3>Webディレクション</h3><p>MVP設計・情報設計</p></div>
+        <div class="skill-card"><i class="fas fa-terminal"></i><h3>プロンプトエンジニア</h3><p>ワークフロー構築</p></div>
+        <div class="skill-card"><i class="fas fa-users"></i><h3>コミュニティデザイン</h3><p>行政・教育・地域</p></div>
+        <div class="skill-card"><i class="fas fa-code"></i><h3>技術スタック</h3><p>Cloudflare / GitHub / GAS</p></div>
+        <div class="skill-card"><i class="fas fa-palette"></i><h3>ビジュアルデザイン</h3><p>DTP・広報物制作</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ポートフォリオ -->
-  <section class="section works">
+  <!-- Works -->
+  <section class="section works" id="works">
     <div class="container">
       <h2 class="section__heading">Works</h2>
-      <div class="works__grid">
 
-        <!-- FIORE -->
-        <a href="https://fiore-site.pages.dev/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">01</div>
+      <!-- カテゴリタブ -->
+      <div class="works-tabs">
+        <button class="works-tab active" data-filter="all">すべて <span class="tab-count" id="count-all"></span></button>
+        <button class="works-tab" data-filter="web">🌐 Web・テック <span class="tab-count" id="count-web"></span></button>
+        <button class="works-tab" data-filter="design">🎨 デザイン <span class="tab-count" id="count-design"></span></button>
+        <button class="works-tab" data-filter="writing">✍️ ライティング <span class="tab-count" id="count-writing"></span></button>
+      </div>
+
+      <div class="works__grid" id="works-grid">
+
+        <!-- 01 FIORE -->
+        <a href="https://fiore-site.pages.dev/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">01</span>
+          </div>
           <h3 class="work-card__title">伊酒屋FIORE Webサイト</h3>
-          <p class="work-card__desc">
-            インスタ運用メインのオーナーのニーズに合わせた、更新不要・メンテナンスフリーの静的サイトをAI活用でディレクション・実装。SNS連携を前提とした情報設計が特徴。クライアントのビジネスの「仕組み」を理解した上での、柔軟な情報設計を行いました。
-          </p>
+          <p class="work-card__desc">インスタ運用メインのオーナーのニーズに合わせた、更新不要・メンテナンスフリーの静的サイト。SNS連携を前提とした情報設計が特徴。</p>
           <div class="work-card__tags">
-            <span>Webディレクション</span>
-            <span>静的サイト</span>
-            <span>AI活用</span>
-            <span>Cloudflare Pages</span>
+            <span>Webディレクション</span><span>静的サイト</span><span>AI活用</span><span>Cloudflare Pages</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- 議会ナビ -->
-        <a href="https://tetiteti36-wq.github.io/shimantochou-gikai/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">02</div>
+        <!-- 02 議会ナビ -->
+        <a href="https://tetiteti36-wq.github.io/shimantochou-gikai/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">02</span>
+          </div>
           <h3 class="work-card__title">議会ナビ（四万十町議会）</h3>
-          <p class="work-card__desc">
-            公式HPの更新を自動検知し、情報の同期・LINE通知まで行うフルオートのシビックテックサイト。住民からのアプローチのしやすさという観点から設計・実装まで一貫して担当。技術主導ではなく、「住民の使いやすさ」から逆算したシステムを形にしました。
-          </p>
+          <p class="work-card__desc">公式HPの更新を自動検知し、情報の同期・LINE通知まで行うフルオートのシビックテックサイト。「住民の使いやすさ」から逆算したシステム。</p>
           <div class="work-card__tags">
-            <span>シビックテック</span>
-            <span>自動化</span>
-            <span>GAS / LINE通知</span>
-            <span>GitHub Pages</span>
+            <span>シビックテック</span><span>自動化</span><span>GAS / LINE通知</span><span>GitHub Pages</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- 育つ会とおわ -->
-        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">03</div>
+        <!-- 03 育つ会とおわ 広報紙アーカイブ -->
+        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">03</span>
+          </div>
           <h3 class="work-card__title">育つ会とおわ 広報紙アーカイブ</h3>
-          <p class="work-card__desc">
-            計60号の広報紙PDF（両面）のデータ容量を極限まで圧縮することで、大量ファイルでも軽快に閲覧できるアーカイブサイトを実現。どんなITリテラシーの端末環境からでも、スムーズに情報にアクセスできるバリアフリーなUX設計です。
-          </p>
+          <p class="work-card__desc">60号分の広報紙PDFを極限まで圧縮・高速配信。どんな端末からでもスムーズにアクセスできるバリアフリーなUX設計。</p>
           <div class="work-card__tags">
-            <span>UX設計</span>
-            <span>アーカイブ</span>
-            <span>パフォーマンス最適化</span>
-            <span>Cloudflare Workers</span>
+            <span>UX設計</span><span>アーカイブ</span><span>パフォーマンス最適化</span><span>Cloudflare Workers</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- 十和ガイド -->
-        <a href="https://genuine-sfogliatella-c53cd0.netlify.app/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">04</div>
+        <!-- 04 十和ガイド -->
+        <a href="https://genuine-sfogliatella-c53cd0.netlify.app/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">04</span>
+          </div>
           <h3 class="work-card__title">四万十町十和 食事処・宿泊ガイド</h3>
-          <p class="work-card__desc">
-            中山間地域の飲食・宿泊情報を「訪れる人に使ってもらえる形」で整理した地域向けガイドサイト。情報が散在しがちな中山間エリアのコンテンツを、誰でもアクセスしやすい静的サイトとして設計・実装しました。
-          </p>
+          <p class="work-card__desc">中山間地域の飲食・宿泊情報を「訪れる人に使ってもらえる形」で整理した地域ガイドサイト。情報が散在しがちなエリアの情報設計。</p>
           <div class="work-card__tags">
-            <span>地域情報設計</span>
-            <span>静的サイト</span>
-            <span>AI活用</span>
-            <span>Netlify</span>
+            <span>地域情報設計</span><span>静的サイト</span><span>AI活用</span><span>Netlify</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- 京都大学交響楽団 -->
-        <a href="https://tetiteti36-wq.github.io/shimanto-orchestra-project-renewal-preview/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">05</div>
-          <h3 class="work-card__title">京都大学交響楽団 in 四万十町（資料サイト）</h3>
-          <p class="work-card__desc">
-            100人編成の京都大学交響楽団を四万十の地へ招く実行委員会向けに制作した、イベント資料・告知サイト。「本物の文化を子どもたちへ」という思いを込めたプロジェクトの情報基盤を担いました。
-          </p>
+        <!-- 05 京都大学交響楽団 -->
+        <a href="https://tetiteti36-wq.github.io/shimanto-orchestra-project-renewal-preview/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">05</span>
+          </div>
+          <h3 class="work-card__title">京都大学交響楽団 in 四万十（資料サイト）</h3>
+          <p class="work-card__desc">100人編成の京大交響楽団を招く実行委員会向けイベント告知サイト。「本物の文化を子どもたちへ」というプロジェクトの情報基盤。</p>
           <div class="work-card__tags">
-            <span>イベントサイト</span>
-            <span>地域文化</span>
-            <span>HTML/CSS</span>
+            <span>イベントサイト</span><span>地域文化</span><span>HTML/CSS</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- とおわのお茶堂 -->
-        <a href="https://tetiteti36-wq.github.io/towaochadou-site/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">06</div>
+        <!-- 06 とおわのお茶堂 -->
+        <a href="https://tetiteti36-wq.github.io/towaochadou-site/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">06</span>
+          </div>
           <h3 class="work-card__title">とおわのお茶堂 サイト</h3>
-          <p class="work-card__desc">
-            四万十町十和エリアにある「とおわのお茶堂」の情報発信サイト。地域の小さなお店が持つ雰囲気・世界観を大切にしながら、訪れる人の「行ってみたい」を引き出す設計を心掛けました。
-          </p>
+          <p class="work-card__desc">四万十町十和エリアのお茶屋さんの情報発信サイト。地域の小さなお店が持つ雰囲気・世界観を大切に、訪れる人の「行ってみたい」を引き出す設計。</p>
           <div class="work-card__tags">
-            <span>店舗サイト</span>
-            <span>地域</span>
-            <span>HTML/CSS</span>
+            <span>店舗サイト</span><span>地域</span><span>HTML/CSS</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
-        </div>
+        </a>
 
-        <!-- 二ヶ月の会 -->
-        <a href="https://tetiteti36-wq.github.io/nikagetsu-no-kai-proposal/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">07</div>
+        <!-- 07 二ヶ月の会 -->
+        <a href="https://tetiteti36-wq.github.io/nikagetsu-no-kai-proposal/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">07</span>
+          </div>
           <h3 class="work-card__title">二ヶ月の会 向けプレゼン資料（Web版）</h3>
-          <p class="work-card__desc">
-            小鳩美術部が主催する「二ヶ月の会」向けに制作した、Web形式の提案・プレゼンテーション資料。発表内容をブラウザで閲覧できる形に落とし込み、関係者との共有をスムーズにしました。
-          </p>
+          <p class="work-card__desc">小鳩美術部主催イベント向けのWeb形式提案資料。発表内容をブラウザで閲覧できる形に落とし込み、関係者との共有をスムーズに。</p>
           <div class="work-card__tags">
-            <span>プレゼン資料</span>
-            <span>Web制作</span>
-            <span>コミュニティ</span>
+            <span>プレゼン資料</span><span>Web制作</span><span>コミュニティ</span>
           </div>
           <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
-        </div>
+        </a>
 
-        <!-- 虎徹アルバム / アルバム共有サービス -->
-        <a href="https://2026-5-30-31-album.tetiteti36.workers.dev" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">08</div>
-          <h3 class="work-card__title">アルバム共有サービス（MVP）虎徹の二日間</h3>
-          <p class="work-card__desc">
-            LINE・みてね・Google Photosのどれにも刺さらない「友人の友人レベルの半私的共有」のニーズに応えるWebアルバムサービスのMVP。写真177枚＋動画4本を雑誌・旅しおり風のUIで配信。物語と編集者の言葉を添えた「贈り物のような体験」を目指しました。
-          </p>
+        <!-- 08 虎徹アルバム -->
+        <a href="https://2026-5-30-31-album.tetiteti36.workers.dev" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-web">🌐 Web</span>
+            <span class="work-card__number">08</span>
+          </div>
+          <h3 class="work-card__title">アルバム共有サービス MVP「虎徹の二日間」</h3>
+          <p class="work-card__desc">LINE・みてねの隙間を埋める「半私的共有」Webアルバムサービスの試作。写真177枚＋動画4本を雑誌風UIで配信。物語と言葉を添えた贈り物体験。</p>
           <div class="work-card__tags">
-            <span>Webアルバム</span>
-            <span>UX設計</span>
-            <span>Cloudflare Workers</span>
-            <span>ffmpeg最適化</span>
+            <span>Webアルバム</span><span>UX設計</span><span>Cloudflare Workers</span><span>ffmpeg最適化</span>
           </div>
           <span class="work-card__link">サービスを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- キャラクター図鑑 -->
-        <a href="https://tetiteti36-wq.github.io/chara-zukan/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">09</div>
+        <!-- 09 キャラクター図鑑 -->
+        <a href="https://tetiteti36-wq.github.io/chara-zukan/" target="_blank" rel="noopener" class="work-card" data-category="design">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-design">🎨 デザイン</span>
+            <span class="work-card__number">09</span>
+          </div>
           <h3 class="work-card__title">キャラクター図鑑サイト（ソシラ＆ラックス）</h3>
-          <p class="work-card__desc">
-            進化心理学×キャラクターデザインで生まれた「ソシラ」と「ラックス」の設定・世界観をまとめたキャラクター図鑑サイト。LINEスタンプ販売・漫画連載と連動した、キャラクターIPの育成基盤として制作。AIとの共同作業でキャラ設定を深掘りしながら構築しました。
-          </p>
+          <p class="work-card__desc">進化心理学×キャラクターデザインで生まれた二人組の設定・世界観をまとめた図鑑サイト。LINEスタンプ・漫画連載と連動したキャラクターIPの育成基盤。</p>
           <div class="work-card__tags">
-            <span>キャラクターデザイン</span>
-            <span>IP設計</span>
-            <span>LINEスタンプ連動</span>
-            <span>GitHub Pages</span>
+            <span>キャラクターデザイン</span><span>IP設計</span><span>LINEスタンプ連動</span>
           </div>
           <span class="work-card__link">図鑑を見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-        <!-- 広報紙アーカイブ / DTP実績 -->
-        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card">
-          <div class="work-card__number">10</div>
-          <h3 class="work-card__title">育つ会とおわ 広報紙アーカイブ（DTP実績）</h3>
-          <p class="work-card__desc">
-            小鳩美術部・育つ会とおわ・各地域イベント等、10年以上にわたるDTP制作の集積。広報紙・チラシ・ロゴ等をIllustrator/Canvaで制作してきた実績を、広報紙アーカイブとして公開。60号分のPDFを軽量配信で提供しています。
-          </p>
+        <!-- 10 広報紙DTP実績 -->
+        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card" data-category="design">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-design">🎨 デザイン</span>
+            <span class="work-card__number">10</span>
+          </div>
+          <h3 class="work-card__title">広報紙・フライヤー DTP実績まとめ</h3>
+          <p class="work-card__desc">小鳩美術部・育つ会とおわ・地域イベント等、10年以上のDTP制作の集積。広報紙・チラシ・ロゴをIllustrator/Canvaで制作。60号分の広報紙PDFをアーカイブとして公開。</p>
           <div class="work-card__tags">
-            <span>DTP・印刷物</span>
-            <span>Illustrator / Canva</span>
-            <span>広報紙制作</span>
-            <span>10年以上の実績</span>
+            <span>DTP・印刷物</span><span>Illustrator / Canva</span><span>10年以上</span>
           </div>
           <span class="work-card__link">アーカイブを見る <i class="fas fa-arrow-right"></i></span>
         </a>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ライティング実績 -->
-  <section class="section works">
-    <div class="container">
-      <h2 class="section__heading">Writing</h2>
-      <div class="works__grid">
-
-        <!-- lala.work -->
-        <div class="work-card">
-          <div class="work-card__number">W01</div>
-          <h3 class="work-card__title">lala.work ライティングトライアル</h3>
-          <p class="work-card__desc">
-            フリーランスとしての初受注。自身の暮らしや価値観を反映したエッセイを執筆し、「一文字ずつに体温が宿るような文章」との評価とともに★5を獲得。ライター0→1の一歩。
-          </p>
+        <!-- W01 lala.work -->
+        <div class="work-card" data-category="writing">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-writing">✍️ ライティング</span>
+            <span class="work-card__number">W01</span>
+          </div>
+          <h3 class="work-card__title">lala.work ライティングトライアル ★5</h3>
+          <p class="work-card__desc">フリーランスとしての初受注・初★5獲得。自身の暮らしや価値観を反映したエッセイが「一文字ずつに体温が宿るような文章」と評価された。</p>
           <div class="work-card__tags">
-            <span>エッセイ</span>
-            <span>ライティング</span>
-            <span>★5獲得</span>
+            <span>エッセイ</span><span>ライティング</span><span>★5獲得</span>
           </div>
         </div>
 
-        <!-- 図書館雑誌 -->
-        <div class="work-card">
-          <div class="work-card__number">W02</div>
+        <!-- W02 図書館雑誌 -->
+        <div class="work-card" data-category="writing">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-writing">✍️ ライティング</span>
+            <span class="work-card__number">W02</span>
+          </div>
           <h3 class="work-card__title">図書館雑誌（日本図書館協会）寄稿論考</h3>
-          <p class="work-card__desc">
-            四万十での実践（摩擦と余白）と嶋田教授の基調報告を掛け合わせた論考。地域の現場から学術誌への寄稿という、「実践者の声を届ける」ことへの挑戦。
-          </p>
+          <p class="work-card__desc">四万十での実践（摩擦と余白）と嶋田教授の基調報告を掛け合わせた論考。地域の現場から学術誌へ——「実践者の声を届ける」挑戦。</p>
           <div class="work-card__tags">
-            <span>論考</span>
-            <span>図書館</span>
-            <span>地域実践</span>
+            <span>論考</span><span>図書館</span><span>地域実践</span>
           </div>
         </div>
 
-        <!-- こどもの図書館 -->
-        <div class="work-card">
-          <div class="work-card__number">W03</div>
+        <!-- W03 こどもの図書館 -->
+        <div class="work-card" data-category="writing">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-writing">✍️ ライティング</span>
+            <span class="work-card__number">W03</span>
+          </div>
           <h3 class="work-card__title">こどもの図書館（児童図書館研究会機関誌）論考</h3>
-          <p class="work-card__desc">
-            児童図書館研究会の機関誌「こどもの図書館」への論考寄稿。子どもの読書環境と地域の関係性について、四万十での活動をもとに執筆。
-          </p>
+          <p class="work-card__desc">児童図書館研究会の機関誌への論考寄稿。子どもの読書環境と地域の関係性について、四万十での活動をもとに執筆。</p>
           <div class="work-card__tags">
-            <span>論考</span>
-            <span>児童図書館</span>
-            <span>地域実践</span>
+            <span>論考</span><span>児童図書館</span><span>地域実践</span>
           </div>
         </div>
 
-      </div>
+      </div><!-- /works__grid -->
     </div>
   </section>
 
-  <!-- 経歴 -->
-  <section class="section career">
+  <!-- Career -->
+  <section class="section career" id="career">
     <div class="container">
       <h2 class="section__heading">Career</h2>
       <div class="career__list">
@@ -396,22 +296,22 @@
           <div class="career-item__label">現在</div>
           <div class="career-item__content">
             <strong>フリーランスライター / AIコンテンツディレクター</strong>
-            <p>地域広報紙の編集やSNS発信をはじめ、Webサイトのディレクション・開発を行っています。また、自動化システム（GAS＋LINE通知等）の構築や運用、API設計にも対応可能です。</p>
+            <p>地域広報紙の編集やSNS発信をはじめ、Webサイトのディレクション・開発を行っています。自動化システム（GAS＋LINE通知等）の構築や運用、API設計にも対応可能です。</p>
           </div>
         </div>
         <div class="career-item">
           <div class="career-item__label">10年以上</div>
           <div class="career-item__content">
             <strong>コミュニティデザイナー / 社会教育委員</strong>
-            <p>移住16年目。子育ちサークルを10年主宰・運営。現在は町社会教育委員長に就任。地域団体の代表として、行政委託事業「空き施設を活用した図書・公園機能の提供」を企画・運営しています。</p>
+            <p>移住16年目。子育ちサークルを10年主宰・運営。現在は町社会教育委員長に就任。行政委託事業「空き施設を活用した図書・公園機能の提供」を企画・運営しています。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- コンタクト -->
-  <section class="section contact">
+  <!-- Contact -->
+  <section class="section contact" id="contact">
     <div class="container">
       <h2 class="section__heading">Contact</h2>
       <p class="contact__text">ご依頼・ご相談はお気軽にどうぞ。</p>
@@ -426,27 +326,52 @@
     </div>
   </section>
 
-  <!-- テーマ切り替えボタン -->
-  <div class="theme-switcher">
-    <button class="theme-btn white" onclick="setTheme('style.css', this)">⬜ シンプル白</button>
-    <button class="theme-btn dark"  onclick="setTheme('style-dark.css', this)">⬛ ダーク</button>
-    <button class="theme-btn warm active"  onclick="setTheme('style-warm.css', this)">🟤 温かみ</button>
-  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 酒井紀子 / 酒井梟</p>
+    </div>
+  </footer>
 
   <script>
+    // テーマ切り替え
     function setTheme(css, btn) {
       document.getElementById('theme-css').href = css;
       document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     }
-  </script>
 
-  <!-- フッター -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 酒井紀子</p>
-    </div>
-  </footer>
+    // ナビ スクロールで縮小
+    window.addEventListener('scroll', () => {
+      document.getElementById('site-nav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Works タブフィルター
+    const tabs = document.querySelectorAll('.works-tab');
+    const cards = document.querySelectorAll('.work-card');
+
+    function updateCounts() {
+      const categories = ['web', 'design', 'writing'];
+      document.getElementById('count-all').textContent = cards.length;
+      categories.forEach(cat => {
+        const el = document.getElementById('count-' + cat);
+        if (el) el.textContent = document.querySelectorAll(`.work-card[data-category="${cat}"]`).length;
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    updateCounts();
+  </script>
 
 </body>
 </html>
