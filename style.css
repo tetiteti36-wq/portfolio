@@ -77,9 +77,10 @@ body {
 .work-card:hover { border-color: #333; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
 .work-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .work-card__cat { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; }
-.cat-web     { background: #e8f0ff; color: #3a5f9a; }
-.cat-design  { background: #f5e8ff; color: #7a3a9a; }
-.cat-writing { background: #e8ffe8; color: #3a7a3a; }
+.cat-web       { background: #e8f0ff; color: #3a5f9a; }
+.cat-design    { background: #f5e8ff; color: #7a3a9a; }
+.cat-writing   { background: #e8ffe8; color: #3a7a3a; }
+.cat-community { background: #fff3e0; color: #8a4a0a; }
 .work-card__number { font-size: 11px; font-weight: 500; color: #bbb; letter-spacing: 0.08em; }
 .work-card__title { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 10px; line-height: 1.5; }
 .work-card__desc { font-size: 13px; line-height: 1.85; color: #666; margin-bottom: 14px; flex: 1; }

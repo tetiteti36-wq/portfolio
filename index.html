@@ -100,6 +100,7 @@
         <button class="works-tab" data-filter="web">🌐 Web・テック <span class="tab-count" id="count-web"></span></button>
         <button class="works-tab" data-filter="design">🎨 デザイン <span class="tab-count" id="count-design"></span></button>
         <button class="works-tab" data-filter="writing">✍️ ライティング <span class="tab-count" id="count-writing"></span></button>
+        <button class="works-tab" data-filter="community">🤝 地域活動 <span class="tab-count" id="count-community"></span></button>
       </div>
 
       <div class="works__grid" id="works-grid">
@@ -297,6 +298,19 @@
           <span class="work-card__link">読む <i class="fas fa-arrow-right"></i></span>
         </a>
 
+        <!-- 12 スマホサポーター -->
+        <div class="work-card" data-category="community">
+          <div class="work-card__header">
+            <span class="work-card__cat cat-community">🤝 地域活動</span>
+            <span class="work-card__number">12</span>
+          </div>
+          <h3 class="work-card__title">四万十町認定スマホサポーター</h3>
+          <p class="work-card__desc">四万十町が認定するスマートフォン・PC操作のサポーター。地域住民（主に高齢者）へのデジタル活用支援を行い、地域のデジタルデバイド解消に貢献。</p>
+          <div class="work-card__tags">
+            <span>スマホ・PCサポート</span><span>デジタル支援</span><span>地域活動</span><span>四万十町認定</span>
+          </div>
+        </div>
+
       </div><!-- /works__grid -->
     </div>
   </section>
@@ -364,7 +378,7 @@
     const cards = document.querySelectorAll('.work-card');
 
     function updateCounts() {
-      const categories = ['web', 'design', 'writing'];
+      const categories = ['web', 'design', 'writing', 'community'];
       document.getElementById('count-all').textContent = cards.length;
       categories.forEach(cat => {
         const el = document.getElementById('count-' + cat);

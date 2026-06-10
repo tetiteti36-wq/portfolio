@@ -291,9 +291,10 @@ body {
   padding: 3px 10px;
   border-radius: 100px;
 }
-.cat-web     { background: #e8f4ff; color: #4a7fb5; }
-.cat-design  { background: #fde8f5; color: #b54a8a; }
-.cat-writing { background: #e8f5e8; color: #4a8a4a; }
+.cat-web       { background: #e8f4ff; color: #4a7fb5; }
+.cat-design    { background: #fde8f5; color: #b54a8a; }
+.cat-writing   { background: #e8f5e8; color: #4a8a4a; }
+.cat-community { background: #fff3e0; color: #b56a1a; }
 
 .work-card__number {
   font-size: 11px;
