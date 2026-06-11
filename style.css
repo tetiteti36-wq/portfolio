@@ -92,6 +92,44 @@ body {
 .work-card--local { opacity: 0.82; border-style: dashed; }
 .work-card__link--wip { font-size: 12px; color: #aaa; font-style: italic; }
 
+/* ===== サイトプレビュー ===== */
+.work-card { padding: 0; overflow: hidden; }
+.work-card__preview {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #f0f0f0;
+  flex-shrink: 0;
+}
+.work-card__preview iframe {
+  width: 1280px;
+  height: 900px;
+  transform: scale(0.25);
+  transform-origin: top left;
+  pointer-events: none;
+  border: none;
+  display: block;
+}
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(255,255,255,0.25) 100%);
+}
+.work-card__preview--placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 160px;
+}
+.work-card__preview--placeholder i { font-size: 28px; opacity: 0.5; }
+.work-card__preview--placeholder span { font-size: 11px; opacity: 0.6; font-weight: 500; letter-spacing: 0.06em; }
+.preview-writing { background: linear-gradient(135deg, #e8f5e8 0%, #c8e8c8 100%); color: #3a7a3a; }
+.preview-community { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b0 100%); color: #8a4a0a; }
+.work-card__body { padding: 20px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+
 /* Career */
 .career__list { display: grid; gap: 20px; }
 .career-item { display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: start; }
