@@ -139,6 +139,7 @@ body {
 .work-card__preview--placeholder span { font-size: 11px; opacity: 0.5; font-weight: 500; letter-spacing: 0.06em; }
 .preview-writing { background: linear-gradient(135deg, #1a2a1a 0%, #152515 100%); color: #5ac05a; }
 .preview-community { background: linear-gradient(135deg, #2a1a0a 0%, #201508 100%); color: #c07a3a; }
+.preview-prep { background: linear-gradient(135deg, #242424 0%, #1c1c1c 100%); color: #888; }
 .work-card__body { padding: 20px 24px 24px; display: flex; flex-direction: column; flex: 1; }
 
 /* Career */
