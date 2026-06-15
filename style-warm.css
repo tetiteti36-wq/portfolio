@@ -129,6 +129,22 @@ body {
 }
 .header__location i { margin-right: 4px; }
 
+/* ===== 注記バナー ===== */
+.site-notice {
+  background: #fbeede;
+  border-top: 1px solid #f0dcc4;
+  border-bottom: 1px solid #f0dcc4;
+  padding: 12px 0;
+}
+.site-notice p {
+  font-size: 13px;
+  color: #8a6a48;
+  text-align: center;
+  line-height: 1.7;
+}
+.site-notice i { margin-right: 6px; color: #c07a4a; }
+.site-notice strong { color: #6b4a28; font-weight: 700; }
+
 /* ===== Section Common ===== */
 .section { padding: 72px 0; }
 
