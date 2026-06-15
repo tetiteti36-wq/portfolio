@@ -35,7 +35,10 @@ body {
 .header { padding: 120px 0 64px; text-align: center; border-bottom: 1px solid #e8e8e8; background: #fff; }
 .header__name { font-size: 30px; font-weight: 700; letter-spacing: 0.08em; color: #111; }
 .header__fuku { font-size: 16px; font-weight: 400; color: #aaa; margin-left: 4px; }
-.header__subname { font-size: 12px; color: #bbb; margin-top: 4px; }
+.header__subname { margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.header__yago-label { font-size: 11px; font-weight: 500; color: #555; background: #f0f0f0; border: 1px solid #ddd; border-radius: 100px; padding: 2px 10px; letter-spacing: 0.08em; }
+.header__yago { font-size: 18px; font-weight: 700; color: #111; letter-spacing: 0.04em; }
+.header__yago-en { font-size: 12px; color: #bbb; }
 .header__title { margin-top: 10px; font-size: 15px; font-weight: 400; color: #555; letter-spacing: 0.04em; }
 .header__location { margin-top: 6px; font-size: 13px; color: #bbb; }
 .header__location i { margin-right: 4px; }
