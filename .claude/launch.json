@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8001", "--directory", "C:/Users/User/Desktop/portfolio"],
       "port": 8001
+    },
+    {
+      "name": "portfolio-laptop",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8001", "--directory", "G:/マイドライブ/2nd-Brain/01_制作したWebサイト/実績ポートフォリオ_サイトコード"],
+      "port": 8001
     }
   ]
 }
