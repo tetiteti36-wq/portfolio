@@ -210,6 +210,15 @@
     .pf{padding:1.6rem 1.4rem}
     .pf .pf-t{font-size:1.3rem}
     section{padding:2.4rem 0 .5rem}
+    /* 見出しが長いと説明の幅が潰れるので、狭い画面では縦に積む */
+    .plain li{flex-direction:column;gap:.2rem}
+    .plain li b{white-space:normal}
+    .plain li span{font-size:.86rem}
+    .why{padding:1.3rem 1.2rem 1.1rem}
+    .voices{padding:.9rem 1rem}
+    .tl-item .sub{line-height:1.6}
+    /* 強制改行は画面が広い前提。狭い画面では自然に折り返させる */
+    .punch br,.hero .tagline br{display:none}
   }
 </style>
 </head>
