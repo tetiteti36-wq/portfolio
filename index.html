@@ -9,6 +9,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" id="theme-css" href="style-warm.css">
   <style>
+    /* ===== 文字サイズの底上げ =====
+       全体的に小さかったので少し大きくする。
+       3つのテーマ（style.css / style-dark.css / style-warm.css）すべてに効くよう、
+       ここにまとめて書いている。数字を変えれば全テーマに反映される。 */
+    .site-notice p        { font-size: 14px; }
+    .section__heading     { font-size: 14px; }
+    .about__text          { font-size: 17px; line-height: 2.15; }
+    .value-item strong    { font-size: 15px; }
+    .value-item span      { font-size: 13.5px; line-height: 1.8; }
+    .value-item i         { font-size: 20px; }
+    .skill-card h3        { font-size: 14px; }
+    .skill-card p         { font-size: 12.5px; }
+    .skill-card i         { font-size: 22px; }
+    .works-tab            { font-size: 14px; }
+    .work-card__cat       { font-size: 12px; }
+    .work-card__number    { font-size: 12px; }
+    .work-card__title     { font-size: 17px; }
+    .work-card__desc      { font-size: 14px; line-height: 1.9; }
+    .work-card__tags span { font-size: 11.5px; }
+    .work-card__link      { font-size: 13.5px; }
+    .contact__text        { font-size: 15px; }
+    /* スキル一覧の下の注記 */
+    .skills__note         { font-size: 13px; color: #999; text-align: center; margin-top: 18px; line-height: 1.8; }
+    .contact__btn         { font-size: 15px; }
+    .footer p             { font-size: 13px; }
+
     /* LINEのQRコード：スマホでは自分の画面のQRを読めないので、パソコン幅でだけ出す */
     .contact__qr { display: none; }
     @media (min-width: 768px) {
@@ -79,7 +105,7 @@
           <i class="fas fa-robot"></i>
           <div>
             <strong>AI × 人間の品質</strong>
-            <span>Claude (Claude Code)・Gemini (Antigravity)・ChatGPT(codex)を実務活用。AIの効率性と、人間ならではの表現力を両立させた制作を得意としています。</span>
+            <span>Claude (Claude Code)・Gemini (Antigravity)・ChatGPT(codex)を実務活用。AIの効率性と、人間ならではの表現力を両立させた制作を目指しています。</span>
           </div>
         </div>
         <div class="value-item">
@@ -93,13 +119,14 @@
       <div class="skills__grid">
         <div class="skill-card"><i class="fas fa-pen-nib"></i><h3>取材・ライティング</h3><p>エッセイ・論考・広報</p></div>
         <div class="skill-card"><i class="fas fa-newspaper"></i><h3>編集・DTP</h3><p>Illustrator / Photoshop</p></div>
-        <div class="skill-card"><i class="fas fa-robot"></i><h3>AI活用コンテンツ</h3><p>Claude・Gemini・GPT</p></div>
+        <div class="skill-card"><i class="fas fa-robot"></i><h3>AI活用コンテンツ</h3><p>Claude Code・Antigravity・codex</p></div>
         <div class="skill-card"><i class="fas fa-sitemap"></i><h3>Webディレクション</h3><p>MVP設計・情報設計</p></div>
         <div class="skill-card"><i class="fas fa-terminal"></i><h3>プロンプトエンジニア</h3><p>ワークフロー構築</p></div>
         <div class="skill-card"><i class="fas fa-users"></i><h3>コミュニティデザイン</h3><p>行政・教育・地域</p></div>
-        <div class="skill-card"><i class="fas fa-code"></i><h3>技術スタック</h3><p>Cloudflare / GitHub / GAS</p></div>
-        <div class="skill-card"><i class="fas fa-palette"></i><h3>ビジュアルデザイン</h3><p>DTP・広報物制作</p></div>
+        <div class="skill-card"><i class="fas fa-code"></i><h3>技術スタック</h3><p>Cloudflare / GitHub / GAS ほか</p></div>
+        <div class="skill-card"><i class="fas fa-palette"></i><h3>イラスト・キャラクター</h3><p>点描画・キャラクターデザイン</p></div>
       </div>
+      <p class="skills__note">※ ここに挙げているのは一例です。書かれていないことも、まずはご相談ください。</p>
     </div>
   </section>
 
