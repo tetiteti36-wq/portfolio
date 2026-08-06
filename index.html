@@ -8,6 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" id="theme-css" href="style-warm.css">
+  <style>
+    /* LINEのQRコード：スマホでは自分の画面のQRを読めないので、パソコン幅でだけ出す */
+    .contact__qr { display: none; }
+    @media (min-width: 768px) {
+      .contact__qr { display: block; margin-top: 28px; }
+    }
+    .contact__qr img {
+      width: 150px; height: 150px; display: block; margin: 0 auto;
+      border: 1px solid #ddd; border-radius: 10px; background: #fff; padding: 8px;
+    }
+    .contact__qr p { font-size: 12px; color: #999; margin-top: 10px; }
+  </style>
 </head>
 <body>
 
@@ -18,7 +30,6 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#works">Works</a>
-        <a href="#career">Career</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
@@ -52,9 +63,9 @@
     <div class="container">
       <h2 class="section__heading">About</h2>
       <p class="about__text">
-        高知県四万十町を拠点に、コミュニティデザイナーとして、地域のデジタル活用支援に取り組んでいます。<br class="pc-only">
-        10年以上のライティング・広報紙制作・コミュニティデザインの経験をベースに、<br class="pc-only">
-        最新のAI技術を掛け合わせた「伝わるコンテンツ」を目指しています。
+        高知県四万十町を拠点に、図書・公園機能を提供する活動を委託事業として運営しています。<br class="pc-only">
+        あわせて、Webサイト・広報紙・チラシの制作や、文章を書く仕事をしています。<br class="pc-only">
+        地域にあるものを伝わる形にすることを大切に、AIも実務で使いながら制作しています。
       </p>
       <div class="about__values">
         <div class="value-item">
@@ -80,8 +91,8 @@
         </div>
       </div>
       <div class="skills__grid">
-        <div class="skill-card"><i class="fas fa-pen-nib"></i><h3>取材・ライティング</h3><p>10年以上</p></div>
-        <div class="skill-card"><i class="fas fa-newspaper"></i><h3>編集・DTP</h3><p>10年以上</p></div>
+        <div class="skill-card"><i class="fas fa-pen-nib"></i><h3>取材・ライティング</h3><p>エッセイ・論考・広報</p></div>
+        <div class="skill-card"><i class="fas fa-newspaper"></i><h3>編集・DTP</h3><p>Illustrator / Photoshop</p></div>
         <div class="skill-card"><i class="fas fa-robot"></i><h3>AI活用コンテンツ</h3><p>Claude・Gemini・GPT</p></div>
         <div class="skill-card"><i class="fas fa-sitemap"></i><h3>Webディレクション</h3><p>MVP設計・情報設計</p></div>
         <div class="skill-card"><i class="fas fa-terminal"></i><h3>プロンプトエンジニア</h3><p>ワークフロー構築</p></div>
@@ -118,7 +129,7 @@
               <span class="work-card__number">04</span>
             </div>
             <h3 class="work-card__title">四万十町十和 食事処・宿泊ガイド</h3>
-            <p class="work-card__desc">中山間地域の飲食・宿泊情報を「訪れる人に使ってもらえる形」で整理した地域ガイドサイト。情報が散在しがちなエリアの情報設計。</p>
+            <p class="work-card__desc">十和の飲食・宿泊情報を「訪れる人、紹介したい人に使ってもらえる形」で整理した地域ガイドサイト。情報が散在しがちなエリアの情報設計。準備中。</p>
             <div class="work-card__tags">
               <span>地域情報設計</span><span>静的サイト</span><span>AI活用</span><span>Netlify</span>
             </div>
@@ -160,7 +171,7 @@
             <h3 class="work-card__title">育つ会とおわ 広報紙アーカイブ</h3>
             <p class="work-card__desc">60号分の広報紙PDFを極限まで圧縮・高速配信。どんな端末からでもスムーズにアクセスできるバリアフリーなUX設計。</p>
             <div class="work-card__tags">
-              <span>UX設計</span><span>アーカイブ</span><span>パフォーマンス最適化</span><span>Cloudflare Workers</span>
+              <span>UX設計</span><span>アーカイブ</span><span>パフォーマンス最適化</span><span>Cloudflare Workers</span><span>GitHub Actions</span>
             </div>
             <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
           </div>
@@ -198,9 +209,9 @@
               <span class="work-card__number">06</span>
             </div>
             <h3 class="work-card__title">とおわのお茶堂 サイト</h3>
-            <p class="work-card__desc">四万十町十和エリアのお茶屋さんの情報発信サイト。地域の小さなお店が持つ雰囲気・世界観を大切に、訪れる人の「行ってみたい」を引き出す設計。</p>
+            <p class="work-card__desc">空き家を活用した「地域の交流拠点」サイト。FIORE同様、インスタメインのオーナーのニーズに合わせた、更新不要・メンテナンスフリーのサイト。</p>
             <div class="work-card__tags">
-              <span>店舗サイト</span><span>地域</span><span>HTML/CSS</span>
+              <span>交流拠点</span><span>地域</span><span>静的サイト</span><span>HTML/CSS</span>
             </div>
             <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
           </div>
@@ -326,26 +337,7 @@
           </div>
         </a>
 
-        <!-- W01 lala.work -->
-        <div class="work-card" data-category="writing">
-          <div class="work-card__preview work-card__preview--placeholder preview-writing">
-            <i class="fas fa-feather-alt"></i>
-            <span>ライティング実績</span>
-          </div>
-          <div class="work-card__body">
-            <div class="work-card__header">
-              <span class="work-card__cat cat-writing">✍️ ライティング</span>
-              <span class="work-card__number">W01</span>
-            </div>
-            <h3 class="work-card__title">lala.work ライティングトライアル ★5</h3>
-            <p class="work-card__desc">フリーランスとしての初受注・初★5獲得。自身の暮らしや価値観を反映したエッセイが「一文字ずつに体温が宿るような文章」と評価された。</p>
-            <div class="work-card__tags">
-              <span>エッセイ</span><span>ライティング</span><span>★5獲得</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- W02 図書館雑誌 -->
+        <!-- W01 図書館雑誌 -->
         <div class="work-card" data-category="writing">
           <div class="work-card__preview work-card__preview--placeholder preview-writing">
             <i class="fas fa-book-open"></i>
@@ -354,17 +346,17 @@
           <div class="work-card__body">
             <div class="work-card__header">
               <span class="work-card__cat cat-writing">✍️ ライティング</span>
-              <span class="work-card__number">W02</span>
+              <span class="work-card__number">W01</span>
             </div>
-            <h3 class="work-card__title">図書館雑誌（日本図書館協会）寄稿論考</h3>
-            <p class="work-card__desc">四万十での実践（摩擦と余白）と嶋田教授の基調報告を掛け合わせた論考。地域の現場から学術誌へ——「実践者の声を届ける」挑戦。</p>
+            <h3 class="work-card__title">図書館雑誌（日本図書館協会）2026年6月号 寄稿論考</h3>
+            <p class="work-card__desc">特集「みんなで考え、つくり、育てる図書館の未来」に、市民の立場からの執筆依頼を受けて寄稿。「市民と図書館の未来プロジェクト」への期待と、これからの図書館のあり方についての論考。</p>
             <div class="work-card__tags">
-              <span>論考</span><span>図書館</span><span>地域実践</span>
+              <span>依頼執筆</span><span>論考</span><span>図書館</span><span>地域実践</span>
             </div>
           </div>
         </div>
 
-        <!-- W03 こどもの図書館 -->
+        <!-- W02 こどもの図書館 -->
         <div class="work-card" data-category="writing">
           <div class="work-card__preview work-card__preview--placeholder preview-writing">
             <i class="fas fa-child"></i>
@@ -373,12 +365,12 @@
           <div class="work-card__body">
             <div class="work-card__header">
               <span class="work-card__cat cat-writing">✍️ ライティング</span>
-              <span class="work-card__number">W03</span>
+              <span class="work-card__number">W02</span>
             </div>
-            <h3 class="work-card__title">こどもの図書館（児童図書館研究会機関誌）論考</h3>
-            <p class="work-card__desc">児童図書館研究会の機関誌への論考寄稿。子どもの読書環境と地域の関係性について、四万十での活動をもとに執筆。</p>
+            <h3 class="work-card__title">こどもの図書館（児童図書館研究会機関誌）2024年9月号 論考</h3>
+            <p class="work-card__desc">特集「子どもの読書の権利は守られているか」への執筆依頼に応えた論考。子どもの読書環境と、議会・政治・環境である大人としての関わりについて、四万十での活動をもとに執筆。</p>
             <div class="work-card__tags">
-              <span>論考</span><span>児童図書館</span><span>地域実践</span>
+              <span>依頼執筆</span><span>論考</span><span>児童図書館</span><span>地域実践</span>
             </div>
           </div>
         </div>
@@ -406,42 +398,30 @@
     </div>
   </section>
 
-  <!-- Career -->
-  <section class="section career" id="career">
-    <div class="container">
-      <h2 class="section__heading">Career</h2>
-      <div class="career__list">
-        <div class="career-item">
-          <div class="career-item__label">現在</div>
-          <div class="career-item__content">
-            <strong>フリーランスライター / AIコンテンツディレクター</strong>
-            <p>地域広報紙の編集やSNS発信をはじめ、Webサイトのディレクション・開発を行っています。自動化システム（GAS＋LINE通知等）の構築や運用、API設計にも対応可能です。</p>
-          </div>
-        </div>
-        <div class="career-item">
-          <div class="career-item__label">10年以上</div>
-          <div class="career-item__content">
-            <strong>コミュニティデザイナー / 社会教育委員</strong>
-            <p>移住16年目。子育ちサークルを10年主宰・運営。現在は町社会教育委員長に就任。行政委託事業「空き施設を活用した図書・公園機能の提供」を企画・運営しています。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact -->
   <section class="section contact" id="contact">
     <div class="container">
       <h2 class="section__heading">Contact</h2>
       <p class="contact__text">ご依頼・ご相談はお気軽にどうぞ。</p>
+      <!-- ▼ 連絡先：ここの ●●● を実際のアドレス／URLに書き換える ▼ -->
       <div class="contact__links">
-        <a href="https://crowdworks.jp/public/employees/6761730" target="_blank" rel="noopener" class="contact__btn">
-          <i class="fas fa-briefcase"></i> CrowdWorks
+        <a href="mailto:tetiteti36@gmail.com" class="contact__btn">
+          <i class="fas fa-envelope"></i> tetiteti36@gmail.com
         </a>
-        <a href="https://www.linkedin.com/in/%E7%B4%80%E5%AD%90-%E9%85%92%E4%BA%95-b8b3573b9/" target="_blank" rel="noopener" class="contact__btn">
-          <i class="fab fa-linkedin"></i> LinkedIn
+        <a href="tel:08095845086" class="contact__btn">
+          <i class="fas fa-phone"></i> 080-9584-5086
+        </a>
+        <a href="https://line.me/ti/p/7126jfC-SK" target="_blank" rel="noopener" class="contact__btn">
+          <i class="fab fa-line"></i> LINE
         </a>
       </div>
+
+      <!-- LINEのQRコード（パソコンで見ている人向け。スマホでは非表示） -->
+      <div class="contact__qr">
+        <img src="qr-line.jpg" alt="LINE 友だち追加QRコード" onerror="this.parentNode.style.display='none'">
+        <p>パソコンからご覧の方は、こちらのQRコードからどうぞ</p>
+      </div>
+      <!-- ▲ 連絡先ここまで ▲ -->
     </div>
   </section>
 

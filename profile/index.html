@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>酒井 梟 ｜ 地域の生態系編集者</title>
-<meta name="description" content="高知県四万十町。森と川の現場と、行政・教育の制度と、デザイン・Web・AIのあいだを通す仕事をしています。">
+<title>酒井 紀子 ｜ 高知県四万十町十和</title>
+<meta name="description" content="山、川、生物、自然。行政・教育・福祉。Web・AI分野。横断して繋いでいきたいと考えています。高知県四万十町十和。">
+<meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
@@ -103,19 +104,6 @@
     color:var(--river-dark);font-weight:600;line-height:1.9;
   }
 
-  /* ===== できること ===== */
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:12px;
-    padding:1.1rem 1.2rem;
-  }
-  .card h3{
-    font-size:.95rem;color:var(--river-dark);margin-bottom:.4rem;
-    display:flex;align-items:center;gap:.45rem;
-  }
-  .card h3 .ico{font-size:1.15rem}
-  .card p{font-size:.83rem;color:var(--ink-soft);line-height:1.8}
-
   /* ===== 年表 ===== */
   .tl{position:relative;padding-left:1.7rem;margin-top:.6rem}
   .tl::before{
@@ -154,20 +142,26 @@
     border-radius:999px;padding:.28rem .8rem;color:var(--ink-soft);
   }
 
-  /* ===== 作ったもの ===== */
-  .works{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-  .work{
-    display:block;background:#fff;border:1px solid var(--line);
-    border-radius:10px;padding:.85rem 1rem;text-decoration:none;
-    color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s;
+  /* ===== 作ったもの（ポートフォリオへの入口） ===== */
+  .pf{
+    display:block;text-decoration:none;color:#fff;
+    background:linear-gradient(135deg,var(--river-dark) 0%,var(--river) 100%);
+    border-radius:16px;padding:2rem 1.9rem;
+    box-shadow:0 4px 22px rgba(47,107,99,.2);
+    transition:transform .2s,box-shadow .2s;
   }
-  .work:hover{
-    border-color:var(--river);box-shadow:0 3px 12px rgba(47,107,99,.12);
-    transform:translateY(-1px);
+  .pf:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(47,107,99,.3)}
+  .pf .pf-t{
+    font-family:'Noto Serif JP',serif;font-size:1.5rem;
+    font-weight:600;letter-spacing:.06em;line-height:1.4;
   }
-  .work .t{font-size:.88rem;font-weight:700;color:var(--river-dark);margin-bottom:.2rem}
-  .work .d{font-size:.76rem;color:var(--ink-soft);line-height:1.7}
-  .work .t::after{content:" ↗";font-size:.7rem;opacity:.5}
+  .pf .pf-d{font-size:.88rem;line-height:1.9;opacity:.94;margin-top:.7rem}
+  .pf .pf-go{
+    display:inline-block;margin-top:1.3rem;
+    font-size:.8rem;font-weight:700;letter-spacing:.1em;
+    border:1px solid rgba(255,255,255,.55);border-radius:999px;
+    padding:.45rem 1.3rem;
+  }
 
   /* ===== 締め ===== */
   .closing{
@@ -191,7 +185,8 @@
   @media(max-width:600px){
     .hero{padding:2.8rem 0 2.4rem}
     .hero h1{font-size:1.8rem}
-    .cards,.works{grid-template-columns:1fr}
+    .pf{padding:1.6rem 1.4rem}
+    .pf .pf-t{font-size:1.3rem}
     section{padding:2.4rem 0 .5rem}
   }
 </style>
@@ -210,16 +205,17 @@
 <!-- ▼▼▼ ここから：名前と肩書き ▼▼▼ -->
 <div class="hero">
   <div class="wrap">
-    <div class="role">高知県四万十町 ｜ 地域の生態系編集者</div>
-    <h1>酒井 梟<span class="yomi">SAKAI FUKU</span></h1>
+    <div class="role">高知県四万十町十和</div>
+    <h1>酒井 紀子<span class="yomi">SAKAI NORIKO</span></h1>
     <p class="tagline">
-      森と川の現場と、行政・教育の制度と、デザイン・Web・AI。<br>
-      本来つながっているはずなのに途切れているもの、そのあいだを通す仕事をしています。
+      山、川、生物、自然。行政・教育・福祉。Web・AI分野。<br>
+      横断して繋いでいきたいと考えています。
     </p>
     <div class="meta">
-      <span>四万十町十和 在住 16年</span>
+      <span>1975年生まれ</span>
+      <span>四万十町十和 在住16年目（2026年現在）</span>
       <span>三兄弟の母</span>
-      <span>酒井梟事務所（2026年4月開業）</span>
+      <span>屋号：酒井梟（SAKAI FUKU）</span>
     </div>
   </div>
 </div>
@@ -230,142 +226,130 @@
 
 <!-- ▼▼▼ ここから：なぜこの仕事をしているか（いちばん大事なところ） ▼▼▼ -->
 <section>
-  <h2><span class="en">WHY</span>なぜ、この仕事をしているか</h2>
+  <h2><span class="en">WHY</span>なぜ今の働き方に繋がっているのか</h2>
   <div class="why">
     <p>
       高知市の町なかで生まれました。長屋で、子どもたちが団子になって育つような場所です。
-      通学路の田んぼには季節ごとに鯉やフナやカブトエビがいて、国分川でタナゴやオイカワを網ですくって育ちました。
-      ただ、いま思えばあの川は、まわりをコンクリートで固められた川でした。
+      メジロやウグイスを大量に飼養しているおじさんもいました。
+      電車と馬小屋が共存するような、不思議な町でした。
+    </p>
+    <p>
+      保育園時代に新興住宅街へ移りました。
+      通学路の田んぼには季節ごとに鯉やフナやカブトエビがいて、大量の毛虫や蚕を見たり、
+      基地にしていた茅の野原では何者かの巣に喜んだり。あれはカヤネズミなのか、鳥だったのか。
+    </p>
+    <p>
+      舟入川ではアヒルの卵を食べたり、国分川でタナゴやオイカワを網ですくって育ちました。
+      兄たちはもっぱら釣りで大物を狙っていました。
+      コンクリで固められていない田んぼの水路では、ドジョウやアメリカザリガニ、メダカなど、
+      生き生きと動く生き物に夢中になりました。
+    </p>
+    <p>
+      子どもらしく群れで活発に遊び、市内ながらに自然に接しながら育ってきたのかなと思います。
+      ただ、いま思えばあの大きな川は──国分川と舟入川は、まわりをコンクリートで固められた川でした。
     </p>
     <p>
       週末は、父の生家がある物部村の山奥へ。高校を出るまでずっと通いました。
-      物部川の源流は、美しさが怖いくらいで、冷たくて長くは入っていられない。
-      山で暮らしたいとずっと思っていたのは、間違いなくここが原点です。
+      イザナギ流で有名なその山奥は、京極夏彦さんや荒俣宏さんが取材に来られたとも言われる秘境のようなところで、
+      物部川の源流は、美しさが怖いくらいで、冷たくて長くは入っていられない川でした。
     </p>
     <p>
-      16年前、四万十町の十和に移り住みました。
-      そこから少なくとも10年、ほぼ毎日のように子どもたちと川へ行きました。
+      以降、山で暮らしたいとずっと根底にあったのは、この山の体験が原点となっています。
+      山で暮らせるようにと、30代には林業の仕事に就いたこともありました。
+    </p>
+    <p>
+      紆余曲折した20代・30代を経て、16年前、四万十町の十和に出産を機に移住しました。
+      夫の生家なので、当初は4世代同居。
+      祖父母が逝去した今は、8人と猫1頭、犬3頭、鰻と亀と生活しています。
+    </p>
+    <p>
+      移住してから、ほぼ毎日のように子どもたちと川へ行きました。
       そして、<b>年ごとに状況が悪くなっていく四万十川を、肌で感じ続けてきました。</b>
     </p>
-    <p>一方で、30年より前を知る地元の方の話を聞くと、こういう話が出てきます。</p>
+    <p>一方で、30年より前を知る地元の方の話を聞くと、こういう話がよく出てきます。</p>
     <ul class="voices">
       <li>川の真ん中ですくって、水がそのまま飲めるほど綺麗だった</li>
       <li>ツガニ（樵蟹）は、ハサミが大きすぎてバランスが取れないような大物がウヨウヨいた。昼休みに捕まえて昼食にしていた</li>
-      <li>ホウキで掃くほど、鮎がウヨウヨいた</li>
+      <li>ホウキで掃くほど、鮎がごよごよいた</li>
       <li>水量が豊かで、川漁師も子どもも、たくさん川にいた</li>
+      <li>子どもたちは子どもたち同士で、川との付き合いを学んだ</li>
     </ul>
     <p class="punch">
-      なんで今はこうなんだろう、と悔しい。<br>
-      その美しかった時代の風景を、私はまだ見たことがありません。<br>
-      子どもたちにも、見せてやれていません。
+      なんで今はこうなんだろう、と現状を見て悔しく思ったことは多々です。<br>
+      子どもたちにも見せてやれていない、もどかしさを抱えながら、<br>
+      その美しかった時代の風景を、私はまだ見たことがなく、いつか見たいなあと思っていました。
     </p>
   </div>
 </section>
 <!-- ▲▲▲ ここまで：なぜ ▲▲▲ -->
 
 
-<!-- ▼▼▼ ここから：できること ▼▼▼ -->
-<section>
-  <h2><span class="en">WHAT I DO</span>できること</h2>
-  <p class="lead">現場の一次情報を拾って、伝わる形・続く形にして返すことが仕事の中心です。</p>
-  <div class="cards">
-
-    <div class="card">
-      <h3><span class="ico">🖌️</span>伝わる形にする</h3>
-      <p>DTP・編集10年超（Illustrator／Photoshop）。地域の広報紙を50号近く出し続けてきました。チラシ・ロゴ・パンフレットから、Webサイトまで。</p>
-    </div>
-
-    <div class="card">
-      <h3><span class="ico">🌐</span>Webをつくる・回す</h3>
-      <p>HTML／CSS／JavaScriptの静的サイト構築。GitHub＋Cloudflare／GitHub Pagesでの自動デプロイ、Pythonスクレイピングによる情報の自動更新まで、要件定義から実装・運用まで一人で。</p>
-    </div>
-
-    <div class="card">
-      <h3><span class="ico">🤖</span>AIと組んでつくる</h3>
-      <p>AIエージェントを「道具」ではなく「同僚」として使い、企画・設計・実装・文章を回します。可視化されていない価値を、AIで可視化することが私の事業の核です。</p>
-    </div>
-
-    <div class="card">
-      <h3><span class="ico">🗂️</span>引き継げる形にする</h3>
-      <p>属人化した仕事を、次の人が動ける形に組み直します。手順だけでなく「なぜやるか」を残すこと、書き起こす過程で続かない仕組み自体を作り替えることを大事にしています。</p>
-    </div>
-
-    <div class="card">
-      <h3><span class="ico">🏛️</span>制度の内側を通す</h3>
-      <p>社会教育委員長、町からの業務委託による団体運営、議会との6年間のやりとり。行政・議会・学校の作法とスピード感が分かるので、現場と制度のあいだを通せます。</p>
-    </div>
-
-    <div class="card">
-      <h3><span class="ico">✍️</span>書く</h3>
-      <p>エッセイ・広報・記事・寄稿。ライティング案件で初回から最高評価をいただきました。一次情報を持っている人間が書く文章を強みにしています。</p>
-    </div>
-
-  </div>
-</section>
-<!-- ▲▲▲ ここまで：できること ▲▲▲ -->
-
-
 <!-- ▼▼▼ ここから：これまでの仕事（学歴は入れていません） ▼▼▼ -->
 <section>
   <h2><span class="en">CAREER</span>これまでの仕事</h2>
-  <p class="lead">保育園の頃からの夢が「山で絵を描きながら動物と暮らす」でした。並べてみると、まっすぐでした。</p>
+  <p class="lead">保育園の頃からの夢が「山で絵を描きながら動物と暮らす」でした。よって、結果的にそれに沿った経歴となっています。</p>
 
   <div class="tl">
 
     <div class="tl-item">
       <h3>動物病院</h3>
-      <div class="sub">トリマー補佐</div>
-      <p>生き物と人のあいだの現場から。</p>
+      <div class="sub">主にトリマー補佐</div>
+      <p>一般にペットと言われる生物と、人間との距離感や関係性を学びました。</p>
     </div>
 
     <div class="tl-item mark">
-      <h3>看板屋</h3>
+      <h3>看板業</h3>
       <div class="sub">DTP ＋ 現場施工</div>
-      <p>デザインするだけでなく、自分で取り付けまでやる。<b>設計と施工を両方やる</b>という自分の型は、ここでできました。</p>
+      <p>デザイン、取り付け、PC操作を学びました。</p>
     </div>
 
     <div class="tl-item">
       <h3>ペットシッター</h3>
       <div class="sub">─</div>
-      <p>預かるということの責任と段取り。</p>
+      <p>高知県内でも当時有数の動物福祉推進団体の先輩方のもと、ペットと人間との在り方を学びつつ、実践の現場としてシッター業務を学びました。</p>
     </div>
 
     <div class="tl-item mark">
       <h3>水産研究所</h3>
       <div class="sub">南西海区水産研究所／中央水産研究所 高知庁舎 ｜ 研究員補助</div>
-      <p>魚と水を、科学の側から見た時間。データが取られ、扱われ、活かされる（あるいは活かされない）現場を知っています。</p>
+      <p>
+        主に仔魚の耳石を採取してデータ化。国の漁獲等に反映されるデータ集めなど、地道な取り組みに接することができた貴重な体験でした。
+        船が一般公開される日などには、研究所の取組みを子どもたちに分かりやすく示すイベント企画を補助するなど、楽しい仕事でした。
+      </p>
     </div>
 
     <div class="tl-item mark">
       <h3>林業（第三セクター方式の株式会社）</h3>
       <div class="sub">伐倒・クローラ等による運搬を中心とした現場作業</div>
-      <p>実際に木を伐って、運びました。<b>森の側と水の側、その両方を仕事として踏んでいます。</b></p>
+      <p>実際に伐倒部隊に入り、木を伐って、運びました。面河渓谷の美しさや、光が入った時の爽快さなど、今も記憶に鮮明です。</p>
     </div>
 
     <div class="tl-item">
       <h3>制作（勤務時間外）</h3>
-      <div class="sub">点描画・キャラクターデザイン</div>
-      <p>ずっと描いていました。いまも描いています。</p>
+      <div class="sub">点描画・キャラクターデザイン作成</div>
     </div>
 
     <div class="tl-break">🏔 四万十町 十和 へ移住（16年前）</div>
 
     <div class="tl-item mark">
-      <h3>子育ちサークル 主宰</h3>
+      <h3>子育ちサークル「さんまの会」主宰</h3>
       <div class="sub">約10年</div>
-      <p><b>水と土を通した子育ち</b>を実践。各分野の有識者を招いた講話なども開催してきました。</p>
+      <p>
+        「子どもには3つの間、時間・空間・仲間が必要」という理念のもと「さんまの会」を開催。
+        <b>水と土を通した子育ち</b>を実践。各分野の有識者を招いた講話なども開催してきました。
+      </p>
     </div>
 
     <div class="tl-item">
       <h3>DTP・編集</h3>
-      <div class="sub">10年超</div>
-      <p>地域の広報紙、チラシ、パンフレット、ロゴ。地域の宝を、紙の上で再発見してきた時間です。</p>
+      <div class="sub">地域の広報紙、チラシ、パンフレット制作</div>
+      <p>運営する廃園舎を活用した事業紹介、社会福祉協議会、ネイチャーセンタートラスト協会より依頼されたチラシやパンフレット作成に携わりました。</p>
     </div>
 
     <div class="tl-item mark">
-      <h3>酒井梟事務所</h3>
-      <div class="sub">2026年4月 開業</div>
-      <p>Web制作・デザイン・ライティング・AI伴走支援。「田舎のリアル」と「最先端のAI」を一人で翻訳することを事業にしました。</p>
+      <h3>開業（屋号：酒井梟）</h3>
+      <div class="sub">2026年4月</div>
+      <p>Web制作・デザイン・ライティング・AI伴走支援。田舎に住みつつも「最先端のAI」を活用し、点を線にして、面にしていくことに寄与することを目指しています。</p>
     </div>
 
   </div>
@@ -380,8 +364,8 @@
     <li><b>育つ会とおわ 代表</b><span>図書・公園機能を提供する団体。町からの業務委託を受けて運営。空き家対策事業、分散型ホテル事業のキックオフにも関わっています。</span></li>
     <li><b>四万十町 社会教育委員長</b><span>2期目。</span></li>
     <li><b>しまんと分校ゼミ</b><span>スタッフとして月1ペースで関与。</span></li>
-    <li><b>おかみさん市（かそべん）</b><span>月1ペースで関与。</span></li>
-    <li><b>とおわ猫のかい 役員</b><span>TNR活動（地域猫の保護）。</span></li>
+    <li><b>おかみさん市（かそべん：郷土資源として）</b><span>月1ペースで関与。</span></li>
+    <li><b>とおわ猫のかい 役員</b><span>TNR活動。</span></li>
     <li><b>地域の子どもの探究・表現活動を支援する団体</b><span>令和8年度 運営協力メンバー。活動拠点：大月町文化教育交流拠点 COSA。</span></li>
     <li><b>美術活動</b><span>キリン財団の助成を受けて展開中。</span></li>
   </ul>
@@ -394,12 +378,12 @@
   <h2><span class="en">NETWORK</span>つながっているところ</h2>
   <p class="lead">肩書きで作った人脈ではなく、やってきたことが結果的に開けてきた窓口です。</p>
   <ul class="plain">
-    <li><b>四万十川財団</b><span>細く長く、良い関係を続けています。</span></li>
-    <li><b>四万十町 企画課（旧・四万十川推進室）</b><span>同上。</span></li>
+    <li><b>四万十川財団</b><span>細く長く、良い関係を続けていけていると思っています。</span></li>
+    <li><b>旧・四万十川推進室</b><span>同上。</span></li>
     <li><b>四万十町 環境審議会</b><span>委員を務めました。</span></li>
-    <li><b>四万十町 社会福祉協議会</b><span>地域福祉活動計画委員会 委員。ふくし大会パンフレット制作、スマホ講師なども。</span></li>
-    <li><b>四万十町 水道課</b><span>保護猫活動のサポートを通じて。</span></li>
-    <li><b>学校・教育委員会</b><span>社会教育委員会、放課後子ども教室、文化的施設検討委員会（6年）などを通じて。</span></li>
+    <li><b>四万十町 社会福祉協議会</b><span>地域福祉活動計画委員会 委員。ふくし大会パンフレット制作、スマホ講師など。</span></li>
+    <li><b>四万十町 水道環境課</b><span>保護猫活動（TNR）のサポートを通じて。</span></li>
+    <li><b>学校・教育委員会・生涯学習課</b><span>社会教育委員会、放課後子ども教室、文化的施設検討委員会（6年）などを通じて。</span></li>
   </ul>
 </section>
 <!-- ▲▲▲ ここまで：つながっているところ ▲▲▲ -->
@@ -408,78 +392,19 @@
 <!-- ▼▼▼ ここから：作ったもの（リンクを増やすときはこの <a> を1つコピーして中身を変える） ▼▼▼ -->
 <section>
   <h2><span class="en">WORKS</span>作ったもの</h2>
-  <p class="lead">要件定義から実装・運用まで、単独で手がけたものです。</p>
-  <div class="works">
+  <p class="lead">要件定義から実装・運用まで、単独で手がけたものです。できることは、こちらを見ていただくのがいちばん早いと思います。</p>
 
-    <a class="work" href="https://tetiteti36-wq.github.io/shimantochou-gikai/" target="_blank" rel="noopener">
-      <div class="t">四万十町議会ナビ</div>
-      <div class="d">議会情報を住民が読める形に。Pythonスクレイピング＋GitHub Actionsで選挙情報を自動更新。</div>
-    </a>
+  <a class="pf" href="https://tetiteti36-wq.github.io/portfolio/" target="_blank" rel="noopener">
+    <div class="pf-t">ポートフォリオ</div>
+    <div class="pf-d">
+      Webサイト、DTP・編集、キャラクター制作、執筆。<br>
+      これまでに手がけたものを、まとめて置いています。
+    </div>
+    <div class="pf-go">制作物を見る ↗</div>
+  </a>
 
-    <a class="work" href="https://tetiteti36-wq.github.io/towa-houkago-hikitsugi/model/" target="_blank" rel="noopener">
-      <div class="t">引継ぎガイドの型</div>
-      <div class="d">役員が毎年入れ替わる現場で、引き継ぎを成立させるために作った実物。恒久マニュアルと実録ログを分け、全項目に参照元を付けた。</div>
-    </a>
-
-    <a class="work" href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener">
-      <div class="t">育つ会とおわ 広報紙アーカイブ</div>
-      <div class="d">10年以上発行してきた地域の広報通信を、読める形で保存・公開。</div>
-    </a>
-
-    <a class="work" href="https://fiore-site.pages.dev/" target="_blank" rel="noopener">
-      <div class="t">伊酒屋 FIORE</div>
-      <div class="d">地域の飲食店サイト。GitHub × Cloudflare Pages の自動デプロイ環境を構築。</div>
-    </a>
-
-    <a class="work" href="https://genuine-sfogliatella-c53cd0.netlify.app/" target="_blank" rel="noopener">
-      <div class="t">四万十町十和 食事処・宿泊ガイド</div>
-      <div class="d">地域の情報を、来る人が使える形にまとめた。</div>
-    </a>
-
-    <a class="work" href="https://tetiteti36-wq.github.io/towaochadou-site/" target="_blank" rel="noopener">
-      <div class="t">とおわのお茶堂</div>
-      <div class="d">地域の場のサイト。</div>
-    </a>
-
-    <a class="work" href="https://tetiteti36-wq.github.io/album-demo/" target="_blank" rel="noopener">
-      <div class="t">Webアルバム制作デモ</div>
-      <div class="d">写真と文章で二日間を残す、章立てのアルバムサイト。Cloudflare Workers＋動画最適化。</div>
-    </a>
-
-    <a class="work" href="https://tetiteti36-wq.github.io/chara-zukan/" target="_blank" rel="noopener">
-      <div class="t">キャラクター図鑑</div>
-      <div class="d">オリジナルキャラクター「ソシラとラックス」の設定と展開例。</div>
-    </a>
-
-    <a class="work" href="https://tetiteti36-wq.github.io/kakeibo-manga/" target="_blank" rel="noopener">
-      <div class="t">家計漫画「ソシラとラックス」</div>
-      <div class="d">自作キャラクターによる連載漫画。LINEスタンプ化も。</div>
-    </a>
-
-    <a class="work" href="https://tetiteti36-wq.github.io/nikagetsu-no-kai-proposal-demo/" target="_blank" rel="noopener">
-      <div class="t">支援依頼プレゼン資料（Web版）</div>
-      <div class="d">団体の支援を募るための提案サイト。※団体名を伏せたデモ版。</div>
-    </a>
-
-  </div>
-
-  <p class="lead" style="margin-top:1.2rem">
-    このほかの実績は <a href="https://tetiteti36-wq.github.io/portfolio/" target="_blank" rel="noopener" style="color:var(--river);font-weight:700">ポートフォリオ ↗</a> にまとめています。
-  </p>
 </section>
 <!-- ▲▲▲ ここまで：作ったもの ▲▲▲ -->
-
-
-<!-- ▼▼▼ ここから：書いたもの ▼▼▼ -->
-<section>
-  <h2><span class="en">WRITING</span>書いたもの</h2>
-  <ul class="plain">
-    <li><b>Webメディア エッセイ</b><span>「一文字ずつに体温が宿るような文章」との評価で、初回から最高評価（★5）をいただきました。</span></li>
-    <li><b>図書館雑誌（日本図書館協会）</b><span>四万十での実践をもとにした論考を寄稿。</span></li>
-    <li><b>育つ会とおわ 広報通信</b><span>企画・取材・執筆・デザイン・印刷手配まで、50号近くを一人で。</span></li>
-  </ul>
-</section>
-<!-- ▲▲▲ ここまで：書いたもの ▲▲▲ -->
 
 
 <!-- ▼▼▼ ここから：できることの道具（増減自由） ▼▼▼ -->
@@ -490,7 +415,7 @@
     <span>HTML / CSS / JavaScript</span><span>Python</span>
     <span>Git / GitHub</span><span>GitHub Pages</span><span>GitHub Actions</span>
     <span>Cloudflare Pages / Workers</span>
-    <span>Claude / Claude Code</span><span>Gemini / NotebookLM</span><span>Antigravity</span><span>Cursor</span>
+    <span>Claude / Claude Code</span><span>Gemini / NotebookLM</span><span>Antigravity</span><span>Codex</span>
     <span>Obsidian</span><span>Google Workspace</span>
   </div>
 </section>
@@ -502,20 +427,18 @@
   <h2><span class="en">CLOSING</span>これから</h2>
   <div class="closing">
     <p>
-      森のこと、水のこと、子どものこと、地域のこと。
-      別々の話に見えて、私の中ではひとつのことです。
-      つながっているものが途切れると、そこから弱っていく。それだけの話だと思っています。
+      山のこと、水のこと、子どものこと、地域のこと、世界のこと。
+      別々の話に見えて、全ては繋がっていて、1人でできることには本当に限りがあると思っています。
     </p>
     <p>
-      四万十川は、いまも大きな流域として、まだつながりを保っている川です。
-      保てているうちは、希望が持てる。
-      そう思いながら、拾えるものを拾って、伝わる形にして、続く形にして返す、ということをやっています。
+      <b>山や川、生物の現場。行政・教育・福祉の制度。デザイン・Web・AI。</b>
+      一つひとつの深さでは専門の方に遠く及ばないのですが、
+      そのあいだを行き来して小さく繋ぐことなら、できるのかもしれないと思っています。
     </p>
     <p>
-      できることは多くありませんが、<b>森と川の現場と、行政・教育の制度と、デザイン・Web・AIのあいだ</b>には、
-      たぶん立てます。そこに用があれば、声をかけてください。
+      そういった部分でお仕事をご一緒できるところがあれば、お声がけ頂ければ嬉しく思います。
     </p>
-    <p class="sig">酒井 梟</p>
+    <p class="sig">酒井 紀子</p>
   </div>
 </section>
 <!-- ▲▲▲ ここまで：締めのことば ▲▲▲ -->
@@ -532,7 +455,7 @@
 
 
 <footer>
-  酒井 梟（酒井梟事務所）｜ 高知県四万十町<br>
+  酒井 紀子（屋号：酒井梟）｜ 高知県四万十町十和<br>
   最終更新：2026年8月
 </footer>
 
