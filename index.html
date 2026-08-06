@@ -45,6 +45,19 @@
       border: 1px solid #ddd; border-radius: 10px; background: #fff; padding: 8px;
     }
     .contact__qr p { font-size: 12px; color: #999; margin-top: 10px; }
+
+    /* ===== スマホでナビが画面からはみ出さないように ===== */
+    @media (max-width: 640px) {
+      .nav-inner            { gap: 10px; padding: 0 14px; }
+      .nav-name             { font-size: 14px; }
+      .nav-name__yago       { display: none; }   /* 屋号は下のヘッダーに出るので省く */
+      .nav-links            { gap: 12px; }
+      .nav-links a          { font-size: 12px; letter-spacing: 0.02em; }
+      .nav-actions          { gap: 6px; }
+      .nav-lang             { font-size: 11px; padding: 3px 6px; }
+      .theme-switcher-inline{ gap: 2px; }
+      .theme-btn            { padding: 4px 5px; font-size: 10px; }
+    }
   </style>
 </head>
 <body>
@@ -52,7 +65,7 @@
   <!-- 固定ナビ -->
   <nav class="site-nav" id="site-nav">
     <div class="nav-inner">
-      <span class="nav-name">酒井 紀子（屋号 酒井梟）</span>
+      <span class="nav-name">酒井 紀子<span class="nav-name__yago">（屋号 酒井梟）</span></span>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#works">Works</a>
