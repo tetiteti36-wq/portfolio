@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>野遊び事業 現状整理と、最初の一歩のご提案</title>
+<style>
+:root{
+--bg:#faf8f4; --panel:#fff; --ink:#1c1b19; --ink2:#45423d; --mute:#6f6a62;
+--line:#e0dad0; --line2:#bdb6a8; --acc:#a85c28; --acc-bg:#f6f0e7; --soft:#f3f0ea;
+}
+@media (prefers-color-scheme:dark){:root{
+--bg:#1a1917; --panel:#232120; --ink:#efece7; --ink2:#c9c4bc; --mute:#948d83;
+--line:#3a3733; --line2:#544f48; --acc:#e0925c; --acc-bg:#2c2622; --soft:#26241f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font-family:"Yu Gothic","Hiragino Sans","Meiryo",system-ui,sans-serif;
+line-height:1.85;font-size:15.5px;-webkit-text-size-adjust:100%}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 80px}
+header{border-bottom:3px solid var(--acc);padding-bottom:16px}
+header h1{font-size:23px;margin:0 0 8px;line-height:1.45}
+header .meta{color:var(--mute);font-size:13.5px;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 0;
+position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;border-bottom:1px solid var(--line)}
+nav button{font:inherit;font-size:13.5px;cursor:pointer;padding:7px 14px;border-radius:999px;
+border:1px solid var(--line2);background:transparent;color:var(--ink2)}
+nav button:hover{border-color:var(--acc);color:var(--acc)}
+nav button[aria-selected=true]{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+section{display:none;margin-top:30px}
+section.on{display:block}
+h2{font-size:20px;margin:0 0 20px;padding-bottom:9px;border-bottom:2px solid var(--acc)}
+h3{font-size:16.5px;margin:30px 0 10px;color:var(--acc)}
+h4{font-size:15px;margin:20px 0 6px}
+p{margin:12px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+.card.acc{border-color:var(--acc);background:var(--acc-bg)}
+.card>:first-child{margin-top:0}.card>:last-child{margin-bottom:0}
+.big{font-size:17.5px;font-weight:700;color:var(--acc);line-height:1.65}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--acc-bg);font-weight:600;font-size:14px;white-space:nowrap}
+ul,ol{padding-left:1.45em;margin:10px 0}li{margin:6px 0}
+strong{font-weight:700}
+.q{border-left:3px solid var(--acc);padding:4px 0 4px 16px;margin:14px 0;color:var(--ink2)}
+.steps{list-style:none;padding-left:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:14px 0 14px 52px;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(s);position:absolute;left:0;top:14px;
+width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;
+display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+a{color:var(--acc)}
+.flow{margin:20px 0}
+.flow .b{background:var(--panel);border:1px solid var(--line2);border-radius:10px;padding:12px 16px;text-align:center}
+.flow .b b{display:block;color:var(--acc);font-size:15.5px;margin-bottom:3px}
+.flow .b span{font-size:13.5px;color:var(--ink2)}
+.flow .ar{text-align:center;color:var(--acc);font-size:17px;line-height:1.3;margin:7px 0}
+.u{display:block;font-size:12.5px;word-break:break-all;line-height:1.5;margin:2px 0 10px}
+.chips{list-style:none;padding-left:0;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chips li{background:var(--soft);border:1px solid var(--line);border-radius:999px;
+padding:5px 15px;font-size:14px;color:var(--ink2);margin:0}
+.note{background:var(--soft);border-radius:10px;padding:14px 16px;font-size:14px;color:var(--ink2);margin:16px 0}
+.note>:first-child{margin-top:0}.note>:last-child{margin-bottom:0}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+body.locked .wrap{display:none}
+#gate{display:none;min-height:100vh;align-items:center;justify-content:center;padding:24px}
+body.locked #gate{display:flex}
+#gate .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+padding:30px 26px;max-width:380px;width:100%;text-align:center}
+#gate h1{font-size:17px;margin:0 0 6px;line-height:1.5}
+#gate p{font-size:13px;color:var(--mute);margin:0 0 18px}
+#gate input{font:inherit;font-size:16px;width:100%;padding:11px 13px;border-radius:9px;
+border:1px solid var(--line2);background:var(--bg);color:var(--ink);text-align:center}
+#gate button{font:inherit;font-size:15px;font-weight:600;width:100%;margin-top:10px;
+padding:11px;border-radius:9px;border:none;background:var(--acc);color:#fff;cursor:pointer}
+#gate .err{color:#c0392b;font-size:13px;margin:10px 0 0;min-height:1.2em}
+@media print{
+nav{display:none}
+section{display:block!important;page-break-before:always}
+section:first-of-type{page-break-before:avoid}
+body{font-size:10.5pt;background:#fff;color:#000}
+.wrap{max-width:none;padding:0}
+.scroll{overflow:visible}
+table{font-size:9.5pt;table-layout:fixed;word-break:break-word}
+th,td{padding:5px 7px}
+.card,.note,table,.flow,.steps li{page-break-inside:avoid}
+h2,h3,h4{page-break-after:avoid}
+a{text-decoration:underline}
+}
+</style>
+</head>
+<body class="locked">
+<div id="gate">
+<div class="box">
+<h1>野遊び事業　現状整理と、<br>最初の一歩のご提案</h1>
+<p>合言葉をご入力ください</p>
+<input id="pw" type="password" autocomplete="off" inputmode="text" aria-label="合言葉">
+<button id="go" type="button">開く</button>
+<p class="err" id="err"></p>
+</div>
+</div>
+
+<div class="wrap">
+<header>
+<h1>野遊び事業　現状整理と、最初の一歩のご提案</h1>
+<p class="meta">2026年8月　酒井 紀子（酒井梟）／ 四万十町十和</p>
+</header>
+
+<nav role="tablist">
+<button role="tab" aria-selected="true" data-t="s1">はじめに</button>
+<button role="tab" aria-selected="false" data-t="s2">伺った課題</button>
+<button role="tab" aria-selected="false" data-t="s3">外から見た現状</button>
+<button role="tab" aria-selected="false" data-t="s4">調べて分かったこと</button>
+<button role="tab" aria-selected="false" data-t="s5">最初のお客さま</button>
+<button role="tab" aria-selected="false" data-t="s6">記録という条件</button>
+<button role="tab" aria-selected="false" data-t="s7">着手の順番</button>
+</nav>
+
+<section id="s1" class="on">
+<h2>はじめに</h2>
+
+<p>先日はお時間をいただき、ありがとうございました。</p>
+
+<p>伺ったお話を持ち帰り、<strong>公開されている情報だけを頼りに、外から野遊び事業を追いかけてみました。</strong>「初めてエーゼロさんを知った人が、どこまで辿り着けるか」を確かめたかったためです。</p>
+
+<p>あわせて、自然体験を事業にしている国内外の会社が、どうやって収益を上げているのかを調べました。</p>
+
+<div class="note">
+<p style="margin-bottom:0">この資料は酒井の仮説に基づいた資料です。牧さんとの意見交換会で、このように受け取った、というものを資料にまとめました。</p>
+</div>
+
+<h3>結論から</h3>
+<div class="card">
+<ol style="margin-bottom:0">
+<li><strong>素材が足りないというより、外から見える形になっていない</strong>ように見えました。</li>
+<li>調べたところ、自然体験の事業は収益の型がいくつかに分かれていて、<strong>その型を決めているのは「何をやるか」ではなく「誰に売るか」でした。</strong></li>
+<li>ですので、<strong>最初のお客さまをどこに置くかで、その後の作り方が変わります。</strong>今回は仮に「企業・団体の研修」と置いてみました。</li>
+<li>そう置くと、条件が一つ付いてくるように見えます。<strong>実施のたびの記録です。</strong>これは後からさかのぼって取りにくいものです。</li>
+<li>そして2027年の宿泊事業から逆算すると、<strong>今年度のうちに始めておくほうがよさそう</strong>に見えます。</li>
+</ol>
+</div>
+
+<div class="note">
+<p style="margin-top:0">本資料は2026年8月13日時点の公開情報のみに基づいています。</p>
+<p style="margin-bottom:0">エーゼロさん・熱田さんに関する記述は、<strong>公式サイトや掲載元を実際に閲覧して確認しました</strong>（視察プログラムの内容と価格、毎年1000人以上という記述は、公式サイトの視察プログラムのページより）。国内外の事例については、公開されている情報をもとに整理したもので、<strong>各団体への直接の確認は行っていません。</strong></p>
+</div>
+</section>
+
+<section id="s2">
+<h2>伺った課題</h2>
+<p>先日のお話を、私はこう受け止めました。誤りがあればご指摘ください。</p>
+
+<ul class="chips">
+<li>野遊び事業のデータ整理</li>
+<li>対外的な発信（サイト・LP・note）</li>
+<li>問い合わせの受け皿と導線</li>
+<li>視察プログラムの形</li>
+<li>お客さんにすべき相手の整理</li>
+<li>公式サイト全体の整理</li>
+<li>オンラインショップ・旧・森の学校</li>
+<li>お客さんのデータベースの一元化</li>
+<li>その他</li>
+</ul>
+
+<p>このなかで、とりわけ多くの時間を割いてお話しくださり、<strong>なかでも手をつけたいとお話しされていたのが「野遊び事業」</strong>だったように思います。</p>
+
+<p>そこで今回は、<strong>「野遊び事業」について重点的に資料に落とし込んでみました。</strong></p>
+
+<h3>いつ手をつけられるか</h3>
+<p>伺った課題を、着手できる順に並べ替えました。</p>
+
+<div class="scroll">
+<table>
+<tr><th>課題</th><th>いつ手をつけられるか</th></tr>
+<tr><td>お客さんにすべき相手（企業研修／行政視察／学校の探究学習）の整理がまだ</td><td><strong>◎ いますぐ</strong><br>最初に決めるのはこの1行です</td></tr>
+<tr><td>野遊び事業：3〜4年分のデータが分散し、整理されていない</td><td><strong>◎ いますぐ</strong><br>棚卸しから始められます</td></tr>
+<tr><td>「こういうことができます」という視察プログラムの形になっていない</td><td>○ 素材の整理のあと<br>既に行ってきた視察内容を、プログラム資料とします</td></tr>
+<tr><td>問い合わせはあるが、受け皿と次に繋げる導線がない</td><td>○ 素材の整理のあと<br>1ページ置くだけで受け皿になります</td></tr>
+<tr><td>対外的に見える形（サイト・LP）が未着手</td><td>○ 素材の整理のあと</td></tr>
+<tr><td>note に定期発信すべきか方針が立たない</td><td>○ 素材の整理のあと<br>Through Me・note・案内ページの役割分担から決めます</td></tr>
+<tr><td>公式サイト全体、オンラインショップ、旧・森の学校の整理</td><td>△ 別途ご相談<br>ご担当者さまがそれぞれいらっしゃるかと思います</td></tr>
+<tr><td>お客さんのデータベースの一元化</td><td>△ 別途ご相談<br>ご担当者さまがそれぞれいらっしゃるかと思います</td></tr>
+</table>
+</div>
+
+<p style="margin-bottom:0"><strong>◎の2つは、いま在る情報だけで動かすことが可能そうです。</strong></p>
+</section>
+
+<section id="s3">
+<h2>外から見た現状</h2>
+<p>「野遊び」で検索して、辿り着けたものと、辿り着けなかったものです。</p>
+
+<div class="scroll">
+<table>
+<tr><th>辿り着けたもの</th><th>辿り着けなかったもの</th></tr>
+<tr><td>
+・熱田さんのチーフ野遊びオフィサー就任リリース（2024年12月1日）
+<span class="u"><a href="https://prtimes.jp/main/html/rd/p/000000063.000026928.html">https://prtimes.jp/main/html/rd/p/000000063.000026928.html</a></span>
+・野遊びチームの求人対談（Through Me・2024年12月18日）
+<span class="u"><a href="https://throughme.jp/recruit_a0_noasobi_202412/">https://throughme.jp/recruit_a0_noasobi_202412/</a></span>
+・牧さんのインタビュー「野遊びを仕事にする。未来の里山をつくる」
+<span class="u"><a href="https://educere-jp.com/goodnature/a-zero-inc/">https://educere-jp.com/goodnature/a-zero-inc/</a></span>
+・熱田さんご自身のサイト（あつたや）
+<span class="u"><a href="http://atsutaya.com/about">http://atsutaya.com/about</a></span>
+</td><td>
+・野遊びとして<strong>何ができるのかの一覧</strong><br>
+・<strong>どなた向けなのか</strong><br>
+・<strong>料金</strong><br>
+・<strong>申し込みの方法</strong><br>
+・これまで何をやってこられたのかの<strong>記録</strong><br>
+・<strong>参加された方の声</strong>
+</td></tr>
+</table>
+</div>
+
+<p>外から見える野遊びは、<strong>明確に申し込めるサービスとして提示されているものがない</strong>状態、という検索結果でした。</p>
+
+<h3>野遊びが、いまどこに置かれているか</h3>
+
+<p>事業・サービスの一覧（17件）を拝見しましたが、その中に野遊びのページが見当たりませんでした。</p>
+
+<p>視察プログラムのページにも、<strong>「野遊び」も「熱田さん」も出てきませんでした。</strong>年に1,000人以上の方が訪れる入口に、野遊びの名前がない状態です。</p>
+
+<p>一方で、野遊びは別のところには確かに存在しています。熱田さんの役職名として、2027年の宿泊事業に向けた中核として、そして牧さんが熱を持って語られるテーマとして。</p>
+
+<p>野遊びの位置づけについては、求人記事のなかで、こう書かれていました。</p>
+
+<div class="note">
+<p style="margin-top:0">「エーゼログループ」は2027年に宿泊施設を開業する予定で、<strong>野遊びチームは宿泊事業の中のアクティビティ部門</strong>という位置づけになります。</p>
+<p style="margin-bottom:0">（<a href="https://throughme.jp/recruit_a0_noasobi_202412/">Through Me・野遊びチーム求人対談</a>／PR TIMESの就任リリースにも「アクティビティ部門の強化」とあります）</p>
+</div>
+
+<p><strong>ただ、外から拝見していると、それ以上のものに見えました。</strong></p>
+
+<p>森の事業、田んぼの事業、うなぎの事業は、それぞれが出口を持っており、<strong>野遊びはエーゼロさんの各事業の核、橋渡しになる存在のように見えます。</strong>身体を使った体験をした人が、実際に各事業を自分ごととして捉えられる気がしています。</p>
+
+<p>ただ、この状態だと情報が少なく、<strong>興味を持った方が行動に移すのにハードルが高そうです。</strong>そこで、それを一つの出口に落として商品にする ── というのが、次の章（調べて分かったこと）の話になります。</p>
+
+<h3>外からは判別できなかったこと</h3>
+<p>野遊びと、各事業との関係ですが、<strong>「はじめて情報を得たお客様」という前提のAI</strong>からは、以下のような意見が寄せられました。</p>
+<ul>
+<li>ビオ田んぼクラブやいちご狩りは、野遊びに含まれるのかどうか</li>
+<li>うなぎ食べ継ぐプロジェクトとは、どう繋がっているのか</li>
+<li><strong>Reml Behn の養蜂事業と、蜂獲り師でもある熱田さんは、どう関わっておられるのか</strong></li>
+<li>視察・研修事業に、野遊びのメニューが載る予定があるのか</li>
+</ul>
+
+<h3>Through Me について</h3>
+<div class="card">
+<p style="margin-top:0">note に定期発信すべきか、というお話がありました。調べていて気づいたことをお伝えします。</p>
+<p><strong>Through Me は、公開されている記事一覧とWordPressの公開投稿情報を確認した範囲では、2025年11月17日の記事を最後に、新しい記事が公開されていないように見受けられました。</strong>2026年以降の公開投稿も確認できませんでした。</p>
+<p>また、サイト上で利用者から見えるSNS導線は Facebook のみでした。メールマガジンの登録導線やサイト内検索欄は確認できませんでした。<strong>RSSフィード自体は存在しますが、サイト上には案内や購読導線が見当たりませんでした。</strong></p>
+<p>これは、掲載する媒体を選びたいというお話ではなく、<strong>現在の媒体だと書き続ける材料と手が続かないため、SEO対策が整っていて比較的簡単に投稿できるもの（note）を検討されている</strong>、ということだったのでしょうか。</p>
+<p style="margin-bottom:0">そういった検討のご相談であったと仮定して、以下に3つ並べてみました。なお、いずれにしろ、<strong>記事や材料が自動的に蓄積される仕組みは事前に必要かと考えます。</strong></p>
+</div>
+
+<div class="scroll">
+<table>
+<tr><th>選択肢</th><th>メリット</th><th>デメリット</th></tr>
+<tr>
+<td><strong>① Through Me を続ける</strong></td>
+<td>エーゼロさん自身の記録・検索資産として残る／事業間を回遊させやすい／デザインと申込導線を自由に設計できる</td>
+<td>現状は再訪・購読の導線が弱い／新しい読者へ自然には届きにくい／WordPressの保守と編集体制が要る</td>
+</tr>
+<tr>
+<td><strong>② note を主媒体にする</strong></td>
+<td>投稿が容易／note内の検索・ハッシュタグ・おすすめ・フォロー通知で出会いを作れる／反応が見える</td>
+<td>読者との関係と検索評価が note 側に蓄積する／他事業や申込先へ移動しにくい／プラットフォームに依存する／入口がさらに増える</td>
+</tr>
+<tr>
+<td><strong>③ Through Me ＋ note</strong></td>
+<td>本文と記録は Through Me に蓄積し、note の発見・通知機能を入口として使える／媒体依存を分散できる／全文の重複を避けられる</td>
+<td>2媒体の運用が必要／note だけ読んで本編へ移らない場合がある／公開順・担当・計測方法のルールが要る</td>
+</tr>
+</table>
+</div>
+
+<div class="card acc">
+<p style="margin-top:0">現時点では、Through Me を閉じて note へ移るよりも、<strong>役割を分けて小さく併用する方法</strong>が合っているように思います。</p>
+<p style="margin-bottom:0"><strong>Through Me は「蓄積する場所」、note は「新しい読者と出会う場所」、野遊びの案内ページは「問い合わせ・申込みへ進む場所」</strong>と分けます。</p>
+</div>
+
+<div class="flow">
+<div class="b"><b>Through Me</b><span>記事本編・実施記録・参加者の声・成果データ</span></div>
+<div class="ar">↓</div>
+<div class="b"><b>note</b><span>記事の背景・編集後記・要点・問いかけ</span></div>
+<div class="ar">↓</div>
+<div class="b"><b>野遊びの案内ページ</b><span>体験メニュー・問い合わせ・申込み</span></div>
+</div>
+
+<h4>note について、一点だけ補足します</h4>
+<p>note には、検索・ハッシュタグ・おすすめ・フォロー通知など、<strong>記事を見つけてもらうための仕組み</strong>があります。ただし、note へ投稿するだけで検索順位が上がるわけではなく、記事の独自性、内容、タイトル、そして検索する方が知りたいこととの一致が必要です。</p>
+
+<p>また、<strong>同じ全文を Through Me と note の両方に載せる方法はお勧めしません。</strong>同じ内容が複数のURLに存在すると、検索エンジンがどちらを代表として扱うかを選びます。note 側が代表になると、Through Me に検索評価が蓄積しない可能性があるためです。</p>
+
+<div class="note">
+<p style="margin-top:0"><strong>note に置くとよさそうな中身</strong></p>
+<p style="margin-bottom:0">なぜこの記事を作ったか／取材や体験で印象に残った一言／写真1〜3枚／本編の要点3つ／Through Me の本編リンク／野遊びやエーゼロさんに関する問いかけ<br>
+「更新しました。本編はこちら」だけにせず、<strong>note 単体でも読む意味のある記事</strong>にします。</p>
+</div>
+
+<h4>まずは1本で試す</h4>
+<p>大きな媒体の移行ではなく、<strong>記事1本で比較してみる</strong>のが安全だと考えています。</p>
+<ol>
+<li>Through Me に野遊びの記事本編を1本公開</li>
+<li>同じ日に note へ、背景・編集後記・要点を<strong>別記事として</strong>公開</li>
+<li>note → Through Me → 野遊びの案内ページ、とリンクをつなぐ</li>
+<li>Facebook でも共有</li>
+<li>30日間、note の反応／note から Through Me への移動／案内ページへの移動／問い合わせや再接触を確認</li>
+<li>続ける・直す・やめるを判断</li>
+</ol>
+<p style="margin-bottom:0">ここで確かめたいのは閲覧数そのものではなく、<strong>野遊びやエーゼロさんとの「次の関係」が生まれたかどうか</strong>です。</p>
+</section>
+
+<section id="s4">
+<h2>調べて分かったこと</h2>
+<p>自然体験を事業にしている国内外の会社を調べました。</p>
+
+<div class="card acc">
+<p class="big" style="margin-top:0">このたびの結果で出たのは、収益の型を決めているのは<br>「何をやるか」ではなく「誰に売るか」というものでした。</p>
+<p style="margin-bottom:0">売る相手が変われば、見せ方も、価格も、<strong>何を証拠として示すかも</strong>、まるごと変わっていました。</p>
+</div>
+
+<div class="scroll">
+<table>
+<tr><th>型</th><th>例</th><th>何を証拠として見せているか</th></tr>
+<tr><td>ブランド型</td><td>スノーピーク、モンベル、REI</td><td>思想と、会員の数</td></tr>
+<tr><td>体験販売型</td><td>南信州観光公社、Intrepid Travel</td><td>現地の人の顔と、参加者のレビュー</td></tr>
+<tr><td>宿泊型</td><td>Under Canvas</td><td>写真と、余白</td></tr>
+<tr><td>デジタル型</td><td>YAMAP、AllTrails</td><td>利用者の数</td></tr>
+<tr><td><strong>教育・研修型</strong></td><td><strong>キープ協会、NOLS、Tinkergarten</strong></td><td><strong>成果のデータと、指導者の資格</strong></td></tr>
+</table>
+</div>
+
+<h3>もう一つ、見つからなかったもの</h3>
+<div class="card">
+<p style="margin-top:0">調べた範囲では、<strong>「自分で獲って、さばいて、食べる」を商品にしている事業者が見つかりませんでした。</strong></p>
+<p style="margin-bottom:0">ギアの販売、高単価の宿泊、リーダーシップ教育、予約プラットフォーム ── どれも活況ですが、熱田さんがやっておられることと同じものは、まだ一つも見つかっていません。<br>
+<strong>これは、真似のできなさの裏返しだと受け取りました。</strong></p>
+</div>
+
+</section>
+
+<section id="s5">
+<h2>最初のお客さまを「企業・団体の研修」と仮置きしました</h2>
+
+<p>「調べて分かったこと」と合わせて、先日、個人向けよりも企業や団体のほうが利益となりそうとのお話があったと思いますので、そこを仮の出発点として置いてみます。研修内容に「野遊び」を追加希望されるかどうかはお客さま次第ではありますが、<strong>そう置くと条件が揃っているように感じました。</strong></p>
+
+<div class="card">
+<h4 style="margin-top:0">① 単価が高く、少人数で成立する</h4>
+<p>視察プログラムのページを拝見しました。<strong>半日4時間132,000円、座学＋1テーマ2時間77,000円、個別テーマ1時間55,000円</strong>と、いずれも10名までのプランが並んでいます。そして<strong>「毎年1000人以上が視察研修に訪れています」</strong>と書かれていました。</p>
+<p>1名あたりに直すと、個人向けを何百人集める形とは、成り立ちが違うように見えます。</p>
+
+<h4>② 集客をゼロから作らなくていい</h4>
+<p>同じページに<strong>「希望のテーマに合わせての視察も可能です」</strong>とありました。テーマ例として挙げられているのは、ローカルベンチャー、地域資源活用、事業創出、官民連携、六次産業化（農/林/漁）です。</p>
+<p>つまり、<strong>テーマを加える仕組みはすでにあって、そこに野遊びが載っていない</strong>、という状態にお見受けしました。新しく何かを起こすというより、<strong>すでにある枠に一つ足す</strong>形になるのではないでしょうか。</p>
+<p>年に1,000人の方が、いま野遊びに触れないまま帰っておられるのでしょうか。</p>
+
+<h4>③ 次に売るための材料が貯まりやすい</h4>
+<p style="margin-bottom:0">企業研修は報告が前提になる場ですので、参加された方の学びが言葉になりやすい。<strong>一回やるごとに、次の一回が売りやすくなるかと思います。</strong></p>
+</div>
+
+<h3>野遊びを単体の商品ではなく、すべての研修に組み込むとよいと考える理由</h3>
+
+<div class="note">
+<p style="margin-bottom:0">※ ただし、サービスを提供される側のマンパワーも必要になりますので、<strong>すべての研修とするのは非現実的かもしれません。</strong></p>
+</div>
+
+<p>私なりに感じたのは、以下のようなことです。</p>
+
+<div class="card acc">
+<p class="big" style="margin:0">野遊びとは、「未来の里山」という理念と、<br>エーゼロさんが手がけておられる事業とを、<br>頭ではなく心身に落とし込むための<br>きっかけ ── 回路なのではないか</p>
+</div>
+
+<p>牧さんが仰っていた解像度やセンサーは、本を読んで移るものではなく、<strong>身体と心を通してしか体感できない</strong>のではないでしょうか。子孫のために考える思考回路も、説明されて身につくものではなく、自分で獲って食べるなど、<strong>野遊びを体感しないと身に染みては分からない</strong>ものなのではないかと思います。だとすれば、野遊びは単体の商品というより、<strong>どの研修にも一度は通しておきたい部分</strong>になります。</p>
+
+<p>もしそうだとすれば、企業が研修に費用を払うのは、ただ珍しい体験のためではありません。<strong>「エーゼロさんの考え方を、身体で受け取る時間」</strong>を買うことになります。ここは、他社が真似のしようがない部分だと思います。</p>
+
+<div class="note">
+<p style="margin-bottom:0">しかし、この考えが見当違いであったり、「単体」のみの商品として「野遊び」を扱いたいというお話もあろうかと思います。<strong>あくまでも一案として受け止めていただけますと幸いです。</strong></p>
+</div>
+
+<h3>一方で、「単体」としてのみ扱う場合でも</h3>
+
+<p><strong>必要になるものは、変わらないように思います。</strong></p>
+
+<p>むしろ、単体の商品にするほうが、<strong>野遊びそのものが選ばれる理由</strong>を用意しなければなりません。ほかのプログラムに含める形であれば、研修全体の説明のなかで伝わる部分もありますが、単体で並んだときには、「これは何で、どなたに向けたもので、何が得られるのか」を<strong>野遊び自身が説明することになります。</strong></p>
+
+<p>ですので、どちらを選ばれる場合でも、次の二つは先に用意しておく必要があると考えています。</p>
+
+<div class="card acc">
+<ol style="margin-bottom:0">
+<li><strong>野遊びとは何かを、一枚で言えるようにしておくこと</strong></li>
+<li><strong>何を学べるのか／誰が教えるのか／安全はどうか／参加された方がどう変わったのかを、示せるようにしておくこと</strong></li>
+</ol>
+</div>
+
+<p style="margin-bottom:0">次の章は、この二つ目についてのお話です。</p>
+</section>
+
+<section id="s6">
+<h2>記録という条件</h2>
+
+<p>例えば研修として売るのであれば、外せない条件が付いてくるように見えます。調べていて、これがとても大きいと感じた点です。</p>
+
+<div class="card acc">
+<p class="big" style="margin-top:0">野外教育を企業や学校に売っている団体は、「成果のデータ」を出していました</p>
+<ul>
+<li>何を学べるのか</li>
+<li>誰が教えるのか</li>
+<li>安全対策と保険はどうなっているのか</li>
+<li>参加された方がどう変わったのか（数字と、その人の言葉で）</li>
+</ul>
+<p style="margin-bottom:0">など</p>
+</div>
+
+<div class="note">
+<p style="margin-top:0">この分野は全体として、体験の価値を数字で示すのが難しい分野でもあるように見えます。それでも、うまくいっている団体は、そこをあきらめずに<strong>測り、可視化を続けて</strong>いました。</p>
+<p style="margin-bottom:0">難しいことですが、<strong>測れるようにできれば、それ自体がそのまま強みになる領域だ</strong>とも感じました。</p>
+</div>
+
+<h3>記録は、後からさかのぼって取りにくいものです</h3>
+
+<p><strong>体験の前に何を思っていたかは、その日を過ぎると失われます。</strong>参加された方が「どう変わったか」を語るには、変わる前を知っている必要があるためです。</p>
+
+<p>事前の聞き取りは5分もかかりませんが、取り逃すと、<strong>その回のデータは半分という結果になりそうです。</strong></p>
+
+<h3>現在、記録の型はおありでしょうか</h3>
+
+<p>野遊び事業では、すでにそういった記録の型をお持ちでしょうか。</p>
+
+<p>もし無く、今後を研修としてお考えになるのであれば、最初に決めておきたいのは、<strong>実施のたびに何を記録するかという「型」</strong>だと考えています。項目さえ決めてあれば、書く手間はほとんど変わらないのに、<strong>一年後にはそのまま提案書にも研修資料にも使える</strong>のではないかと考えます。</p>
+
+<div class="card acc">
+<p style="margin-top:0">そして、<strong>順番を逆にする方法</strong>も活かせるのではないかと思っています。</p>
+<p style="margin-bottom:0"><strong>先に提案書や研修資料の姿をイメージして、そこから逆算して記録表を作る</strong>やり方です。「最後に何を見せたいか」が決まっていれば、取るべき項目は自然に決まります。</p>
+</div>
+
+<h3>記録が回りはじめると、こうなる可能性が高まります</h3>
+<ul>
+<li>成果のデータが貯まる → <strong>研修が選ばれるようになる／助成金などの申請にも活用しやすくなる</strong></li>
+<li>写真と言葉が貯まる → <strong>Through Me や YouTube の素材が、発信のために別途撮らなくても揃う</strong></li>
+<li>参加された方の名簿ができる → <strong>「卒業生」という関係がつくれる</strong></li>
+<li>2027年、宿泊事業が立ち上がるとき、<strong>「ここで何ができる場所なのか」を語れる中身が既にある</strong></li>
+</ul>
+<p>など</p>
+
+<h3>「参加された方」から「卒業生」へ</h3>
+
+<p>研修や視察ですが、<strong>現在の繋がりの仕組みはどのようなものでしょうか。</strong></p>
+
+<p>野外教育の分野で長く続いている団体は、<strong>受講した方が「卒業生」として残り、寄付や紹介、再受講で事業を支えている</strong>様子が見受けられます。受けた人が、次の人を連れてくる構造ともなっているようです。</p>
+
+<p><strong>「参加者」と呼ぶか「卒業生」と呼ぶかで、関係の位置が変わります。</strong>参加者は一度きりのお客さまですが、<strong>卒業生はこちら側の人</strong>という感覚が養えそうです。</p>
+
+<ul>
+<li><strong>企業研修なら</strong> ── 受けたご担当者が、翌年も社内で推してくださったり、別の部署に広げてくださったり。</li>
+<li><strong>行政視察なら</strong> ── 視察に来られた自治体の方が、地元で同じことを始めるときの相談先になりえます。</li>
+</ul>
+
+<p>これは、牧さんが仰っていた<strong>「どんぐり脳をマジョリティにしていく」</strong>というお話と、最終的には同じことを指しているのではないかと思いました。</p>
+
+<div class="card">
+<p style="margin-top:0"><strong>研修は一回の売上ですが、卒業生は、増えていく仲間です。</strong></p>
+<p style="margin-bottom:0">そして卒業生の名簿を作るために必要なのが、記録です。<strong>いつ、誰が来て、何を受け取っていったか。</strong>それが残っていなければ、どんなに良い時間を過ごしていただいても、関係はその日で終わってしまいそうです。</p>
+</div>
+
+<p>しまんと分校ゼミでも「ゼミ生」と呼び合い、その場で初めて出会った人同士が、ゼミ受講後も緩やかに繋がることができています。企業研修であれば、<strong>まったく関係性のない二つの企業を受け入れて交流を促進する</strong>という試みも楽しそうだと、考えが膨らみます。</p>
+
+<h3>なぜ、今年度なのか</h3>
+<div class="card">
+<p style="margin-top:0">熱田さんの就任リリース（2024年12月1日）に<strong>「3年後の宿泊施設オープンに向けて」</strong>とあり、野遊びチームの求人記事には<strong>「2027年に宿泊施設を開業する予定」</strong>と書かれていました。そこから逆算すると、こう見えます。</p>
+<div class="scroll">
+<table>
+<tr><th>時期</th><th>必要なこと</th></tr>
+<tr><td><strong>2026年度（今年度）</strong></td><td>素材の整理・野遊びの定義・メニュー化・<strong>記録の開始</strong></td></tr>
+<tr><td>2027年度</td><td>宿泊事業の立ち上げ・集客</td></tr>
+</table>
+</div>
+<p>宿泊が立ち上がるときに「ここで何ができるのか」を語れる状態になっているには、<strong>今年度のうちに土台を作っておく必要があるように見えます。</strong></p>
+<p>今年度の実施分を記録し、整理しておけば、2027年を迎えたときには、<strong>語れる中身も、見ていただける実績も、すでに手元にある状態</strong>で始められるのではないかと思います。</p>
+<p style="margin-bottom:0;font-size:13.5px;color:var(--mute)">※ すでにご準備を進めておられるようでしたら、こちらの杞憂です。差し出がましいことを申し上げていましたら、申し訳ありません。</p>
+</div>
+
+<h3>そして、熱田さんご自身が、そのまま「証明」になります</h3>
+
+<p>先ほどの4項目のうち、研修を選ぶ側が検討項目にするのは<strong>「誰が教えるのか」</strong>でした。熱田さんの場合、資格などで端的にお伝えできるものではないものの、<strong>熱田さんの自然体そのものが、一般的な感覚からすると常識を超えて刺激的</strong>なので、文章でも映像でも伝わりやすいと考えます。</p>
+
+<p>薬剤を使わずにオオスズメバチの巣を生け捕りにされること。4歳から蜂獲りを仕込まれたこと。生きたコオロギを餌に素手の上でオオスズメバチを待ち、食べている間に体へリボンをくくり付け、そのリボンを追って巣を突き止める「ハチ追い」。</p>
+<span class="u">（「ハチ追い」の手順は、岡山経済新聞 2015年10月5日の記事より　<a href="https://okayama.keizai.biz/headline/277/">https://okayama.keizai.biz/headline/277/</a>）</span>
+
+<p><strong>書けば書くほど、実際に見てみたい、という気持ちになります。</strong></p>
+
+<p>また、熱田さんが動いたり話している映像は、それだけで人が見るものになると思います。<strong>文章でも映像でも引き付ける方なのですが、情報が少なく、一か所で見られていないように思います。</strong></p>
+
+<p>そして、これは新しく企画を立てる話とも違い、研修や視察を記録していれば、<strong>その過程で必ず撮ることになる映像や文章</strong>となりえます。</p>
+
+<ul>
+<li>研修を売るときは <strong>「誰が教えるのか」の証明</strong>になる</li>
+<li>発信するときは、<strong>そのままコンテンツ</strong>になる</li>
+<li>どちらも、<strong>記録のついでに手に入る</strong>のではないでしょうか</li>
+</ul>
+
+<p style="margin-bottom:0">Through Me なのか note なのか、その両方を活用するのか。いずれにしても、<strong>何を載せるかで悩まなくてよくなる</strong>のも、ここだと思っています。書く材料を探すのではなく、<strong>貯まったものから出す形として仕組み化する</strong>のが理想的かなと感じています。</p>
+</section>
+
+<section id="s7">
+<h2>着手の順番</h2>
+
+<p>土台から順に積むほうが、結果的に速いという印象を受けています。</p>
+
+<ol class="steps">
+<li>
+<h4 style="margin-top:0">素材の棚卸し</h4>
+<p style="margin-bottom:0">写真・実施記録・参加された方の声・熱田さんの技術資料が、<strong>いま何がどこにあるか</strong>を一覧にする。熱田さんのサイトにある既存のコンテンツも含めて整理する。<br>
+<em>成果物：素材一覧（何があり、何が足りないかが分かる状態）</em></p>
+</li>
+<li>
+<h4>記録の型を決める</h4>
+<p style="margin-bottom:0">次の一回から使える記録シートを作る。<strong>実施より先に必要。</strong>あわせて、参加された方に<strong>許諾をいただく形を入れた名簿</strong>を用意。<strong>のちに卒業生の名簿となるよう考慮。</strong><br>
+<em>成果物：技法の記録シート／参加者の記録シート／許諾の型</em></p>
+</li>
+<li>
+<h4>「野遊び」の定義と、できることの一覧</h4>
+<p style="margin-bottom:0">野遊びとは何を指すのかを1枚で定義し（皆さんに直していただく前提の案として）、「こういうことができます」を整理する。<br>
+<em>成果物：野遊びメニュー原案（視察・研修に載せられる形）</em></p>
+</li>
+<li>
+<h4>受け皿をつくる</h4>
+<p style="margin-bottom:0">公式サイトに置く野遊びの1ページを設計・制作する。既にある「視察・研修事業」の中にメニューを加える形か、事業一覧に1ページ置く形か、二つあり得るのではないか。<strong>前者のほうが早く、後者のほうが受け皿として強い印象。</strong><br>
+<em>成果物：公開できる1ページ</em></p>
+</li>
+<li>
+<h4>発信と受け皿を、小さくつないで試す</h4>
+<p style="margin-bottom:0">記事本編と実施記録は Through Me に蓄積し、note には記事の背景・編集後記・読みどころなど、<strong>note で読む意味のある別角度の記事</strong>を置く方法を小さく試す。note から Through Me へ、Through Me から野遊びの案内・問い合わせ先へつなぎ、<strong>どこから「次の関係」が生まれたか</strong>を確認する。<strong>①〜②ができていれば、発信のたびに素材を探すところから始めずに済む印象。</strong><br>
+<em>成果物：媒体ごとの役割表／記事テンプレート／公開・計測の運用設計</em></p>
+</li>
+</ol>
+
+<div class="card">
+<p style="margin-top:0"><strong>①②ができていれば、サイトもLPも研修資料も提案書も、同じ素材から展開できると考えます。</strong></p>
+<p style="margin-bottom:0">私ができるのは、<strong>散らばっているものを集めて、何を伝えるかを決めて、形にして、外に出して、回し続けるところまで</strong>です。意匠の作り込みが必要な段階になれば、専門のデザイナーと組む形をご提案します。いまの野遊び事業に必要なのは、その前段ではないかと考えています。</p>
+</div>
+
+<div class="note" style="margin-top:34px">
+<p style="margin-top:0">以上、ご担当の方もおられるところで差し出がましい提案となりましたが、<strong>先日の意見交換会より思い至った資料が、本資料となります。</strong></p>
+<p style="margin-bottom:0">引き続き、どうぞよろしくお願いいたします。</p>
+</div>
+</section>
+
+<footer>
+野遊び事業 現状整理と、最初の一歩のご提案<br>
+2026年8月　酒井 紀子（酒井梟）<br>
+<a href="https://tetiteti36-wq.github.io/portfolio/">https://tetiteti36-wq.github.io/portfolio/</a><br><br>
+本資料は2026年8月13日時点の公開情報のみに基づいた、酒井の仮説による資料です。内部の事情を存じ上げないための誤りは必ずありますので、お気づきの点をご指摘いただけますと幸いです。
+</footer>
+</div>
+
+<script>
+/* ▼ 合言葉を変えるときは、この1行だけ書き換えてください（小文字で入力されます） */
+var PASSWORD="noasobi";
+
+function unlock(){
+  document.body.classList.remove('locked');
+  try{sessionStorage.setItem('a0gate','1')}catch(e){}
+}
+function tryUnlock(){
+  var v=document.getElementById('pw').value.trim().toLowerCase();
+  if(v===PASSWORD.toLowerCase()){unlock();}
+  else{
+    document.getElementById('err').textContent='合言葉が違うようです';
+    document.getElementById('pw').value='';
+    document.getElementById('pw').focus();
+  }
+}
+try{ if(sessionStorage.getItem('a0gate')==='1'){document.body.classList.remove('locked');} }catch(e){}
+document.getElementById('go').addEventListener('click',tryUnlock);
+document.getElementById('pw').addEventListener('keydown',function(e){
+  if(e.key==='Enter'){tryUnlock();}
+});
+if(document.body.classList.contains('locked')){document.getElementById('pw').focus();}
+
+var btns=document.querySelectorAll('nav button');
+var secs=document.querySelectorAll('section');
+for(var i=0;i<btns.length;i++){
+  btns[i].addEventListener('click',function(){
+    for(var j=0;j<btns.length;j++){btns[j].setAttribute('aria-selected','false');}
+    for(var k=0;k<secs.length;k++){secs[k].classList.remove('on');}
+    this.setAttribute('aria-selected','true');
+    document.getElementById(this.dataset.t).classList.add('on');
+    window.scrollTo(0,0);
+  });
+}
+</script>
+</body>
+</html>
