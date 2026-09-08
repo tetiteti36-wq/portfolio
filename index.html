@@ -68,6 +68,7 @@
       <span class="nav-name">酒井 紀子<span class="nav-name__yago">（屋号 酒井梟）</span></span>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#method">Method</a>
         <a href="#works">Works</a>
         <a href="#contact">Contact</a>
       </div>
@@ -138,8 +139,45 @@
         <div class="skill-card"><i class="fas fa-users"></i><h3>コミュニティデザイン</h3><p>行政・教育・地域</p></div>
         <div class="skill-card"><i class="fas fa-code"></i><h3>技術スタック</h3><p>Cloudflare / GitHub / GAS ほか</p></div>
         <div class="skill-card"><i class="fas fa-palette"></i><h3>イラスト・キャラクター</h3><p>点描画・キャラクターデザイン</p></div>
+        <div class="skill-card"><i class="fas fa-file-invoice"></i><h3>事務・バックオフィス</h3><p>業務設計・書類整備・データ化</p></div>
+        <div class="skill-card"><i class="fas fa-user-shield"></i><h3>情報管理・機密対応</h3><p>誓約書・持出記録・消去手順</p></div>
       </div>
       <p class="skills__note">※ ここに挙げているのは一例です。書かれていないことも、まずはご相談ください。</p>
+    </div>
+  </section>
+
+
+  <!-- 仕事の進め方 -->
+  <section class="section method" id="method">
+    <div class="container">
+      <h2 class="section__heading">Method</h2>
+      <p class="about__text">
+        制作でも事務でも、やっていることは同じです。<br class="pc-only">
+        散らばっている情報を構造化し、必要なときに取り出せる状態にしてから、手を動かします。
+      </p>
+      <div class="about__values">
+        <div class="value-item">
+          <i class="fas fa-folder-tree"></i>
+          <div>
+            <strong>記録を構造化する ｜ Obsidian</strong>
+            <span>案件・日誌・知識を一つのVaultに集約し、フォルダとリンクで構造化しています。打ち合わせの経緯も、なぜその判断をしたかも、後から辿れる状態で残ります。担当が入れ替わる現場や、引き継ぎのある仕事に強い進め方です。</span>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-sliders"></i>
+          <div>
+            <strong>AIを目的で使い分ける</strong>
+            <span>Claude Code（実装・調査）、Antigravity（複数AIの統括）、NotebookLM（渡した資料の中だけで要約・裏取り）を切り替えて使っています。とくにNotebookLMは、手元の資料に書かれていることだけを答えさせる使い方なので、事実確認が必要な仕事で効きます。</span>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-file-shield"></i>
+          <div>
+            <strong>AIに覚えさせず、ファイルに残す</strong>
+            <span>AIは前回の会話を記憶しません。そのため判断や前提はすべてファイルに書き、AIが毎回そこを読んでから作業に入る形にしています。人が代わってもAIが代わっても続くことを、設計の前提に置いています。</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -150,6 +188,7 @@
       <div class="works-tabs">
         <button class="works-tab active" data-filter="all">すべて <span class="tab-count" id="count-all"></span></button>
         <button class="works-tab" data-filter="web">🌐 Web・テック <span class="tab-count" id="count-web"></span></button>
+        <button class="works-tab" data-filter="office">🗂️ 事務・業務設計 <span class="tab-count" id="count-office"></span></button>
         <button class="works-tab" data-filter="design">🎨 デザイン <span class="tab-count" id="count-design"></span></button>
         <button class="works-tab" data-filter="writing">✍️ ライティング <span class="tab-count" id="count-writing"></span></button>
         <button class="works-tab" data-filter="community">🤝 地域活動 <span class="tab-count" id="count-community"></span></button>
@@ -158,6 +197,26 @@
       <div class="works__grid" id="works-grid">
 
         <!-- 04 十和ガイド -->
+        <!-- 18 しまんと農楽里 -->
+        <a href="https://shimanto-norari.tetiteti36.chatgpt.site/" target="_blank" rel="noopener" class="work-card" data-category="web">
+          <div class="work-card__preview">
+            <iframe src="https://shimanto-norari.tetiteti36.chatgpt.site/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+            <div class="preview-overlay"></div>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__header">
+              <span class="work-card__cat cat-web">🌐 Web</span>
+              <span class="work-card__number">18</span>
+            </div>
+            <h3 class="work-card__title">一般社団法人しまんと農楽里 紹介サイト</h3>
+            <p class="work-card__desc">新規就農の受け入れと小規模農家の経営支援を行う法人（四万十町昭和）。「急ぎで配れる資料がほしい」という状況で作られたPDF1本を、名刺代わりに渡せるWebページの形に整えました。事業内容・法人概要・連絡先を1枚に集約。<strong>手元にある紙の資料をそのまま活かしてWebにする</strong>進め方の実例です。</p>
+            <div class="work-card__tags">
+              <span>手元素材のWeb化</span><span>短納期</span><span>AI活用</span><span>地域農業</span>
+            </div>
+            <span class="work-card__link">サイトを見る <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
         <a href="https://genuine-sfogliatella-c53cd0.netlify.app/" target="_blank" rel="noopener" class="work-card" data-category="web">
           <div class="work-card__preview">
             <iframe src="https://genuine-sfogliatella-c53cd0.netlify.app/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
@@ -198,7 +257,7 @@
         </a>
 
         <!-- 03 育つ会とおわ 広報紙アーカイブ -->
-        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card" data-category="web">
+        <a href="https://morning-credit-7f7f.tetiteti36.workers.dev/" target="_blank" rel="noopener" class="work-card" data-category="web office">
           <div class="work-card__preview">
             <iframe src="https://morning-credit-7f7f.tetiteti36.workers.dev/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
             <div class="preview-overlay"></div>
@@ -238,7 +297,7 @@
         </a>
 
         <!-- 17 引継ぎガイドの型 -->
-        <a href="https://tetiteti36-wq.github.io/towa-houkago-hikitsugi/model/" target="_blank" rel="noopener" class="work-card" data-category="web">
+        <a href="https://tetiteti36-wq.github.io/towa-houkago-hikitsugi/model/" target="_blank" rel="noopener" class="work-card" data-category="web office">
           <div class="work-card__preview">
             <iframe src="https://tetiteti36-wq.github.io/towa-houkago-hikitsugi/model/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
             <div class="preview-overlay"></div>
@@ -298,7 +357,7 @@
         </a>
 
         <!-- 16 活動報告書のWeb公開 -->
-        <a href="https://tetiteti36-wq.github.io/kirin-kobato-2026/" target="_blank" rel="noopener" class="work-card" data-category="web">
+        <a href="https://tetiteti36-wq.github.io/kirin-kobato-2026/" target="_blank" rel="noopener" class="work-card" data-category="web office">
           <div class="work-card__preview">
             <iframe src="https://tetiteti36-wq.github.io/kirin-kobato-2026/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
             <div class="preview-overlay"></div>
@@ -435,6 +494,82 @@
           </div>
         </div>
 
+        <!-- O01 仕入帳の電子化（業務設計） -->
+        <div class="work-card" data-category="office">
+          <div class="work-card__preview work-card__preview--placeholder preview-office">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span>業務設計</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__header">
+              <span class="work-card__cat cat-office">🗂️ 事務・業務設計</span>
+              <span class="work-card__number">O01</span>
+            </div>
+            <h3 class="work-card__title">仕入帳の電子化 設計（建設業・社名非公開）</h3>
+            <p class="work-card__desc">数年分たまったまま止まっていた仕入帳を、社内で使ってきたExcelを活かしたまま動かすための設計。入力を始める前に、まず壊れない手順のほうを作りました。原本は退避してから触る／読み取ったデータは中間シートで検算してから貼る／既存の数式には手を入れない。2026年着手、進行中の案件です。</p>
+            <div class="work-card__tags">
+              <span>業務設計</span><span>経理事務</span><span>Excel</span><span>OCR・データ化</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- O02 機密書類の取り扱いルール整備 -->
+        <div class="work-card" data-category="office">
+          <div class="work-card__preview work-card__preview--placeholder preview-office">
+            <i class="fas fa-user-shield"></i>
+            <span>情報管理</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__header">
+              <span class="work-card__cat cat-office">🗂️ 事務・業務設計</span>
+              <span class="work-card__number">O02</span>
+            </div>
+            <h3 class="work-card__title">機密書類の取り扱いルール整備（外部委託を受ける側として）</h3>
+            <p class="work-card__desc">社外の人間に会社のデータを触らせる不安に対して、求められる前に自分から用意した一式です。秘密保持の誓約書、データ持出・返却の記録簿、外部サービス利用の申告書、書類の撮影と消去の手順。疑われない形を先に整えることを、条件ではなく前提にしています。</p>
+            <div class="work-card__tags">
+              <span>情報管理</span><span>機密保持</span><span>様式作成</span><span>リスク設計</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- O03 委託事業の運営事務 -->
+        <div class="work-card" data-category="office">
+          <div class="work-card__preview work-card__preview--placeholder preview-office">
+            <i class="fas fa-clipboard-check"></i>
+            <span>委託事業</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__header">
+              <span class="work-card__cat cat-office">🗂️ 事務・業務設計</span>
+              <span class="work-card__number">O03</span>
+            </div>
+            <h3 class="work-card__title">委託事業の運営事務（図書・公園機能の提供）</h3>
+            <p class="work-card__desc">四万十町で図書・公園機能を提供する活動を、委託事業として運営しています。契約、予算の執行、実績の報告までを年度で回す立場です。制度側が求める書式と、現場で実際に起きることの、両方が見える位置にいます。</p>
+            <div class="work-card__tags">
+              <span>委託事業</span><span>予算・実績報告</span><span>行政対応</span><span>年度処理</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- O04 謝金・領収書処理 -->
+        <div class="work-card" data-category="office">
+          <div class="work-card__preview work-card__preview--placeholder preview-office">
+            <i class="fas fa-receipt"></i>
+            <span>経理事務</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__header">
+              <span class="work-card__cat cat-office">🗂️ 事務・業務設計</span>
+              <span class="work-card__number">O04</span>
+            </div>
+            <h3 class="work-card__title">指導謝金・領収書の年度処理（令和7年度）</h3>
+            <p class="work-card__desc">地域の子ども向け教室の運営にともなう指導謝金の明細作成と、領収書の管理。年度単位で集計し、そのまま報告に使える形で保管しています。小さな金額を、あとから誰でも確認できる状態にしておく仕事です。</p>
+            <div class="work-card__tags">
+              <span>経理事務</span><span>明細作成</span><span>領収書管理</span><span>年度処理</span>
+            </div>
+          </div>
+        </div>
+
         <!-- 12 スマホサポーター -->
         <div class="work-card" data-category="community">
           <div class="work-card__preview work-card__preview--placeholder preview-community">
@@ -501,11 +636,11 @@
     const tabs = document.querySelectorAll('.works-tab');
     const cards = document.querySelectorAll('.work-card');
     function updateCounts() {
-      const categories = ['web', 'design', 'writing', 'community'];
+      const categories = ['web', 'office', 'design', 'writing', 'community'];
       document.getElementById('count-all').textContent = cards.length;
       categories.forEach(cat => {
         const el = document.getElementById('count-' + cat);
-        if (el) el.textContent = document.querySelectorAll(`.work-card[data-category="${cat}"]`).length;
+        if (el) el.textContent = document.querySelectorAll(`.work-card[data-category~="${cat}"]`).length;
       });
     }
     tabs.forEach(tab => {
@@ -514,7 +649,8 @@
         tab.classList.add('active');
         const filter = tab.dataset.filter;
         cards.forEach(card => {
-          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+          const cats = (card.dataset.category || '').split(' ');
+          card.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
         });
       });
     });
