@@ -71,6 +71,18 @@
   --jp-round: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
   --roman: "Cinzel", "Trajan Pro", "Times New Roman", serif;
 
+
+  /* --- ヒーローの位置（カンプ2026-09-08の実測値）---------------------
+     ここが唯一の出どころ。PC・スマホ横長版のどちらもこの変数を使う。
+     数値の根拠は .hero-rs のコメントを見ること */
+  --hero-strip-top: 4.07%;
+  --hero-rs-left: 4.11%;
+  --hero-rs-top: 31.83%;
+  --hero-rs-size: 34.1vw;
+  --hero-roman-top: 45.41%;
+  --hero-roman-width: 58.4%;
+  --hero-catch-top: 63.98%;
+
   --wrap: 1120px;
   /* チラシは写真も囲みもすべて直角。角丸にするのは「設備等」のような
      小さいラベルのピルだけ、という切り分けにしている */
@@ -393,13 +405,13 @@ table {
 .hero-strip {
   position: absolute;
   z-index: 2;
-  top: 3.4%;
+  top: var(--hero-strip-top);
   left: 0;
   right: 0;
   text-align: center;
   font-family: var(--roman);
   font-weight: 700;
-  font-size: clamp(.62rem, 2.42vw, 2rem);
+  font-size: clamp(.62rem, 2.58vw, 2rem);
   line-height: 1.2;
   letter-spacing: .22em;
   text-indent: .22em;
@@ -417,27 +429,31 @@ table {
 /* 巨大RS：カンプは TrajanPro-Bold 436pt（＝34.1vw）・x54〜636・y136 */
 .hero-rs {
   position: absolute;
-  /* 字送りを0にすると字の幅がカンプの45.5%とぴったり合う（Cinzelは
-     Trajanより細いので、詰めずに置くのが正解だった）。
-     top はブラウザで実測して、字の上端がカンプの15.8%に来る値に調整済み */
-  left: 3.8%;
-  top: 11.5%;
+  /* カンプ2026-09-08 実測：RSの行ボックス上端はヒーロー高の22.64%、左端4.11%、幅45.5%。
+     ただし書体が Trajan（ascender .985）→ Cinzel（ascender .976 / descender .371）に
+     替わっているため、line-height:1 では字の載る位置がずれる。
+     ベースラインがカンプと同じ72.56%に来る値を逆算して top:31.83%（ブラウザで実測）。
+     字送りは0。Cinzelは細いので詰めないほうが幅がカンプと合う。 */
+  left: var(--hero-rs-left);
+  top: var(--hero-rs-top);
   font-family: var(--roman);
   font-weight: 700;
-  font-size: 34.1vw;
+  font-size: var(--hero-rs-size);
   line-height: 1;
   letter-spacing: 0;
-  /* カンプPDFのグラフィックス状態が ca 0.55。実測値に合わせている */
+  /* カンプPDFのグラフィックス状態が ca 0.55 */
   color: rgba(255, 255, 255, .55);
   white-space: nowrap;
 }
 
 /* ワードマーク：カンプは x218〜529（中心29.2%）・y305〜485 */
 .hero-roman {
+  /* カンプ2026-09-08：1行目のベースラインが枠の 49.99%。
+     Cinzel のメトリクスで逆算して top:45.41%（実測） */
   position: absolute;
   left: 0;
-  top: 34.5%;
-  width: 58.4%;
+  top: var(--hero-roman-top);
+  width: var(--hero-roman-width);
   text-align: center;
   font-family: var(--roman);
   font-weight: 700;
@@ -483,10 +499,11 @@ table {
 
 /* カンプ：明朝30pt 白・中央・字送り +0.27em・y1242/1292（写真の上から62%） */
 .hero2-catch {
+  /* カンプ2026-09-08：ヒーロー②の高さに対して上端63.98%（前は60.7%）*/
   position: absolute;
   left: 0;
   right: 0;
-  top: 60.7%;
+  top: var(--hero-catch-top);
   text-align: center;
   font-family: var(--jp-mincho);
   font-weight: 500;
@@ -2221,22 +2238,24 @@ section {
 
 
 /* ==== 大村さん案：スマホでもPDF・PCと同じ横長のサイズ感にする ====
-   既定の版（スマホは縦長3:4）との比較用。本体CSSは変更していない */
+   既定の版（スマホは縦長3:4）との比較用。本体CSSは変更していない。
+   位置の数値は style.css の :root 変数をそのまま使うので、
+   カンプに合わせて直すときは style.css だけ直せばこちらにも効く */
 @media (max-width: 700px) {
   .hero  { aspect-ratio: 1280 / 860; }
   .hero2 { aspect-ratio: 1280 / 845; }
 
   .hero-rs {
-    left: 3.8%;
-    top: 11.5%;
+    left: var(--hero-rs-left);
+    top: var(--hero-rs-top);
     transform: none;
-    font-size: 34.1vw;
+    font-size: var(--hero-rs-size);
   }
 
   .hero-roman {
     left: 0;
-    width: 58.4%;
-    top: 34.5%;
+    width: var(--hero-roman-width);
+    top: var(--hero-roman-top);
   }
 
   .hero-roman .l1,
@@ -2244,7 +2263,7 @@ section {
   .hero-roman .l2 { font-size: 2.66vw; }
 
   .hero2-catch {
-    top: 60.7%;
+    top: var(--hero-catch-top);
     /* カンプの比率どおりだと375pxで8.8pxになり読めないので、
        下限だけ12.8pxで止めている。ここも合わせるかは大村さんに要確認 */
     font-size: clamp(.8rem, 2.34vw, 1.88rem);
