@@ -1172,6 +1172,22 @@ section {
   font-weight: 700;
 }
 
+/* 川ちゃん指摘（2026-09-13）：キャビンの「1棟4名様まで」の直下に注意書き */
+.feature-card .feature-advice {
+  margin-top: 10px;
+  padding: 9px 12px;
+  background: var(--blue-mist);
+  border-left: 3px solid var(--blue);
+  font-size: .82rem;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.feature-card .feature-advice strong {
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
 /* 川ちゃんの指摘（2026-09-13）：4名だと狭いので3名までを勧める。
    注意ではなく提案として読ませたいので、赤ではなく青系にしている */
 .price-advice {
@@ -2490,6 +2506,7 @@ body.locked #gate{display:flex}
           <svg class="ico feature-ico"><use href="#i-cabin" /></svg>
           <h3>独立した16棟の完全個室</h3>
           <p>約6畳の天然木フローリング。全室南向きで、陽当たりのいいお部屋です。1棟に4名様までお泊まりいただけます。</p>
+          <p class="feature-advice">※布団を敷き詰めると3名様でいっぱいになります。ゆったりお休みいただくなら、4名様は<strong>2棟に分けてのご利用</strong>がおすすめです。</p>
         </div>
         <div class="feature-card">
           <svg class="ico feature-ico"><use href="#i-shower" /></svg>
