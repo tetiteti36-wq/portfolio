@@ -2219,6 +2219,40 @@ section {
 .review-note span{opacity:.72;display:inline-block}
 @media(max-width:700px){.review-note{font-size:.72rem;text-align:left}}
 
+
+/* ==== 大村さん案：スマホでもPDF・PCと同じ横長のサイズ感にする ====
+   既定の版（スマホは縦長3:4）との比較用。本体CSSは変更していない */
+@media (max-width: 700px) {
+  .hero  { aspect-ratio: 1280 / 860; }
+  .hero2 { aspect-ratio: 1280 / 845; }
+
+  .hero-rs {
+    left: 3.8%;
+    top: 11.5%;
+    transform: none;
+    font-size: 34.1vw;
+  }
+
+  .hero-roman {
+    left: 0;
+    width: 58.4%;
+    top: 34.5%;
+  }
+
+  .hero-roman .l1,
+  .hero-roman .l3 { font-size: 3.67vw; }
+  .hero-roman .l2 { font-size: 2.66vw; }
+
+  .hero2-catch {
+    top: 60.7%;
+    /* カンプの比率どおりだと375pxで8.8pxになり読めないので、
+       下限だけ12.8pxで止めている。ここも合わせるかは大村さんに要確認 */
+    font-size: clamp(.8rem, 2.34vw, 1.88rem);
+    letter-spacing: .27em;
+    text-indent: .135em;
+  }
+}
+
   
 /* ==== 合言葉ゲート：この限定公開版にだけ入っています ==== */
 body.locked > *:not(#gate){display:none!important}
@@ -2258,8 +2292,8 @@ body.locked #gate{display:flex}
   </div>
 
   <div class="review-note">
-    <b>確認用のたたき台です（2026-09-13）</b> ／ 公式パンフレットのデザインをWebに展開したものです。
-    <span>ロゴ・キャッチコピー・配色・書体は、パンフレットから起こしています。写真は解像度が不足しているものに「要・元データ」と印を付けています。</span>
+    <b>確認用｜横長版（2026-09-13）</b> ／ スマホでもPDF・PCと同じ横長のサイズ感にした版です。
+    <span>ヒーローの比率・RSロゴ・キャッチの位置を、すべてPC側（＝パンフのカンプ）の値に揃えています。もう一方のURLは、スマホでは縦長に切った版です。</span>
   </div>
 
   <!-- ============ アイコン定義（表示されません） ============ -->
