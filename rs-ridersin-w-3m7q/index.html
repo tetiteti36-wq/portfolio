@@ -2249,6 +2249,38 @@ section {
   }
 }
 
+/* ==================================================================
+   見出しを灰色の帯の上下まん中に置く（2026-09-13 梟さん指示）
+   対象：共用スペース・ご利用料金。
+   もともと「section の上余白」＋「見出しの上余白」が二重になっていて、
+   見出しの上が下の約3倍空いていた（スマホ 88px／24px、PC 142px／44px）。
+   section の上余白を0にして、見出しの上下を同じ値にそろえる。
+   値はスマホ・PCとも、元の上下の合計を半分ずつに分けたもの。
+   目で見てずれていたら、--band-gap-adjust で見出しだけ上下に動かす。
+   メディアクエリより後ろに置いて、スマホ側の指定にも勝たせている。
+   ================================================================== */
+:root {
+  --band-gap: clamp(56px, 7.25vw, 93px);
+  --band-gap-adjust: 0px;
+}
+
+.common,
+.price {
+  padding-top: 0;
+}
+
+.common .sec-mark,
+.price .sec-mark {
+  padding-top: calc(var(--band-gap) + var(--band-gap-adjust));
+  padding-bottom: calc(var(--band-gap) - var(--band-gap-adjust));
+}
+
+/* ご利用料金は最後が文字の行（表示価格は全て税込みです）で、行の下に行間ぶんの
+   すき間が出る。そのぶん（実測3.8px）だけ下を詰めて、上下を同じにしている */
+.price .sec-mark {
+  padding-bottom: calc(var(--band-gap) - var(--band-gap-adjust) - 3.8px);
+}
+
 /* ==== 確認用の帯：この共有ファイルにだけ入っています。本番には含まれません ==== */
 .review-note{background:#221815;color:#fff;font-family:var(--jp-round);font-size:.8rem;
   line-height:1.7;padding:11px 20px;text-align:center;letter-spacing:.02em}
