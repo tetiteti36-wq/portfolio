@@ -2285,6 +2285,28 @@ section {
   padding-bottom: calc(var(--band-gap) - var(--band-gap-adjust) - 3.8px);
 }
 
+/* ==================================================================
+   スマホの改行調整（2026-09-13 梟さんがスマホで見ながら指示）
+   改行位置は index.html の <br class="br-sp">（スマホだけ有効）で決めている。
+   ================================================================== */
+/* 「調味料」と「電子レンジ」の間の「・」。スマホは改行で区切るので出さない */
+.sep-pc { display: inline; }
+
+/* 注意書きは左揃え（中央揃えだと行頭がそろわない） */
+.feature-card .feature-advice,
+.price-advice {
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .sep-pc { display: none; }
+
+  /* ※駐車・駐輪スペースは〜 は左揃え */
+  .cabin-note {
+    text-align: left;
+  }
+}
+
 /* ==== 確認用の帯：この共有ファイルにだけ入っています。本番には含まれません ==== */
 .review-note{background:#221815;color:#fff;font-family:var(--jp-round);font-size:.8rem;
   line-height:1.7;padding:11px 20px;text-align:center;letter-spacing:.02em}
@@ -2508,7 +2530,7 @@ body.locked #gate{display:flex}
     <div class="container">
       <div class="cabin-intro">
         <p>
-          四万十川のほとりに建つ、<strong>独立した16棟のキャビン</strong>。全室にシャワーと温水洗浄トイレを備えた完全個室です。<br class="br-sp">約6畳の天然木フローリングで、全室南向き。<br class="br-sp">玄関前に、屋根付きで駐輪できます。
+          四万十川のほとりに建つ<br class="br-sp"><strong>独立した16棟のキャビン</strong>。<br class="br-sp">全室にシャワーと温水洗浄<br class="br-sp">トイレを備えた完全個室<br class="br-sp">です。<br class="br-sp">約6畳の天然木フローリング<br class="br-sp">で、全室南向き。玄関前に<br class="br-sp">屋根付きで駐輪できます。
         </p>
         <p class="cabin-note">
           ※駐車・駐輪スペースは無料です。<br>
@@ -2540,12 +2562,12 @@ body.locked #gate{display:flex}
           <svg class="ico feature-ico"><use href="#i-cabin" /></svg>
           <h3>独立した16棟の完全個室</h3>
           <p>約6畳の天然木フローリング。全室南向きで、陽当たりのいいお部屋です。1棟に4名様までお泊まりいただけます。</p>
-          <p class="feature-advice">※布団を敷き詰めると3名様でいっぱいになります。ゆったりお休みいただくなら、4名様は<strong>2棟に分けてのご利用</strong>がおすすめです。</p>
+          <p class="feature-advice">※布団を敷き詰めると3名様でいっぱいに<br class="br-sp">なります。ゆったりお休みいただくなら、<br class="br-sp">4名様は<strong>2棟に分けてのご利用</strong>がおすすめ<br class="br-sp">です。</p>
         </div>
         <div class="feature-card">
           <svg class="ico feature-ico"><use href="#i-shower" /></svg>
           <h3>シャワー・温水洗浄トイレ付</h3>
-          <p>室内の金属の円筒の中が、洗面台とトイレとシャワールームになっています。<strong class="warn">※湯舟はありません</strong></p>
+          <p>室内の金属の円筒の中が、洗面台とトイレとシャワールームになっています。<br><strong class="warn">※湯舟はありません</strong></p>
         </div>
         <div class="feature-card">
           <svg class="ico feature-ico"><use href="#i-aircon" /></svg>
@@ -2592,7 +2614,7 @@ body.locked #gate{display:flex}
           <figcaption>約12畳の畳敷きの真ん中に、横長の大きな囲炉裏</figcaption>
         </figure>
         <div class="common-text">
-          <p class="common-lead">囲炉裏を囲んで、持ち込んだ食材を焼きながら。</p>
+          <p class="common-lead">囲炉裏を囲んで、持ち込んだ食材を<br class="br-sp">焼きながら。</p>
           <p>
             お持ち込みのお肉や魚、野菜を焼きながら、ゆったりとお食事を楽しめます。宿泊者どうしの交流が生まれるのも、この場所です。
           </p>
@@ -2600,7 +2622,7 @@ body.locked #gate{display:flex}
             共用キッチンには、お鍋やフライパンはもちろん、包丁などの調理道具・冷蔵庫・炊飯器・電子レンジ・トースター、さらに<strong>調味料や食器類</strong>もそろっています。食材を持ち込んでのお料理ができます。
           </p>
           <p class="common-free">
-            囲炉裏・キッチン・炊飯器・電子レンジ・トースター・調味料・冷蔵庫・冷凍庫・食器類は、<strong>すべて無料</strong>でお使いいただけます。<span class="common-ice">※製氷機の氷のみ、1盛100円をいただいています。</span>
+            囲炉裏・キッチン・炊飯器・冷蔵庫・調味料<span class="sep-pc">・</span><br class="br-sp">電子レンジ・トースター・冷凍庫・食器類は<br class="br-sp"><strong>すべて無料</strong>でお使いいただけます。<span class="common-ice">※製氷機の氷のみ、1盛100円をいただいています。</span>
           </p>
         </div>
       </div>
@@ -2653,7 +2675,7 @@ body.locked #gate{display:flex}
           </table>
           <ul class="price-notes">
             <li>1棟に4名様までお泊まりいただけます</li>
-            <li class="price-advice">ゆったりお休みいただくなら、<strong>1棟3名様まで</strong>がおすすめです。布団を敷き詰めると3名様でいっぱいになりますので、4名様でお越しの際は<strong>2棟に分けてのご利用</strong>をおすすめしています</li>
+            <li class="price-advice">ゆったりお休みいただくなら<strong>1棟3名様まで</strong>が<br class="br-sp">おすすめです。布団を敷き詰めると3名様で<br class="br-sp">いっぱいになりますので4名様でお越しの際は<br class="br-sp"><strong>2棟に分けてのご利用</strong>をおすすめしています。</li>
             <li><strong>人数が増えるごとに、お一人様あたりの料金が<span class="nb">お得になります</span></strong></li>
             <li><span class="nb">小・中学生は550円引</span>（お一人様あたり）／<span class="nb">乳幼児は無料</span></li>
             <li class="price-caution">料金に布団セット（500円／1名分）は含まれておりません</li>
@@ -2755,7 +2777,7 @@ body.locked #gate{display:flex}
         <div class="info-card onsen">
           <svg class="ico info-ico"><use href="#i-onsen" /></svg>
           <h3>お風呂は十和温泉へ</h3>
-          <p>ゆっくり湯船につかりたい方は、<strong>車で約5分</strong>の「清流四万十の里 十和温泉」へ。日帰り入浴ができます。</p>
+          <p>ゆっくり湯船につかりたい方は、<strong>車で約5分</strong>の<br class="br-sp">「清流四万十の里十和温泉」へ。日帰り入浴<br class="br-sp">ができます。</p>
           <dl class="onsen-list">
             <dt>日帰り入浴</dt>
             <dd>12:00〜19:00</dd>
