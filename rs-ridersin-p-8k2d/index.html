@@ -2251,7 +2251,7 @@ section {
 
 /* ==================================================================
    見出しを灰色の帯の上下まん中に置く（2026-09-13 梟さん指示）
-   対象：共用スペース・ご利用料金。
+   対象：共用スペース・ご利用料金・ご利用案内。
    もともと「section の上余白」＋「見出しの上余白」が二重になっていて、
    見出しの上が下の約3倍空いていた（スマホ 88px／24px、PC 142px／44px）。
    section の上余白を0にして、見出しの上下を同じ値にそろえる。
@@ -2265,12 +2265,14 @@ section {
 }
 
 .common,
-.price {
+.price,
+.info {
   padding-top: 0;
 }
 
 .common .sec-mark,
-.price .sec-mark {
+.price .sec-mark,
+.info .sec-mark {
   padding-top: calc(var(--band-gap) + var(--band-gap-adjust));
   padding-bottom: calc(var(--band-gap) - var(--band-gap-adjust));
 }
