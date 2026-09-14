@@ -2307,6 +2307,16 @@ section {
   }
 }
 
+@media (max-width: 700px) {
+  /* 紹介文のかたまりは画面の真ん中、各行の頭は左でそろえる（2026-09-14 梟さん指示）。
+     幅をいちばん長い行に合わせて左右中央に置き、中は左揃えにしている */
+  .cabin-intro p:not(.cabin-note) {
+    width: fit-content;
+    margin-inline: auto;
+    text-align: left;
+  }
+}
+
 /* ==== 確認用の帯：この共有ファイルにだけ入っています。本番には含まれません ==== */
 .review-note{background:#221815;color:#fff;font-family:var(--jp-round);font-size:.8rem;
   line-height:1.7;padding:11px 20px;text-align:center;letter-spacing:.02em}
@@ -2360,7 +2370,7 @@ body.locked #gate{display:flex}
   </div>
 
   <div class="review-note">
-    <b>確認用｜PDF貼り付け版（2026-09-13）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
+    <b>確認用｜PDF貼り付け版（2026-09-14）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
     <span>RS・英字・キャッチ・境目のぼかしまでカンプと同じです。画像なので、スマホでは文字がそのまま縮みます。</span>
   </div>
 

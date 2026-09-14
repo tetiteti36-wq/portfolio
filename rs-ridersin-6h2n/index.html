@@ -2307,6 +2307,16 @@ section {
   }
 }
 
+@media (max-width: 700px) {
+  /* 紹介文のかたまりは画面の真ん中、各行の頭は左でそろえる（2026-09-14 梟さん指示）。
+     幅をいちばん長い行に合わせて左右中央に置き、中は左揃えにしている */
+  .cabin-intro p:not(.cabin-note) {
+    width: fit-content;
+    margin-inline: auto;
+    text-align: left;
+  }
+}
+
 /* ==== 確認用の帯：この共有ファイルにだけ入っています。本番には含まれません ==== */
 .review-note{background:#221815;color:#fff;font-family:var(--jp-round);font-size:.8rem;
   line-height:1.7;padding:11px 20px;text-align:center;letter-spacing:.02em}
@@ -2353,7 +2363,7 @@ body.locked #gate{display:flex}
   </div>
 
   <div class="review-note">
-    <b>確認用のたたき台です（2026-09-13）</b> ／ 公式パンフレットのデザインをWebに展開したものです。
+    <b>確認用のたたき台です（2026-09-14）</b> ／ 公式パンフレットのデザインをWebに展開したものです。
     <span>ロゴ・キャッチコピー・配色・書体は、パンフレットから起こしています。写真は解像度が不足しているものに「要・元データ」と印を付けています。</span>
   </div>
 
