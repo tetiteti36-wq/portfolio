@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="高知県四万十町十和のマスコットキャラクター「のぼりん」オフィシャルサイト。十和中学校の生徒たちから生まれた小さな鯉の物語、なかまたちの紹介、グッズや地域の魅力をお届けします。" />
+  <title>のぼりん オフィシャルサイト | 高知県四万十町十和マスコットキャラクター</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Outfit:wght@500;700;800&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="refined.css" />
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#hero" class="site-brand">
+        <img src="images/characters/noborin_full.png" alt="のぼりん" class="brand-avatar" />
+        <div class="brand-text">
+          <span class="brand-sub">四万十町十和マスコットキャラクター</span>
+          <span class="brand-main">のぼりん オフィシャルサイト</span>
+        </div>
+      </a>
+
+      <nav class="header-nav" id="headerNav">
+        <a href="#about">のぼりん紹介</a>
+        <a href="#friends">なかまたち</a>
+        <a href="#history">あゆみ</a>
+        <a href="#town">十和の魅力</a>
+        <a href="#school">十和中</a>
+        <a href="#song">のぼりんソング</a>
+        <a href="#goods">グッズ</a>
+        <a href="#linestamp">LINEスタンプ</a>
+        <a href="#gallery">写真館</a>
+        <a href="#contact" class="nav-contact-btn">ご利用案内</a>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="headerNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🎏 四万十川「こいのぼりの川渡し」発祥の地・十和より</span>
+        </div>
+        <h1 class="hero-title">
+          四万十川から、<br />
+          <span class="hl-sky">大空へ。</span>
+        </h1>
+        <p class="hero-lead">
+          川を泳ぐのはちょっぴり苦手だけど、大空を気持ちよく泳ぐことができる不思議な鯉。<br />
+          高知県四万十町立十和中学校の生徒たちの豊かな発想から生まれた、<br />
+          十和地域の公式マスコットキャラクター「のぼりん」のオフィシャルサイトです。
+        </p>
+        <div class="hero-actions">
+          <a href="#about" class="btn-primary">のぼりんのことを見る</a>
+          <a href="#history" class="btn-secondary">誕生のあゆみ</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card">
+          <div class="visual-bg-glow"></div>
+          <img src="images/characters/noborin_full.png" alt="のぼりん公式イラスト" class="hero-char-img" id="heroCharImg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メインナビゲーションカード（インデックス） -->
+  <section class="section index-section">
+    <div class="container">
+      <div class="index-grid index-grid-9">
+        <a href="#about" class="index-card c-blue">
+          <div class="index-icon">🐟</div>
+          <div class="index-text">
+            <h3>のぼりんプロフィール</h3>
+            <p>性格、好物、チャームポイント</p>
+          </div>
+        </a>
+        <a href="#friends" class="index-card c-pink">
+          <div class="index-icon">🌸</div>
+          <div class="index-text">
+            <h3>なかまたち</h3>
+            <p>みのりん・あめ芝・たけぽん</p>
+          </div>
+        </a>
+        <a href="#history" class="index-card c-orange">
+          <div class="index-icon">📜</div>
+          <div class="index-text">
+            <h3>誕生とあゆみ</h3>
+            <p>十和中学生たちの取り組み</p>
+          </div>
+        </a>
+        <a href="#town" class="index-card c-green">
+          <div class="index-icon">🌲</div>
+          <div class="index-text">
+            <h3>十和のまち紹介</h3>
+            <p>清流四万十と特産品の案内</p>
+          </div>
+        </a>
+        <a href="#school" class="index-card c-teal">
+          <div class="index-icon">🏫</div>
+          <div class="index-text">
+            <h3>十和中ってこんなとこ</h3>
+            <p>生徒の挑戦と学校の日常</p>
+          </div>
+        </a>
+        <a href="#song" class="index-card c-indigo">
+          <div class="index-icon">🎵</div>
+          <div class="index-text">
+            <h3>のぼりんソング</h3>
+            <p>神JAZZで初披露のテーマ曲</p>
+          </div>
+        </a>
+        <a href="#goods" class="index-card c-yellow">
+          <div class="index-icon">🛍️</div>
+          <div class="index-text">
+            <h3>グッズ情報</h3>
+            <p>クッキー、木工品、Tシャツ</p>
+          </div>
+        </a>
+        <a href="#linestamp" class="index-card c-emerald">
+          <div class="index-icon">💬</div>
+          <div class="index-text">
+            <h3>LINEスタンプ（準備中）</h3>
+            <p>日常土佐弁・試作シート先行公開</p>
+          </div>
+        </a>
+        <a href="#gallery" class="index-card c-purple">
+          <div class="index-icon">📷</div>
+          <div class="index-text">
+            <h3>フォトギャラリー</h3>
+            <p>地域での活動記録写真</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ① のぼりん紹介セクション -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">PROFILE</span>
+        <h2 class="main-title">のぼりんのプロフィール</h2>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="profile-card-large">
+        <div class="profile-grid">
+          <div class="profile-visual-col">
+            <div class="profile-img-frame">
+              <img src="images/characters/noborin_full.png" alt="のぼりん 全身" class="profile-main-img" />
+            </div>
+            <div class="profile-gallery-row">
+              <div class="gallery-thumb-item">
+                <img src="images/official/1055_のぼりん_4039.jpg" alt="公式原画1" />
+                <span>公式原画①</span>
+              </div>
+              <div class="gallery-thumb-item">
+                <img src="images/official/1055_のぼりん_4041.jpg" alt="公式原画2" />
+                <span>公式原画②</span>
+              </div>
+              <div class="gallery-thumb-item">
+                <img src="images/official/2870_トロッコ列車_14538.JPG" alt="トロッコ列車" />
+                <span>実車写真</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-info-col">
+            <div class="name-block">
+              <h3 class="char-name">のぼりん</h3>
+              <span class="char-role">十和地域マスコットキャラクター（恋多き鯉）</span>
+            </div>
+
+            <p class="profile-intro">
+              十和村（現・四万十町十和）発祥の伝統行事「こいのぼりの川渡し」をモチーフに誕生したキャラクター。<br />
+              川は泳げないけれど、大空を気持ちよさそうに泳ぐことができます。
+              いつか立派な竜（ドラゴン）になる日を夢見て、日々がんばっています。
+            </p>
+
+            <div class="meta-table">
+              <div class="meta-row">
+                <span class="meta-dt">🎂 誕生日</span>
+                <span class="meta-dd">5月5日（こどもの日）</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-dt">❤️ 好きなもの</span>
+                <span class="meta-dd">鮎の塩焼き、かしわもち</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-dt">🌧️ 苦手なもの</span>
+                <span class="meta-dd">雨（濡れるとしおれてしまいます）</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-dt">✨ 特技</span>
+                <span class="meta-dd">空を飛べること、旺盛な食欲</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-dt">⚠️ 悩み</span>
+                <span class="meta-dd">川を泳ぐことができない</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-dt">🌟 夢</span>
+                <span class="meta-dd">いつか立派な竜になること！</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② なかまたちセクション -->
+  <section class="section friends-section" id="friends">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">FRIENDS</span>
+        <h2 class="main-title">十和のなかまたち</h2>
+        <p class="section-subtitle">のぼりんと一緒に十和を明るく元気にしている仲間たちです。</p>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="friends-grid">
+        <!-- みのりん -->
+        <div class="friend-card minorin-card">
+          <div class="friend-badge badge-pink">彼女</div>
+          <div class="friend-img-wrap">
+            <img src="images/characters/minorin_full.png" alt="みのりん" class="friend-img" />
+          </div>
+          <h3 class="friend-name">みのりん</h3>
+          <p class="friend-caption">のぼりんの大切な彼女</p>
+          <div class="friend-desc">
+            令和6年度に誕生した、のぼりんの最愛の彼女。<br />
+            トロッコ列車に乗るのぼりんをいつも温かく見守り、のぼりんがいつか竜になる日を優しく応援しています。
+          </div>
+        </div>
+
+        <!-- あめ芝 -->
+        <div class="friend-card anashiba-card">
+          <div class="friend-badge badge-blue">なかま</div>
+          <div class="friend-img-wrap">
+            <img src="images/characters/anashiba_full.png" alt="あめ芝" class="friend-img" />
+          </div>
+          <h3 class="friend-name">あめ芝（あめしば）</h3>
+          <p class="friend-caption">あめごの養殖場の箱入り娘</p>
+          <div class="friend-desc">
+            四万十の支流で育った川魚「あめご」の女の子。<br />
+            感情によって体の色が変わる不思議な特徴を持っています。山の恵み「椎茸（しいたけ）」が大好物です。
+          </div>
+        </div>
+
+        <!-- たけぽん -->
+        <div class="friend-card takepon-card">
+          <div class="friend-badge badge-green">なかま</div>
+          <div class="friend-img-wrap">
+            <img src="images/characters/takepon_full.png" alt="たけぽん" class="friend-img" />
+          </div>
+          <h3 class="friend-name">たけぽん</h3>
+          <p class="friend-caption">小野の山から生まれたタケノコ</p>
+          <div class="friend-desc">
+            十和・小野の豊かな山で生まれた元気なタケノコ。<br />
+            きれいな水と日光を浴びてすくすく育ちます。水分が足りなくなるとちょっぴりしおれてしまいます。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 誕生とあゆみ（年表） -->
+  <section class="section history-section" id="history">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">HISTORY</span>
+        <h2 class="main-title">のぼりん誕生とあゆみ</h2>
+        <p class="section-subtitle">
+          十和中学校の生徒たちが総合的な学習の一環として生み出し、地域に育てられてきた歩みです。
+        </p>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="timeline-wrap">
+        
+        <!-- Step 1 -->
+        <div class="timeline-block">
+          <div class="timeline-year">2022年4月</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <h3 class="box-title">生徒会発案から全校投票で「のぼりん」誕生</h3>
+            <p class="box-text">
+              十和中学校の生徒会執行部が「全校生徒の手で学校と地域のマスコットキャラクターを作ろう」と提案。<br />
+              生徒から寄せられた図案の中から、全校投票によって「こいのぼりの川渡し」をモチーフにした「のぼりん」が決定しました。
+            </p>
+            <div class="box-photos">
+              <img src="images/official/1054_いきさつ_パネル_8154.jpg" alt="全校投票パネル" />
+              <img src="images/official/1054_いきさつ_万国旗_8153.jpg" alt="生徒たちの活動" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-block">
+          <div class="timeline-year">2023年4月</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <h3 class="box-title">なかまたちの誕生と「株式会社のぼりん」設立</h3>
+            <p class="box-text">
+              「あめ芝」「たけぽん」が仲間に加わり、生徒全員が株主となる模擬会社「株式会社のぼりん」を設立。<br />
+              キャリア教育・起業家学習として、クッキーや木工品の製造・販売などの実践的な地域活動がスタートしました。
+            </p>
+            <div class="box-photos">
+              <img src="images/official/1054_いきさつ_活動_8155.jpg" alt="株式会社のぼりん設立総会" />
+              <img src="images/official/1054_いきさつ_グッズ_8158.jpg" alt="生徒制作の木工品" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-block">
+          <div class="timeline-year">2023年11月〜12月</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <h3 class="box-title">イベント販売の実績と調理室エアコン設置</h3>
+            <p class="box-text">
+              高知市の「こうち漫画まつり まんさい」じもキャラストリートに出展し、生徒自らグッズやクッキーを販売。<br />
+              生徒たちの熱心なクッキー作りの取り組みが町議会でも報告され、学校調理室へのエアコン設置予算が可決・整備されました。
+            </p>
+            <div class="box-photos">
+              <img src="images/official/1054_いきさつ_販売_8157.jpg" alt="地域での販売の様子" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-block">
+          <div class="timeline-year">2024年4月</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <h3 class="box-title">彼女「みのりん」の誕生とメディア出演</h3>
+            <p class="box-text">
+              のぼりんの大切な彼女「みのりん」が誕生。<br />
+              テレビ番組の取材を受けるなど、学校内にとどまらず高知県内各地へと活動の輪が広がっていきました。
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-block">
+          <div class="timeline-year">2024年8月</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <h3 class="box-title">十和地域振興局へのプレゼンテーションと「地域マスコット」認定</h3>
+            <p class="box-text">
+              生徒会役員が四万十町役場十和地域振興局を訪問し、地域マスコット認定に向けた直談判プレゼンを実施。<br />
+              その熱意が実を結び、振興局より正式に「十和地域のマスコットキャラクター」として公認を受けました。さらにJR予土線のトロッコ列車にも「のぼりん」が乗車しました。
+            </p>
+            <div class="box-photos">
+              <img src="images/official/2870_プレゼン_15307.JPG" alt="振興局でのプレゼン" />
+              <img src="images/official/2870_地域マスコット認定_15308.JPG" alt="認定記念写真" />
+              <img src="images/official/2870_トロッコ列車_14538.JPG" alt="トロッコ列車に乗るのぼりん" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-block">
+          <div class="timeline-year">2025年7月</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <h3 class="box-title">熊野神社「神JAZZ」でのぼりんソング初披露</h3>
+            <p class="box-text">
+              十和の熊野神社で開催された音楽イベント「神JAZZ」にて、地域おこし協力隊が生徒会の意見を取り入れて作詞・作曲した公式テーマ曲「のぼりんソング」が初公開されました。
+            </p>
+            <div class="box-photos">
+              <img src="images/official/3023_神JAZZ音楽デビュー_15687.JPG" alt="神JAZZ音楽デビュー" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 十和のまち紹介セクション -->
+  <section class="section town-section" id="town">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">LOCAL AREA</span>
+        <h2 class="main-title">のぼりんが生まれた町・十和</h2>
+        <p class="section-subtitle">
+          日本最後の清流・四万十川の中流域に位置する、豊かな自然と温かい人の温もりにあふれた里山です。
+        </p>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="town-cards-grid">
+        <div class="town-feature-card">
+          <div class="town-card-header">
+            <span class="town-icon">🎏</span>
+            <h3>こいのぼりの川渡し発祥の地</h3>
+          </div>
+          <p>
+            昭和49年、十和の青年たちが始めた「こいのぼりの川渡し」。四万十川の上空を約500匹のこいのぼりが泳ぐ雄大な光景は、全国に広がる川渡しの元祖です。
+          </p>
+        </div>
+
+        <div class="town-feature-card">
+          <div class="town-card-header">
+            <span class="town-icon">🐟</span>
+            <h3>清流四万十の「天然鮎」と「あめご」</h3>
+          </div>
+          <p>
+            のぼりんの大好物でもある鮎の塩焼き。透き通る支流で育つあめごや四万十川の恵みは、訪れる人々に親しまれています。
+          </p>
+        </div>
+
+        <div class="town-feature-card">
+          <div class="town-card-header">
+            <span class="town-icon">🌰</span>
+            <h3>「しまんと地栗」と香り高い十和茶</h3>
+          </div>
+          <p>
+            山あいの豊かな寒暖差が生み出す極上の和栗「しまんと地栗」や、四万十川の朝霧を浴びて育つ「十和茶」。「道の駅四万十とおわ」でも大人気です。
+          </p>
+        </div>
+
+        <div class="town-feature-card">
+          <div class="town-card-header">
+            <span class="town-icon">🌉</span>
+            <h3>里山風景に溶け込む「沈下橋」</h3>
+          </div>
+          <p>
+            増水時に川の中に沈むよう設計された欄干のない橋。四万十川の流れと緑豊かな山々、そして沈下橋が織りなす風景は十和の誇りです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 十和中ってこんなところ -->
+  <section class="section school-section" id="school">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">OUR SCHOOL</span>
+        <h2 class="main-title">十和中学校ってこんなところ</h2>
+        <p class="section-subtitle school-intro">
+          四万十町立十和中学校は、四万十川の中流域・十和地域にある小さな学校です。<br />
+          少人数だからこそ、学年の垣根を越えて全員が近い関係。<br />
+          先生と生徒、そして地域の方々との距離がとても近く、温かい絆の中で日々学んでいます。
+        </p>
+        <a href="https://www.town.shimanto.lg.jp/school/?SID=1105" target="_blank" rel="noopener noreferrer" class="school-homepage-btn">十和中学校 公式ホームページ <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="school-content-grid">
+        <div class="school-img-wrap">
+          <img src="images/official/top_slider_8196.png" alt="四万十町立十和中学校の校舎と緑の山々" />
+          <div class="school-img-caption">清流四万十川のほとりに佇む、四万十町立十和中学校</div>
+        </div>
+        <div class="school-feature-box box-challenge">
+            <div class="feature-box-header">
+              <span class="feature-icon">🚀</span>
+              <h4>生徒たちの大きな挑戦</h4>
+            </div>
+            <p>
+              「株式会社のぼりん」を模した模擬会社を立ち上げ、木工品やクッキーの商品化、そして十和地域振興局への直談判プレゼンまで成し遂げました。「自分たちの手で地域を元気にしたい」という純粋な熱意が、大人たちを動かしました。
+            </p>
+            <div class="box-tag">実践的な起業家教育・地域連携</div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 公式テーマ曲 のぼりんソング -->
+  <section class="section song-section" id="song">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">OFFICIAL SONG</span>
+        <h2 class="main-title">公式テーマ曲「のぼりんソング」</h2>
+        <p class="section-subtitle">
+          神社の境内でJAZZとコラボ！ 地域おこし協力隊と中学生の想いから生まれた公式ソングです。
+        </p>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="song-card-wrap">
+        <div class="song-visual-side">
+          <div class="song-img-box">
+            <img src="images/official/3023_神JAZZ音楽デビュー_15687.JPG" alt="熊野神社・神JAZZでののぼりんソング初披露" />
+            <span class="song-badge">2025年7月31日 音楽デビュー</span>
+          </div>
+          <div class="song-record-deco">
+            <div class="record-disc">
+              <div class="record-center">
+                <span class="music-note">🎵</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="song-info-side">
+          <div class="song-meta-pill">十和地域おこし協力隊 × 十和中学校 生徒会</div>
+          <h3 class="song-title">『のぼりんソング』</h3>
+          
+          <div class="song-story">
+            <p>
+              2025年7月、十和の熊野神社で開催された音楽イベント「神JAZZ」にて初披露された公式テーマソング。<br />
+              十和地域おこし協力隊が、十和中学校生徒会から出されたアイデアやキーワードをもとに作詞・作曲を手がけました。
+            </p>
+            
+            <div class="lyrics-quote-box">
+              <span class="quote-mark">“</span>
+              <p class="lyrics-lead">
+                川を泳ぐのはちょっぴり苦手。<br />
+                でも、大きな大空ならどこまでも気持ちよく飛んでいける！
+              </p>
+              <span class="lyrics-desc">
+                「誰にだって得意なことと苦手なことがある。枠にとらわれず、自分の空を飛べばいい」という、のぼりん誕生の原点を明るく歌い上げています。
+              </span>
+            </div>
+          </div>
+
+          <div class="song-specs">
+            <div class="spec-row">
+              <span class="spec-label">初披露会場</span>
+              <span class="spec-val">十和・熊野神社 境内特設ステージ（神JAZZ 2025）</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">作詞・作曲</span>
+              <span class="spec-val">十和地域おこし協力隊（十和中学校生徒会 共同原案）</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">演奏・放送</span>
+              <span class="spec-val">十和地域のイベントや学校行事等で親しまれています</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ グッズ情報 -->
+  <section class="section goods-section" id="goods">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">GOODS</span>
+        <h2 class="main-title">のぼりんグッズ</h2>
+        <p class="section-subtitle">生徒たちの創意工夫が詰まったオリジナルアイテムです。</p>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="goods-grid">
+        <div class="goods-item-card">
+          <div class="goods-thumb-wrap">
+            <img src="images/official/1054_いきさつ_グッズ_8158.jpg" alt="手作り木工品" />
+          </div>
+          <div class="goods-body">
+            <h3>手作り木工コースター＆キーホルダー</h3>
+            <p>地元の木材を活かして生徒たちがデザイン・制作した温かみのある木工雑貨です。</p>
+            <span class="goods-badge">学校祭・地域イベントにて販売</span>
+          </div>
+        </div>
+
+        <div class="goods-item-card">
+          <div class="goods-thumb-wrap">
+            <img src="images/official/1054_いきさつ_販売_8157.jpg" alt="のぼりんクッキー" />
+          </div>
+          <div class="goods-body">
+            <h3>のぼりんクッキー</h3>
+            <p>生徒たちが試行錯誤を重ねて焼き上げた特製クッキー。サクサクの香ばしい味わいが地域でも大好評です。</p>
+            <span class="goods-badge">限定イベントにて販売</span>
+          </div>
+        </div>
+
+        <div class="goods-item-card">
+          <div class="goods-thumb-wrap">
+            <img src="images/characters/noborin_full.png" alt="オリジナルTシャツ" class="contain-img" />
+          </div>
+          <div class="goods-body">
+            <h3>のぼりんTシャツ</h3>
+            <p>のぼりんの可愛いイラストがプリントされたオリジナルTシャツ。行事やイベントで活躍しています。</p>
+            <span class="goods-badge">生徒会企画アイテム</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ LINEスタンプ企画（準備中） -->
+  <section class="section linestamp-section" id="linestamp">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">LINE STICKERS</span>
+        <h2 class="main-title">LINEスタンプ企画（準備中）</h2>
+        <p class="section-subtitle">
+          地域の皆様やファンからの声を受けて、現在LINEスタンプの制作・リリースに向けて企画を進めています。<br />
+          日常で使える土佐弁スタンプから、試作段階で生まれたユニークな劇画調・アート作品まで、候補シートを先行公開します。
+        </p>
+        <div class="title-bar"></div>
+      </div>
+
+      <!-- スタンプシート展示グリッド -->
+      <div class="linestamp-grid">
+        <!-- ① カラー版 -->
+        <div class="linestamp-card">
+          <div class="stamp-img-wrap">
+            <img src="images/stamps/line_stamp_sheet_color_16.png" alt="LINEスタンプ カラー版（全16種）" />
+            <span class="stamp-status-badge badge-primary">本命候補案</span>
+          </div>
+          <div class="stamp-card-body">
+            <div class="stamp-meta">全16種・フルカラー</div>
+            <h3>日常づかい土佐弁スタンプ</h3>
+            <p>
+              のぼりん、たけぽん、あめ芝、みのりんの4体が勢揃い！「おはようさん」「いってくるき」「元気にしゆう？」「ごめんで」など、日常のトークで温かく使える土佐弁フレーズを収録した本命候補案です。
+            </p>
+          </div>
+        </div>
+
+        <!-- ② モノクロ劇画版 -->
+        <div class="linestamp-card">
+          <div class="stamp-img-wrap">
+            <img src="images/stamps/line_stamp_sheet_monochrome_16.png" alt="LINEスタンプ モノクロ劇画版（全16種）" />
+            <span class="stamp-status-badge badge-sub">特別試作案</span>
+          </div>
+          <div class="stamp-card-body">
+            <div class="stamp-meta">全16種・ペン画調モノクロ</div>
+            <h3>劇画・モノクロスタンプ</h3>
+            <p>
+              白背景にシャープな陰影と力強いペンタッチで描かれた劇画調スタンプ。コミカルさと独特の迫力が共存するユニークな試作品です。
+            </p>
+          </div>
+        </div>
+
+        <!-- ③ 黒背景・ホラー劇画調版 -->
+        <div class="linestamp-card">
+          <div class="stamp-img-wrap">
+            <img src="images/stamps/line_stamp_sheet_horror_dark_16.png" alt="LINEスタンプ 黒背景・ホラー劇画調版（全16種）" />
+            <span class="stamp-status-badge badge-dark">番外編・話題作</span>
+          </div>
+          <div class="stamp-card-body">
+            <div class="stamp-meta">全16種・木版画調ダークアート</div>
+            <h3>黒背景・ダークファンタジー調</h3>
+            <p>
+              重厚な木版画調のタッチと黒背景。「左上のあめしばがホラーテイスト」と制作メンバーの間で話題騒然となった、キャラクターの意外な一面（？）を楽しめる衝撃の試作アートです。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 手描き原案シートアーカイブ -->
+      <div class="linestamp-archive-wrap">
+        <div class="archive-header">
+          <span class="archive-icon">🎨</span>
+          <div>
+            <h3>手描きキャラクター原案シート（原点アーカイブ）</h3>
+            <p>中学生たちが「正面」「喜んだ顔」「悲しい顔」など、豊かな表情を1枠ずつ描き込んだキャラクター原案シートです。</p>
+          </div>
+        </div>
+        <div class="archive-grid">
+          <div class="archive-item">
+            <img src="images/stamps/noborin_character_sheet.png" alt="のぼりん 表情原案シート" />
+            <span>のぼりん 表情シート</span>
+          </div>
+          <div class="archive-item">
+            <img src="images/stamps/minorin_character_sheet.png" alt="みのりん 表情原案シート" />
+            <span>みのりん 表情シート</span>
+          </div>
+          <div class="archive-item">
+            <img src="images/stamps/anashiba_character_sheet.png" alt="あめ芝 表情原案シート" />
+            <span>あめ芝 表情シート</span>
+          </div>
+          <div class="archive-item">
+            <img src="images/stamps/takepon_character_sheet.png" alt="たけぽん 表情原案シート" />
+            <span>たけぽん 表情シート</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 準備中インフォメーション -->
+      <div class="linestamp-notice-box">
+        <div class="notice-badge">STATUS</div>
+        <p>
+          現在、LINE Creators Marketへの申請・審査およびリリース準備を進めています。<br />
+          販売開始時期や配信ページが決定次第、こちらの公式サイト等にて改めてお知らせいたします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ フォトギャラリー -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-label">GALLERY</span>
+        <h2 class="main-title">活動フォトギャラリー</h2>
+        <p class="section-subtitle">地域と生徒たちをつなぐ、のぼりんの活動風景です。</p>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card featured">
+          <img src="images/official/2870_トロッコ列車_14538.JPG" alt="予土線トロッコ列車に乗るのぼりん" />
+          <div class="gallery-info">
+            <h4>予土線トロッコ列車の旅</h4>
+            <p>四万十川の風を感じながら走る観光列車に乗車しました。</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/official/3023_神JAZZ音楽デビュー_15687.JPG" alt="神JAZZでの音楽デビュー" />
+          <div class="gallery-info">
+            <h4>熊野神社「神JAZZ」</h4>
+            <p>テーマ曲「のぼりんソング」が初披露された歴史的瞬間。</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/official/2870_地域マスコット認定_15308.JPG" alt="地域マスコット認定記念" />
+          <div class="gallery-info">
+            <h4>地域マスコット認定</h4>
+            <p>十和地域振興局長より認定証を授与された記念写真。</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/official/1054_いきさつ_販売_8157.jpg" alt="イベント販売の様子" />
+          <div class="gallery-info">
+            <h4>地域の皆様へ販売</h4>
+            <p>生徒たちが笑顔で地域の皆様に商品を手渡しました。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ ご利用案内・お問い合わせ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-box-wrap">
+        <div class="contact-header">
+          <span class="sub-label-white">FOR LOCAL COMMUNITY</span>
+          <h2 class="contact-title">キャラクターのご利用・お問い合わせ</h2>
+          <p class="contact-lead">
+            「のぼりん」は十和地域を盛り上げるためのマスコットキャラクターです。<br />
+            地域イベントのチラシ、店舗のPOP、特産品のパッケージなどでの活用をご希望の際は、下記窓口までお気軽にお問い合わせください。
+          </p>
+        </div>
+
+        <div class="contact-branches">
+          <div class="branch-card">
+            <span class="branch-role">🏫 キャラクター管理・著作権</span>
+            <h3 class="branch-name">四万十町立十和中学校</h3>
+            <p class="branch-tel">TEL: 0880-28-5215</p>
+            <p class="branch-desc">キャラクターデザインの著作権管理、生徒会との連携企画など</p>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-role">🏢 地域振興・地域マスコット公認</span>
+            <h3 class="branch-name">四万十町役場 十和地域振興局</h3>
+            <p class="branch-tel">TEL: 0880-28-5111</p>
+            <p class="branch-desc">地域イベントでの活用、観光振興における連携など</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <img src="images/characters/noborin_full.png" alt="のぼりん" class="footer-avatar" />
+          <span>のぼりん オフィシャルサイト</span>
+        </div>
+        <p class="footer-copy">
+          高知県四万十町立十和中学校 マスコットキャラクター「のぼりん」<br />
+          公認：四万十町役場 十和地域振興局
+        </p>
+        <p class="footer-rights">
+          &copy; 2026 四万十町立十和中学校 All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>関連リンク</h4>
+        <ul>
+          <li><a href="https://www.town.shimanto.lg.jp/school/?SID=1105" target="_blank" rel="noopener">四万十町立十和中学校 公式サイト</a></li>
+          <li><a href="https://www.town.shimanto.lg.jp/" target="_blank" rel="noopener">四万十町役場 公式サイト</a></li>
+          <li><a href="https://toowashimanto.jp/" target="_blank" rel="noopener">四万十とおわ観光案内</a></li>
+          <li><a href="https://tetiteti36-wq.github.io/towa-guide-site/" target="_blank" rel="noopener">十和ガイドサイト</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

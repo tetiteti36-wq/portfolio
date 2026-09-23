@@ -1,0 +1,424 @@
+/* Copy-only visual refinement. Original content and asset paths preserved. */
+:root {
+ --c-primary:#26758a; --c-primary-dark:#244c59; --c-primary-light:#b6dadd;
+ --c-primary-pale:#edf5f4; --c-primary-bg:#f3f7f5;
+ --c-text-main:#293c40; --c-text-sub:#536365; --c-text-muted:#627477;
+ --c-border:#dce5e2; --c-secondary:#e8be73;
+ --font-base:"Noto Sans JP","Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+ --radius-sm:4px; --radius-md:8px; --radius-lg:12px;
+ --shadow-sm:none; --shadow-md:none; --shadow-lg:none;
+}
+body { background:#fff; line-height:1.9; }
+.container { width:calc(100% - 96px); max-width:1160px; }
+a,button { -webkit-tap-highlight-color:transparent; }
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible { outline:3px solid #26758a; outline-offset:5px; }
+.site-header { background:rgba(255,255,255,.98); backdrop-filter:none; }
+.header-inner { max-width:1440px; gap:28px; padding:18px 32px; }
+.site-brand { flex-shrink:0; gap:10px; }
+.brand-sub { font-weight:500; font-size:10px; letter-spacing:.06em; }
+.brand-main { font-size:16px; font-weight:700; white-space:nowrap; line-height:1.7; }
+.brand-avatar { width:39px; height:46px; }
+.header-nav { gap:15px; }
+.header-nav a { padding:7px 0; font-size:12px; font-weight:500; white-space:nowrap; }
+.header-nav a:hover { background:transparent; }
+.nav-contact-btn { padding:10px 18px!important; border-radius:3px!important; }
+.hero-section { background:#f7f9f5; padding:88px 0 104px; isolation:isolate; }
+.hero-section::before { content:""; position:absolute; z-index:-1; inset:0 0 0 44%; background:linear-gradient(90deg,#f7f9f5 0%,rgba(247,249,245,.18) 45%,rgba(247,249,245,.06)),url('images/scenery/shimanto_river.png') center/cover; }
+.hero-container { grid-template-columns:1.1fr .9fr; gap:50px; }
+.hero-content { background:none; border:0; border-radius:0; backdrop-filter:none; padding:0; box-shadow:none; }
+.hero-badge span { padding:0; border:0; background:none; box-shadow:none; font-size:11px; font-weight:500; letter-spacing:.035em; margin-bottom:28px; }
+.hero-title { font-family:'M PLUS Rounded 1c',sans-serif; font-size:clamp(42px,4.7vw,68px); font-weight:700; line-height:1.35; letter-spacing:.025em; text-shadow:none; margin-bottom:26px; }
+.hl-sky::after { display:none; }
+.hero-lead { max-width:480px; font-size:14px; font-weight:400; line-height:2.1; margin-bottom:30px; }
+.hero-lead br { display:none; }
+.hero-actions { gap:20px; align-items:center; }
+.btn-primary,.btn-secondary { font-size:13px; font-weight:500; border-radius:3px; box-shadow:none; padding:14px 22px; }
+.btn-secondary { padding:10px 0; border:0; border-bottom:1px solid #9badad; background:transparent; border-radius:0; }
+.btn-primary:hover,.btn-secondary:hover { box-shadow:none; transform:none; }
+.visual-card { max-width:400px; padding:48px 32px; }
+.visual-bg-glow { width:350px; height:350px; background:rgba(255,255,255,.78); }
+.hero-char-img { max-height:330px; filter:drop-shadow(0 12px 12px rgba(30,55,40,.09)); }
+.speech-bubble { top:8px; right:0; max-width:290px; font-size:12px; font-weight:500; border:0; padding:12px 18px; border-radius:5px; }
+.char-tag-pill { font-size:11px; font-weight:500; background:rgba(255,255,255,.92); }
+.index-section { background:#fff; padding:30px 0 46px; }
+.index-grid { gap:0 30px; }
+.index-card { border:0; border-bottom:1px solid var(--c-border); padding:20px 0; border-radius:0; gap:12px; }
+.index-card:hover { transform:none; }
+.index-icon { width:28px; height:30px; font-size:19px; background:transparent!important; }
+.index-text h3 { font-size:13px; font-weight:600; }
+.index-text p { font-size:11px; margin-top:3px; }
+.section { padding:96px 0; }
+.section-title-wrap { text-align:left; margin-bottom:42px; }
+.sub-label { font-size:11px; letter-spacing:.2em; font-weight:500; margin-bottom:14px; }
+.main-title { font-size:clamp(25px,2.7vw,36px); font-weight:600; color:var(--c-text-main); letter-spacing:.05em; line-height:1.5; }
+.section-subtitle { max-width:750px; margin-top:18px; font-size:14px; line-height:1.9; }
+.title-bar { display:none; }
+.profile-card-large { background:transparent; padding:0; border:0; }
+.profile-grid { gap:80px; }
+.profile-img-frame { background:#f3f7f4; padding:44px; border-radius:50% 50% 44% 46%; }
+.profile-main-img { max-height:320px; }
+.char-name { font-family:'M PLUS Rounded 1c',sans-serif; font-weight:700; }
+.char-role { font-size:12px; font-weight:500; }
+.meta-table { gap:0 20px; }
+.meta-row { border:0; border-top:1px solid var(--c-border); padding:14px 0; border-radius:0; }
+.meta-dt { font-weight:500; }
+.meta-dd { font-size:14px; font-weight:500; }
+.friends-section { background:#f5f7f3; }
+.friends-grid { gap:42px; }
+.friend-card { background:transparent; border:0; border-radius:0; padding:30px 0 0; }
+.friend-card:hover { transform:none; }
+.friend-badge { left:0; top:0; padding:0; background:none; font-weight:500; }
+.friend-name,.box-title,.town-card-header h3,.goods-body h3 { font-weight:600; }
+.timeline-box { background:transparent; border:0; border-top:1px solid var(--c-border); border-radius:0; padding:20px 0 28px 22px; }
+.timeline-year { font-weight:500; }
+.box-photos img { width:170px; height:120px; border:0; }
+.town-section { background:#f3f7f5; }
+.town-section .section-title-wrap::after { content:""; display:block; height:340px; margin-top:34px; background:url('images/scenery/towa_aerial.jpg') center 50%/cover; border-radius:5px; }
+.town-cards-grid { gap:32px 60px; }
+.town-feature-card { border:0; border-top:1px solid #cad9d3; background:transparent; backdrop-filter:none; padding:24px 0 0; border-radius:0; }
+.town-feature-card:hover { transform:none; }
+.town-icon { font-size:22px; }
+.school-content-grid { grid-template-columns:1fr; gap:34px; }
+.school-main-card { border:0; background:none; border-radius:0; overflow:visible; }
+.school-img-wrap { height:440px; border-radius:5px; }
+.school-img-wrap img { object-position:center 48%; }
+.school-img-caption { font-size:11px; font-weight:400; padding:30px 24px 16px; }
+.school-main-body { display:grid; grid-template-columns:1.12fr 1fr; gap:16px 64px; padding:34px 0 0; }
+.school-main-body h3 { grid-column:1; font-size:21px; font-weight:600; color:var(--c-text-main); line-height:1.7; margin:0; }
+.school-main-body>p { grid-column:1; margin:0; font-size:14px; line-height:2; }
+.school-points { grid-column:2; grid-row:1 / 3; margin:0; gap:18px; }
+.point-item { background:none; border:0; border-bottom:1px solid var(--c-border); padding:0 0 18px; border-radius:0; }
+.point-icon { display:none; }
+.point-item strong { font-size:14px; font-weight:600; margin-bottom:8px; color:var(--c-text-main); }
+.point-item p { line-height:1.8; }
+.school-side-col { display:grid; grid-template-columns:1fr 1fr; gap:34px 64px; }
+.school-feature-box { border:0; border-top:1px solid #b9cdca; border-radius:0; background:none; padding:26px 0 0; }
+.school-feature-box:hover { transform:none; }
+.feature-icon { display:none; }
+.feature-box-header h4 { font-size:20px; font-weight:500; color:var(--c-text-main); }
+.school-feature-box p { font-size:14px; line-height:2; margin:18px 0; }
+.box-tag,.box-challenge .box-tag,.box-daily .box-tag { padding:0; border-radius:0; background:none; color:var(--c-primary); font-size:11px; font-weight:500; }
+.school-link-card { grid-column:1 / -1; background:#f3f7f5; border:0; border-radius:3px; padding:22px 26px; margin:0; }
+.link-icon { display:none; }
+.school-external-btn { background:transparent; border:0; border-radius:0; border-bottom:1px solid; padding:8px 0; font-weight:500; }
+.song-section { background:#f7f6f0; }
+.song-card-wrap { background:transparent; padding:0; border:0; gap:64px; }
+.song-img-box { border-radius:5px; }
+.song-img-box img { height:360px; }
+.song-record-deco { width:70px; height:70px; right:-12px; bottom:-18px; }
+.song-title { font-weight:600; font-size:28px; }
+.song-meta-pill { padding:0; border-radius:0; background:transparent; font-weight:500; }
+.lyrics-quote-box { background:transparent; padding-left:20px; border-left:2px solid #c5ae7e; }
+.lyrics-lead { color:#635941; font-weight:500; }
+.lyrics-desc { color:#6c6658; }
+.song-specs { background:transparent; padding:18px 0 0; border:0; border-top:1px solid #dddccf; border-radius:0; }
+.spec-label,.spec-val { font-weight:500; }
+.goods-grid { gap:36px; }
+.goods-item-card { border:0; border-radius:0; }
+.goods-thumb-wrap { height:250px; border-radius:5px; background:#f3f5f2; }
+.goods-body { padding:24px 0 0; }
+.goods-badge { padding:0; background:none; border-radius:0; font-weight:500; }
+.gallery-section { background:#f3f7f5; }
+.gallery-grid { grid-template-rows:240px 240px; gap:20px; }
+.gallery-card { border-radius:5px; min-height:220px; }
+.gallery-info { padding:35px 24px 18px; }
+.gallery-info h4 { font-weight:500; }
+.contact-box-wrap { background:#244c59; border-radius:5px; padding:52px; }
+.contact-title { font-size:28px; font-weight:500; }
+.branch-card { background:transparent; border:0; border-top:1px solid #67858d; backdrop-filter:none; padding:24px 0 0; border-radius:0; }
+.branch-name { font-weight:500; }
+.site-footer { background:#fff; color:#536365; border-top:1px solid var(--c-border); }
+.footer-logo span,.footer-links-col h4 { color:var(--c-text-main); font-weight:600; }
+.footer-links-col a { color:#536365; }
+.footer-links-col a:hover { color:var(--c-primary); }
+.footer-rights { color:#627477; }
+@media (max-width:1250px) {
+ .header-nav { display:none; }
+ .mobile-menu-toggle { display:block; flex-shrink:0; }
+ .header-nav.open { display:grid!important; grid-template-columns:repeat(3,1fr); gap:12px 24px; padding:28px 40px; border-bottom:1px solid var(--c-border); }
+ .header-nav.open a { padding:12px 0; }
+}
+@media (min-width:769px) and (max-width:1024px) {
+ .friends-grid,.goods-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+ .town-cards-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .gallery-grid { grid-template-columns:1.2fr 1fr; }
+ .gallery-card.featured { height:auto; grid-row:span 2; }
+}
+@media (max-width:768px) {
+ .container { width:calc(100% - 40px); }
+ .header-inner { padding:12px 20px; gap:14px; }
+ .brand-main { font-size:13px; }
+ .brand-sub { font-size:8px; letter-spacing:0; }
+ .brand-avatar { width:30px; height:38px; }
+ .header-nav.open { grid-template-columns:1fr 1fr; padding:20px; gap:8px 20px; }
+ .hero-section { padding:48px 0 36px; }
+ .hero-section::before { inset:45% 0 0; background:linear-gradient(#f7f9f5,rgba(247,249,245,.12)),url('images/scenery/shimanto_river.png') center/cover; }
+ .hero-container { grid-template-columns:1fr; gap:18px; text-align:left; }
+ .hero-content { padding:0; }
+ .hero-badge span { font-size:10px; margin-bottom:22px; }
+ .hero-title { font-size:44px; }
+ .hero-lead { font-size:13px; }
+ .hero-actions { justify-content:flex-start; gap:16px; }
+ .btn-primary,.btn-secondary { font-size:12px; }
+ .btn-primary { padding:13px 16px; }
+ .hero-char-img { max-height:230px; }
+ .visual-card { max-width:310px; padding:38px 24px; }
+ .visual-bg-glow { width:260px; height:260px; }
+ .speech-bubble { font-size:11px; }
+ .index-section { padding:15px 0 24px; }
+ .index-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 18px; }
+ .index-card { gap:6px; padding:16px 0; }
+ .index-icon { font-size:17px; width:24px; }
+ .index-text h3 { font-size:12px; }
+ .index-text p { font-size:10px; }
+ .section { padding:60px 0; }
+ .section-title-wrap { margin-bottom:28px; }
+ .main-title { font-size:25px; letter-spacing:.015em; }
+ .section-subtitle { font-size:13px; }
+ .profile-grid { gap:32px; }
+ .profile-img-frame { max-width:340px; margin:0 auto 20px; padding:30px; }
+ .profile-main-img { max-height:250px; }
+ .meta-table { gap:0 14px; }
+ .meta-dd { font-size:13px; }
+ .friends-grid { gap:36px; }
+ .friend-card { max-width:420px; margin:0 auto; width:100%; }
+ .timeline-box { padding:16px 0; }
+ .box-photos img { width:calc(50% - 6px); height:100px; }
+ .town-section .section-title-wrap::after { height:220px; }
+ .town-cards-grid { gap:28px; }
+ .school-img-wrap { height:260px; }
+ .school-img-caption { padding:24px 16px 12px; font-size:10px; }
+ .school-main-body { display:block; padding-top:24px; }
+ .school-main-body h3 { font-size:19px; margin-bottom:14px; }
+ .school-points { margin-top:26px; }
+ .school-side-col { grid-template-columns:1fr; gap:28px; }
+ .school-link-card { flex-direction:column; align-items:flex-start; padding:20px; }
+ .song-card-wrap { padding:0; gap:40px; }
+ .song-img-box img { height:270px; }
+ .song-title { font-size:25px; }
+ .spec-row { gap:12px; }
+ .spec-label { width:72px; }
+ .goods-grid { gap:36px; }
+ .goods-thumb-wrap { height:260px; }
+ .gallery-grid { grid-template-columns:1fr; grid-template-rows:auto; gap:16px; }
+ .gallery-card,.gallery-card.featured { height:260px; }
+ .contact-box-wrap { padding:28px 22px; }
+ .contact-title { font-size:23px; }
+ .contact-lead { font-size:13px; }
+ .branch-name { font-size:18px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto; }
+ *,*::before,*::after { animation:none!important; transition:none!important; }
+}
+/* Keep long credits and captions within narrow screens. */
+.container > *, .spec-val, .profile-grid > *, .school-main-body > * { min-width:0; overflow-wrap:anywhere; }
+section[id] { scroll-margin-top:90px; }
+
+@media(max-width:768px) { .song-record-deco { right:18px; bottom:-12px; } }
+
+/* Requested refinement: a larger character and a concise school introduction. */
+.hero-visual .visual-card { max-width:480px; padding:12px 0; }
+.hero-char-img { max-height:440px; width:auto; max-width:100%; cursor:default; }
+.visual-bg-glow { width:400px; height:400px; }
+.school-intro { max-width:900px; line-height:2.1; }
+.school-homepage-btn { display:inline-flex; align-items:center; gap:30px; margin-top:26px; background:var(--c-primary); color:#fff; padding:15px 24px; border-radius:4px; font-size:15px; font-weight:600; }
+.school-homepage-btn:hover { background:var(--c-primary-dark); }
+.school-content-grid > .box-challenge { max-width:900px; }
+@media (max-width:768px) {
+ .hero-visual .visual-card { max-width:350px; padding:12px 0; }
+ .hero-char-img { max-height:320px; }
+ .visual-bg-glow { width:300px; height:300px; }
+ .school-homepage-btn { font-size:13px; padding:14px 18px; gap:18px; max-width:100%; }
+}
+
+.hero-char-img { width:100%; height:440px; object-fit:contain; }
+@media(max-width:768px) { .hero-char-img { height:320px; } }
+
+/* ─── LINE Stamp Section (Refined) ─── */
+.linestamp-section {
+  background: #f7f9f5;
+  border-top: 1px solid var(--c-border);
+}
+
+.linestamp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-bottom: 48px;
+}
+
+.linestamp-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stamp-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d8e2df;
+}
+
+.stamp-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.linestamp-card:hover .stamp-img-wrap img {
+  transform: scale(1.02);
+}
+
+.stamp-status-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+.badge-primary {
+  background: #26758a;
+  color: #ffffff;
+}
+
+.badge-sub {
+  background: #e2e8e5;
+  color: #293c40;
+}
+
+.badge-dark {
+  background: #1e292c;
+  color: #f1f5f9;
+}
+
+.stamp-card-body {
+  padding-top: 18px;
+}
+
+.stamp-meta {
+  font-size: 11px;
+  color: var(--c-primary);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.stamp-card-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--c-text-main);
+  margin-bottom: 8px;
+}
+
+.stamp-card-body p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--c-text-sub);
+}
+
+/* 原案アーカイブ */
+.linestamp-archive-wrap {
+  border-top: 1px solid #d8e2df;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+.archive-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.archive-icon {
+  font-size: 22px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.archive-header h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--c-text-main);
+  margin-bottom: 4px;
+}
+
+.archive-header p {
+  font-size: 13px;
+  color: var(--c-text-sub);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.archive-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.archive-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #d8e2df;
+  background: #ffffff;
+}
+
+.archive-item span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-text-sub);
+  text-align: center;
+}
+
+/* 案内通知ボックス */
+.linestamp-notice-box {
+  background: #ffffff;
+  border: 1px solid #d8e2df;
+  border-left: 3px solid #26758a;
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notice-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #26758a;
+  flex-shrink: 0;
+}
+
+.linestamp-notice-box p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--c-text-sub);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .linestamp-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .archive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
