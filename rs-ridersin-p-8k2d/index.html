@@ -2547,6 +2547,104 @@ body.menu-open {
   }
 }
 
+/* ==================================================================
+   スマホ下部の固定連絡バー（2026-09-24）
+   参考：さくら堂サイトの、画面下に常に見える連絡導線。
+   ライダーズは予約電話を広く、Instagram / Facebookを並べる。
+   ================================================================== */
+.mobile-contact-bar {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  body {
+    /* フッターやボタンが固定バーの下に隠れないようにする */
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-contact-bar {
+    position: fixed;
+    z-index: 190;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1.9fr 1fr 1fr;
+    min-height: calc(68px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background: #fff;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -5px 20px rgba(34, 24, 21, .2);
+    line-height: 1.25;
+  }
+
+  .mobile-contact-bar a {
+    min-width: 0;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-contact-tel {
+    gap: 7px;
+    padding: 7px 5px;
+    background: var(--green);
+  }
+
+  .mobile-contact-tel .ico {
+    width: 22px;
+    height: 22px;
+    flex: none;
+  }
+
+  .mobile-contact-label,
+  .mobile-contact-number {
+    display: block;
+    white-space: nowrap;
+    font-family: var(--jp-round);
+  }
+
+  .mobile-contact-label {
+    margin-bottom: 2px;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+  }
+
+  .mobile-contact-number {
+    font-size: clamp(.86rem, 4vw, 1.02rem);
+    font-weight: 900;
+    letter-spacing: .01em;
+  }
+
+  .mobile-contact-sns {
+    flex-direction: column;
+    gap: 3px;
+    padding: 6px 2px;
+    border-left: 2px solid #fff;
+    font-family: var(--jp-sans);
+    font-size: clamp(.55rem, 2.6vw, .68rem);
+    font-weight: 700;
+    letter-spacing: .01em;
+  }
+
+  .mobile-contact-sns .ico {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mobile-contact-instagram {
+    background: #c13584;
+  }
+
+  .mobile-contact-facebook {
+    background: #1877f2;
+  }
+}
+
 /* ==== 確認用の帯：この共有ファイルにだけ入っています。本番には含まれません ==== */
 .review-note{background:#221815;color:#fff;font-family:var(--jp-round);font-size:.8rem;
   line-height:1.7;padding:11px 20px;text-align:center;letter-spacing:.02em}
@@ -2600,7 +2698,7 @@ body.locked #gate{display:flex}
   </div>
 
   <div class="review-note">
-    <b>確認用｜PDF貼り付け版（2026-09-23）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
+    <b>確認用｜PDF貼り付け版（2026-09-24）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
     <span>RS・英字・キャッチ・境目のぼかしまでカンプと同じです。画像なので、スマホでは文字がそのまま縮みます。</span>
   </div>
 
@@ -2724,6 +2822,25 @@ body.locked #gate{display:flex}
       </div>
     </nav>
   </div>
+
+  <!-- ============ スマホ下部の固定連絡バー ============ -->
+  <nav class="mobile-contact-bar" aria-label="ご予約と公式SNS">
+    <a href="tel:0880-28-5858" class="mobile-contact-tel">
+      <svg class="ico" aria-hidden="true"><use href="#i-phone" /></svg>
+      <span>
+        <span class="mobile-contact-label">ご予約はお電話で</span>
+        <span class="mobile-contact-number">0880-28-5858</span>
+      </span>
+    </a>
+    <a href="https://www.instagram.com/ridersin40010/" class="mobile-contact-sns mobile-contact-instagram" aria-label="Instagramを開く">
+      <svg class="ico" aria-hidden="true"><use href="#i-insta" /></svg>
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.facebook.com/shimantokawachan/?locale=ja_JP" class="mobile-contact-sns mobile-contact-facebook" aria-label="Facebookを開く">
+      <svg class="ico" aria-hidden="true"><use href="#i-fb" /></svg>
+      <span>Facebook</span>
+    </a>
+  </nav>
 
   <!-- ============ ヘッダー ============ -->
   <header class="site-header">
