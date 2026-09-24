@@ -1924,6 +1924,56 @@ section {
   color: rgba(255, 255, 255, .8);
 }
 
+/* PCでは、予約電話のすぐ下に文字つきのSNS導線を見せる。
+   スマホは画面下の固定バーに同じ導線があるため、重複させない。 */
+.reserve-sns {
+  margin-top: 34px;
+}
+
+.reserve-sns > p {
+  margin-bottom: 13px;
+  font-family: var(--jp-round);
+  font-size: .9rem;
+  color: rgba(255, 255, 255, .9);
+}
+
+.reserve-sns-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.reserve-sns-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 158px;
+  padding: 12px 22px;
+  border: 1px solid rgba(255, 255, 255, .72);
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  font-family: var(--jp-sans);
+  font-weight: 700;
+  transition: background .2s, transform .2s;
+}
+
+.reserve-sns-link:hover {
+  background: rgba(255, 255, 255, .24);
+  transform: translateY(-2px);
+}
+
+.reserve-sns-link .ico {
+  width: 21px;
+  height: 21px;
+}
+
+@media (max-width: 700px) {
+  .reserve-sns {
+    display: none;
+  }
+}
+
 /* ==================================================================
    フッター
    ================================================================== */
@@ -2698,7 +2748,7 @@ body.locked #gate{display:flex}
   </div>
 
   <div class="review-note">
-    <b>確認用｜PDF貼り付け版（2026-09-24）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
+    <b>確認用｜PDF貼り付け版（2026-09-25）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
     <span>RS・英字・キャッチ・境目のぼかしまでカンプと同じです。画像なので、スマホでは文字がそのまま縮みます。</span>
   </div>
 
@@ -3251,6 +3301,19 @@ body.locked #gate{display:flex}
         </span>
       </a>
       <p class="reserve-note">年中無休（年末年始 12/28〜1/4 を除く）</p>
+      <div class="reserve-sns" aria-label="公式SNS">
+        <p>日々の様子は公式SNSで発信しています</p>
+        <div class="reserve-sns-links">
+          <a href="https://www.instagram.com/ridersin40010/" class="reserve-sns-link instagram" aria-label="Instagramを開く">
+            <svg class="ico" aria-hidden="true"><use href="#i-insta" /></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/shimantokawachan/?locale=ja_JP" class="reserve-sns-link facebook" aria-label="Facebookを開く">
+            <svg class="ico" aria-hidden="true"><use href="#i-fb" /></svg>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
