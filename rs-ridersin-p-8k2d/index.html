@@ -2601,6 +2601,19 @@ body.menu-open {
   display: none;
 }
 
+/* 色はスマホ・PC共通（幅に関わらず同じボタン色にする） */
+.mobile-contact-tel {
+  background: var(--green);
+}
+
+.mobile-contact-instagram {
+  background: #689f38; /* 2026-09-29：#c13584 から変更（梟さん指定・案B 落ち着いた若草色） */
+}
+
+.mobile-contact-facebook {
+  background: #1877f2;
+}
+
 @media (max-width: 700px) {
   body {
     /* フッターやボタンが固定バーの下に隠れないようにする */
@@ -2636,7 +2649,6 @@ body.menu-open {
   .mobile-contact-tel {
     gap: 7px;
     padding: 7px 5px;
-    background: var(--green);
   }
 
   .mobile-contact-tel .ico {
@@ -2681,13 +2693,7 @@ body.menu-open {
     height: 25px;
   }
 
-  .mobile-contact-instagram {
-    background: #689f38; /* 2026-09-29：#c13584 から変更（梟さん指定・案B 落ち着いた若草色） */
-  }
-
-  .mobile-contact-facebook {
-    background: #1877f2;
-  }
+  /* Instagram・Facebookの色は幅に関わらず共通のため上（767行付近）で指定 */
 }
 
 /* PCでも連絡先を出しっぱなしにする（2026-09-29） */
@@ -2719,7 +2725,6 @@ body.menu-open {
 
   .mobile-contact-tel {
     padding: 7px 10px;
-    background: var(--green);
   }
 
   .mobile-contact-tel .ico {
