@@ -1013,9 +1013,8 @@ section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 34px;
-  /* 元データが来るまでは低解像度なので、拡大されないよう幅を抑える */
-  max-width: 640px;
-  margin-inline: auto;
+  /* max-width: 640px;  ← 削除（2026-09-29・写真を元データに差し替えたため） */
+  /* margin-inline: auto; ← 削除 */
 }
 
 .common-sub .ph img {
@@ -2683,11 +2682,88 @@ body.menu-open {
   }
 
   .mobile-contact-instagram {
-    background: #c13584;
+    background: #689f38; /* 2026-09-29：#c13584 から変更（梟さん指定・案B 落ち着いた若草色） */
   }
 
   .mobile-contact-facebook {
     background: #1877f2;
+  }
+}
+
+/* PCでも連絡先を出しっぱなしにする（2026-09-29） */
+@media (min-width: 701px) {
+  .mobile-contact-bar {
+    display: grid;
+    grid-auto-flow: row;          /* 縦に3つ積む */
+    position: fixed;
+    z-index: 150;                 /* メニュー(200/210)より下、本文より上 */
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+    width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+  }
+
+  .mobile-contact-bar a {
+    min-width: 0;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #fff;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-contact-tel {
+    padding: 7px 10px;
+    background: var(--green);
+  }
+
+  .mobile-contact-tel .ico {
+    width: 22px;
+    height: 22px;
+    flex: none;
+  }
+
+  .mobile-contact-label,
+  .mobile-contact-number {
+    display: block;
+    white-space: nowrap;
+    font-family: var(--jp-round);
+  }
+
+  .mobile-contact-label {
+    margin-bottom: 2px;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+  }
+
+  .mobile-contact-number {
+    font-size: .92rem;
+    font-weight: 900;
+    letter-spacing: .01em;
+    white-space: nowrap;
+  }
+
+  .mobile-contact-sns {
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px 10px;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    font-family: var(--jp-sans);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+  }
+
+  .mobile-contact-sns .ico {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -2751,7 +2827,7 @@ body.locked #gate{display:flex}
   </div>
 
   <div class="review-note">
-    <b>確認用｜PDF貼り付け版（2026-09-28）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
+    <b>確認用｜PDF貼り付け版（2026-09-29）</b> ／ ヒーロー部分に、大村さんのカンプPDFをそのまま画像で貼った版です。
     <span>RS・英字・キャッチ・境目のぼかしまでカンプと同じです。画像なので、スマホでは文字がそのまま縮みます。</span>
   </div>
 
