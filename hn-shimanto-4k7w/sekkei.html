@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>サイトの設計シート（たたき台）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#3b3330; --soft:#6b5f58; --accent:#c8693f; --accent-soft:#f6e3d6; --green:#5f7f5a; --green-soft:#e4ece0; --line:#e2d7c8; --bg:#fbf7f0; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Zen Maru Gothic","Meiryo",sans-serif; font-size:14px; line-height:1.75; }
+  .sheet { max-width: 900px; margin: 24px auto; background:#fff; padding: 36px 40px; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,.05); }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--soft); font-size: 13px; margin: 0 0 20px; }
+  h2 { font-size: 15px; margin: 22px 0 8px; padding-left: 10px; border-left: 5px solid var(--accent); }
+  p { margin: 0 0 8px; }
+  .purpose { background: var(--accent-soft); border-radius: 12px; padding: 14px 18px; }
+  .purpose strong { color: var(--accent); }
+  .layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .layer { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .layer .k { font-size: 12px; color: var(--green); font-weight: 700; }
+  .layer h3 { font-size: 14px; margin: 2px 0 6px; }
+  .layer ul { margin: 0; padding-left: 1.1em; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: var(--green-soft); font-weight: 700; white-space: nowrap; }
+  td.n { white-space: nowrap; color: var(--soft); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .box { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+  .box ul, .box ol { margin: 0; padding-left: 1.2em; }
+  .ask { background: var(--green-soft); border-radius: 12px; padding: 14px 18px; }
+  .ask ol { margin: 0; padding-left: 1.3em; }
+  .foot { color: var(--soft); font-size: 12px; margin-top: 16px; }
+  @media (max-width: 680px) { .sheet { padding: 22px 16px; margin: 0; border-radius: 0; } .layers, .two { grid-template-columns: 1fr; } }
+  @media print {
+    @page { size: A4; margin: 10mm; }
+    body { background: #fff; font-size: 10.5px; line-height: 1.55; }
+    .sheet { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+    h1 { font-size: 17px; } h2 { font-size: 12px; margin: 10px 0 5px; }
+    table { font-size: 10px; } th, td { padding: 3px 6px; }
+    .layers, .two { grid-template-columns: repeat(3, 1fr); } .two { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <h1>サイトの設計シート（たたき台）</h1>
+  <p class="sub">四万十町 猫と人の連絡会（仮）のサイトについて、見えている画面の裏で「なぜこの形にしたか」をまとめたものです。テスト版と合わせてご覧ください。名前・文章・数字は仮のものを含みます。</p>
+
+  <h2>このサイトで目指したいこと</h2>
+  <div class="purpose">
+    <p><strong>猫のことをきっかけに、人と地域の困りごとにも手が届く活動</strong>であることを、町の人にも、福祉や行政の人にも伝えたい。</p>
+    <p style="margin:0">そのうえで、<strong>一人が頑張るのではなく、いろいろな関わり方を持ち寄れる</strong>入口にしたい、と考えました。旧3町村の3団体と町（環境水道課）が協働している形そのものを、サイトの軸にしています。</p>
+  </div>
+
+  <h2>設計の3つの層</h2>
+  <div class="layers">
+    <div class="layer">
+      <div class="k">ソフト面</div>
+      <h3>企画・情報設計（要件定義）</h3>
+      <ul>
+        <li><b>企画</b>＝なぜ・誰のために：上の「目指したいこと」</li>
+        <li><b>要件定義</b>＝何を作るか：3団体の連絡会のサイト。TNRの予定と実績、里親、寄付、ボランティア、相談</li>
+        <li><b>情報設計</b>＝どこに何を置くか：下の「ページの並びと意図」</li>
+      </ul>
+    </div>
+    <div class="layer">
+      <div class="k">ハード面</div>
+      <h3>サイト構造と技術構成</h3>
+      <ul>
+        <li>トップ1枚＋「福祉・行政の方へ」の2ページ</li>
+        <li>無料の公開サービス（GitHub Pages）で、維持費がほぼかからない作り</li>
+        <li>里親はInstagram、TNRの予定・実績はスプレッドシートから表示する予定</li>
+      </ul>
+    </div>
+    <div class="layer">
+      <div class="k">続け方</div>
+      <h3>運用設計</h3>
+      <ul>
+        <li>サイト本体はほとんど触らなくていい作りに</li>
+        <li>更新は「表に1行足す」「Instagramに投稿する」だけ</li>
+        <li>大正・窪川の情報は、今まで通りLINEで共有するだけでOK</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>ページの並びと意図</h2>
+  <table>
+    <tr><th>#</th><th>セクション</th><th>なぜここに置いたか</th></tr>
+    <tr><td class="n">1</td><td>最初のひとこと</td><td>「猫と人が穏やかに過ごせるまち」という、これまで使ってきた言葉を入口に。福祉・行政の方向けの入口ボタンも最初から見えるように</td></tr>
+    <tr><td class="n">2</td><td>はじめに（合併と3団体）</td><td>旧町村ごとの団体が町と協働している形は、合併を経験した多くの自治体が共感しやすい背景だと考え、目的のすぐそばに</td></tr>
+    <tr><td class="n">2'</td><td>全国から、応援が届いています</td><td>町通信の特集と、2つのクラウドファンディング（全国1,519人・約2,229万円）。町と団体が一緒に積み上げた成果であり、見る人の安心感にもつながると考えて、はじめのすぐ後に</td></tr>
+    <tr><td class="n">3</td><td>TNR活動（予定と実績）</td><td>活動の骨組み。毎月の開催予定と実績報告を一か所で見られるように</td></tr>
+    <tr><td class="n">4</td><td>知ってほしいこと</td><td>「放っておくと増え続ける」「捨てる・虐待は犯罪」。必ず伝えたい2点を早めに</td></tr>
+    <tr><td class="n">5</td><td>猫をきっかけに、人とまちへ</td><td>猫だけの話ではなく、高齢の方の暮らしなど福祉ともつながる活動であること</td></tr>
+    <tr><td class="n">6</td><td>猫を見つけたら</td><td>「見つけたあなたが最初の一歩、私たちが支える」。見つけた人が動けるよう手順を示す</td></tr>
+    <tr><td class="n">7</td><td>関わり方いろいろ</td><td>シェア、物資、寄付、議会を見守る…。軽い順に並べ、「自分にもできそう」から入れるように</td></tr>
+    <tr><td class="n">8〜9</td><td>里親募集／寄付・ボランティア</td><td>具体的な行動の受け皿</td></tr>
+    <tr><td class="n">10</td><td>3つの団体</td><td>それぞれの地域と得意なことを持ち寄っている形を見せる</td></tr>
+    <tr><td class="n">11</td><td>相談</td><td>フォームの直前に「保護の代行はしていません」と書き、連絡する前に期待のずれをなくす</td></tr>
+    <tr><td class="n">別</td><td>福祉・行政・議会の方へ</td><td>協働の仕組みの図、年度ごとの数字、事例をまとめ、仕事の中でつないでもらう入口に</td></tr>
+  </table>
+
+  <div class="two" style="margin-top:14px">
+    <div class="box">
+      <h2 style="margin-top:0">大事にしている考え方</h2>
+      <ul>
+        <li><b>団体は基本的に保護をしない。</b>見つけた人が保護することを全力で支える。団体が潰れないため、そして見つけた人が猫と関わる機会を大切にするため</li>
+        <li><b>関わり方は、その人ができることで。</b>知識で、動きで、お金で。無理しすぎない</li>
+        <li><b>事例は、場所や人が分からない形で、了解を得てから</b>載せる</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h2 style="margin-top:0">これからの進め方（案）</h2>
+      <ol>
+        <li>猫のかいのみんなに見てもらう（いまここ）</li>
+        <li>3団体のLINEグループで見てもらう</li>
+        <li>11月の行政との会で見てもらう</li>
+        <li>いただいた意見を反映して、公開</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>みなさんに聞きたいこと</h2>
+  <div class="ask">
+    <ol>
+      <li>全体を見て、「これは違う」「これが足りない」と感じるところはありますか？</li>
+      <li>連絡会の名前と、最初のひとことは、どんなものがよさそうでしょうか？</li>
+      <li>里親募集として、猫のかいのInstagramをサイトに表示してもよいでしょうか？</li>
+      <li>毎月のTNRの予定と実績を、サイトに載せることに心配な点はありますか？</li>
+      <li>大正・窪川の団体に見てもらう前に、整えておいた方がよいところはありますか？</li>
+    </ol>
+  </div>
+
+  <p class="foot">たたき台のため、認識違いや不足があるかと思います。気づいたことは、どんな小さなことでも教えてください。<br>テスト版：トップページ（index.html）／福祉・行政の方へ（gyosei.html）</p>
+</div>
+</body>
+</html>
