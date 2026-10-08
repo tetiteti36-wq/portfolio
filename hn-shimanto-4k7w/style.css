@@ -167,6 +167,14 @@ th { background: var(--green-soft); }
 .flow .arrow { text-align: center; color: var(--ink-soft); }
 @media (max-width: 640px) { .flow .row { grid-template-columns: 1fr; } }
 
+/* 福祉・行政・議会関係の方への帯 */
+.pro-band { background: var(--green); color: #fff; text-align: center; }
+.pro-band .eyebrow { color: #f6e3d6; }
+.pro-band h2 { margin-bottom: 20px; }
+.pro-band .note { color: #e4ece0; }
+.pro-band .btn { background: #fff; color: var(--green); margin-top: 8px; }
+.pro-band .btn:hover { background: var(--accent-soft); }
+
 /* フッター */
 footer { background: var(--ink); color: #eadfd3; padding: 48px 20px; font-size: 14px; }
 footer a { color: #fff; }
