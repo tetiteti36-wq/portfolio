@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サイトの装備5点｜ホームページを公開する前に整えておくこと</title>
+<meta name="description" content="OGP・説明文・ファビコン・ホーム画面用アイコン・アクセス解析。公開前に整えておく5つの設定を、実際のサイトの画面で「入れている／入れていない」を並べて説明します。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="サイトの装備5点｜ホームページを公開する前に整えておくこと">
+<meta property="og:description" content="OGP・説明文・ファビコン・ホーム画面用アイコン・アクセス解析。無いとどう見えるかを、実際の画面で並べて説明します。">
+<meta property="og:url" content="https://tetiteti36-wq.github.io/portfolio/site-5/">
+<meta property="og:image" content="https://ridersin40010.github.io/images/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    color-scheme: light;
+    --ink:#1d2420; --soft:#5d6a62; --line:#dcd9cf; --paper:#faf8f3; --card:#fff;
+    --green:#14532d; --green-bg:#eef4ef;
+    --blue:#1d5f74; --blue-bg:#e9f1f4;
+    --gold:#8a5a16; --gold-bg:#f8f1e3;
+    --bad:#a23b2c; --bad-bg:#fbeeeb;
+  }
+  body{
+    font-family:"Yu Gothic","Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--paper); color:var(--ink);
+    font-size:16px; line-height:1.85;
+    max-width:760px; margin-inline:auto; padding:32px 20px 64px;
+  }
+  header{margin-bottom:30px;}
+  .eyebrow{font-size:13px;letter-spacing:.18em;color:var(--soft);margin:0 0 6px;}
+  h1{font-size:30px;margin:0;line-height:1.4;padding-bottom:12px;border-bottom:3px solid var(--green);}
+  .lead{margin:16px 0 0;color:var(--soft);}
+  .sample{
+    background:var(--green-bg);border:1px solid var(--line);border-radius:8px;
+    padding:10px 14px;font-size:13.5px;margin-top:16px;
+  }
+  .sample strong{color:var(--green);}
+
+  section{margin-bottom:44px;}
+  .head{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
+  .n{
+    flex:none;width:34px;height:34px;border-radius:50%;
+    background:var(--green);color:#fff;font-weight:700;
+    display:flex;align-items:center;justify-content:center;font-size:16px;
+  }
+  h2{font-size:21px;margin:0;}
+  .en{font-size:12px;color:var(--soft);letter-spacing:.1em;margin:2px 0 0 46px;}
+  .what{margin:12px 0 18px;}
+
+  .demo{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin:18px 0;}
+  @media(max-width:620px){.demo{grid-template-columns:1fr;}}
+  .pane{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card);}
+  .pane .cap{font-size:13px;font-weight:700;padding:7px 12px;}
+  .ok .cap{background:var(--green-bg);color:var(--green);}
+  .ng .cap{background:var(--bad-bg);color:var(--bad);}
+  .pane .body{padding:14px;}
+
+  .chat{background:#8fb8d6;padding:14px;}
+  .bubble{background:#fff;border-radius:12px;padding:8px;max-width:230px;font-size:13px;box-shadow:0 1px 3px rgba(0,0,0,.15);}
+  .bubble img{display:block;width:100%;border-radius:7px;}
+  .bubble .t{font-weight:700;margin-top:6px;line-height:1.5;font-size:12.5px;}
+  .bubble .d{color:#777;font-size:11px;margin-top:3px;}
+  .bubble.plain{color:#1a73e8;word-break:break-all;font-size:12.5px;}
+
+  .serp{font-size:13.5px;}
+  .serp .u{color:#2a6e2a;font-size:12px;}
+  .serp .t{color:#1a0dab;font-size:17px;margin:2px 0 3px;line-height:1.4;}
+  .serp .d{color:#4d5156;line-height:1.6;}
+  .serp .d.gray{color:#9aa0a6;}
+
+  .tabs{display:flex;gap:4px;background:#dfe3e6;padding:8px 8px 0;}
+  .tab{background:#fff;border-radius:7px 7px 0 0;padding:7px 9px;font-size:11.5px;display:flex;align-items:center;gap:5px;max-width:130px;}
+  .tab img{width:15px;height:15px;border-radius:3px;}
+  .tab .blank{width:15px;height:15px;border:1px solid #c3c8cc;border-radius:2px;background:#f1f3f4;}
+  .tab span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+  .home{background:linear-gradient(160deg,#4a6b86,#8aa7bd);padding:18px;display:flex;gap:18px;}
+  .app{text-align:center;font-size:10.5px;color:#fff;width:62px;}
+  .app .ic{width:54px;height:54px;border-radius:13px;background:#fff;overflow:hidden;margin:0 auto 5px;box-shadow:0 2px 6px rgba(0,0,0,.25);}
+  .app .ic img{width:100%;height:100%;object-fit:cover;}
+  .app .ic.bad{display:flex;align-items:center;justify-content:center;font-size:7px;color:#aaa;line-height:1.3;padding:4px;}
+
+  .stats{display:flex;gap:16px;flex-wrap:wrap;}
+  .stat b{display:block;font-size:22px;color:var(--blue);line-height:1.2;}
+  .stat span{font-size:11.5px;color:var(--soft);}
+  .bars{margin-top:12px;font-size:12px;}
+  .bar{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+  .bar i{display:block;height:9px;background:var(--blue);border-radius:3px;}
+  .bar em{font-style:normal;color:var(--soft);width:88px;flex:none;}
+
+  .note{background:var(--gold-bg);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 16px;font-size:14.5px;margin-top:14px;}
+  .note strong{color:var(--gold);}
+  .why{background:var(--bad-bg);border-left:4px solid var(--bad);border-radius:0 8px 8px 0;padding:12px 16px;font-size:14.5px;margin-top:14px;}
+  .why strong{color:var(--bad);}
+  footer{border-top:1px solid var(--line);padding-top:18px;color:var(--soft);font-size:13.5px;}
+  img{max-width:100%;}
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">ホームページを公開する前に</p>
+  <h1>サイトの装備5点とは</h1>
+  <p class="lead">どれも画面には出てこない、裏方の設定です。<br>
+    ただ、<strong>見つけてもらえるか・伝わるか</strong>が、ここでかなり変わります。</p>
+  <p class="sample"><strong>例として使うサイト：</strong>ライダーズイン四万十（高知県高岡郡四万十町・宿泊施設）<br>
+    画面の見本は、実際のものを使っています。</p>
+</header>
+
+<section>
+  <div class="head"><span class="n">1</span><h2>OGP</h2></div>
+  <p class="en">オージーピー（Open Graph Protocol）</p>
+  <p class="what"><strong>LINEやFacebook、InstagramにURLを貼ったときに出る「カード」</strong>を決めるものです。
+    写真・タイトル・説明の3つを、こちらから指定します。</p>
+
+  <div class="demo">
+    <div class="pane ok">
+      <div class="cap">⭕️ 入れている場合</div>
+      <div class="body chat">
+        <div class="bubble">
+          <img src="https://ridersin40010.github.io/images/ogp.jpg" alt="OGPカードの画像">
+          <div class="t">ライダーズイン四万十 | 高知県四万十町・四万十川のほとりの宿</div>
+          <div class="d">ridersin40010.github.io</div>
+        </div>
+      </div>
+    </div>
+    <div class="pane ng">
+      <div class="cap">❌ 入れていない場合</div>
+      <div class="body chat">
+        <div class="bubble plain">https://ridersin40010.github.io/</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="why"><strong>無いとどうなる。</strong>
+    青い文字のURLだけが出ます。写真もお店の名前も出ないので、
+    <strong>SNSやLINEで配っても、見た人がどんなお店なのか分かりません。</strong>
+    せっかく配っても、開いてもらえる数が落ちます。</div>
+
+  <div class="note"><strong>画像は1200×630。</strong>
+    ロゴが入っているほうが、ひと目で誰のお店か伝わります。
+    ⚠️ LINEやFacebookは一度読んだカードをしばらく覚えています。
+    <strong>配り始める前に画像を決めておく</strong>のが大事です。</div>
+</section>
+
+<section>
+  <div class="head"><span class="n">2</span><h2>説明文</h2></div>
+  <p class="en">メタディスクリプション（meta description）</p>
+  <p class="what"><strong>Googleで検索したときに、タイトルの下へ出る2〜3行</strong>です。
+    ここを用意しておかないと、Googleが本文から適当に抜き出します。</p>
+
+  <div class="demo">
+    <div class="pane ok">
+      <div class="cap">⭕️ 入れている場合</div>
+      <div class="body serp">
+        <div class="u">ridersin40010.github.io</div>
+        <div class="t">ライダーズイン四万十 | 高知県四万十町…</div>
+        <div class="d">高知県四万十町の宿泊施設「ライダーズイン四万十」。四万十川のほとりに独立した16棟のキャビン。全室シャワー・温水洗浄トイレ付きの完全個室。1泊素泊まり3,300円〜。ご予約はお電話で 0880-28-5858。</div>
+      </div>
+    </div>
+    <div class="pane ng">
+      <div class="cap">❌ 入れていない場合</div>
+      <div class="body serp">
+        <div class="u">ridersin40010.github.io</div>
+        <div class="t">ライダーズイン四万十 | 高知県四万十町…</div>
+        <div class="d gray">ライダーズインという名ですが、どなた様でもお泊りいただけます。完全個室で各部屋トイレ・シャワー付き！ 自炊もできて共用スペースで…</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="why"><strong>無いとどうなる。</strong>
+    本文の上から順に抜かれるので、<strong>料金や連絡先が出ないことがあります。</strong>
+    検索した人は、知りたいことが分からないまま、別のお店を見に行ってしまいます。</div>
+
+  <div class="note"><strong>90文字前後。</strong>長すぎると途中で切れます。
+    <strong>「どこにある・何がある・いくら・連絡先」</strong>を短く詰めるのがコツです。</div>
+</section>
+
+<section>
+  <div class="head"><span class="n">3</span><h2>ファビコン</h2></div>
+  <p class="en">favicon（フェイビコン）</p>
+  <p class="what"><strong>ブラウザのタブに出る、小さなアイコン</strong>です。
+    お気に入り（ブックマーク）に入れたときにも出ます。</p>
+
+  <div class="demo">
+    <div class="pane ok">
+      <div class="cap">⭕️ 入れている場合</div>
+      <div class="body" style="padding:0;">
+        <div class="tabs">
+          <div class="tab"><div class="blank"></div><span>とある記事</span></div>
+          <div class="tab"><img src="https://ridersin40010.github.io/images/favicon.png" alt="お店のアイコン"><span>ライダーズイン</span></div>
+          <div class="tab"><div class="blank"></div><span>検索</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pane ng">
+      <div class="cap">❌ 入れていない場合</div>
+      <div class="body" style="padding:0;">
+        <div class="tabs">
+          <div class="tab"><div class="blank"></div><span>とある記事</span></div>
+          <div class="tab"><div class="blank"></div><span>ライダーズイン</span></div>
+          <div class="tab"><div class="blank"></div><span>検索</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="why"><strong>無いとどうなる。</strong>
+    白い紙のアイコンになります。タブをたくさん開く人には、
+    <strong>どれがお店のページか分からなくなります。</strong></div>
+</section>
+
+<section>
+  <div class="head"><span class="n">4</span><h2>ホーム画面用アイコン</h2></div>
+  <p class="en">apple-touch-icon（アップル タッチ アイコン）</p>
+  <p class="what">スマホで<strong>「ホーム画面に追加」したときのアイコン</strong>です。
+    お客さまより、<strong>お店の方がご自身で開くとき</strong>に効きます
+    （料金やご案内を、その場で確かめたいときなど）。</p>
+
+  <div class="demo">
+    <div class="pane ok">
+      <div class="cap">⭕️ 入れている場合</div>
+      <div class="body home">
+        <div class="app"><div class="ic"><img src="https://ridersin40010.github.io/images/favicon.png" alt="お店のアイコン"></div>ライダーズ</div>
+        <div class="app"><div class="ic" style="background:#4a8c3f;"></div>カメラ</div>
+      </div>
+    </div>
+    <div class="pane ng">
+      <div class="cap">❌ 入れていない場合</div>
+      <div class="body home">
+        <div class="app"><div class="ic bad">ページの切れ端が<br>縮んで入る</div>ライダーズ</div>
+        <div class="app"><div class="ic" style="background:#4a8c3f;"></div>カメラ</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note"><strong>ファビコンと同じ画像でまかなえます。</strong>
+    180×180のPNGが1枚あれば、3番とこれの両方に使えます。</div>
+</section>
+
+<section>
+  <div class="head"><span class="n">5</span><h2>アクセス解析</h2></div>
+  <p class="en">アクセスかいせき（例：Cloudflare ウェブ分析・無料・Cookieなし）</p>
+  <p class="what"><strong>何人が見たか、どこから来たかを数えるもの</strong>です。
+    ページに1行だけ仕込みます。見た目には何も出ません。</p>
+
+  <div class="demo">
+    <div class="pane ok">
+      <div class="cap">⭕️ 入れている場合</div>
+      <div class="body">
+        <div class="stats">
+          <div class="stat"><b>128</b><span>訪問</span></div>
+          <div class="stat"><b>341</b><span>ページビュー</span></div>
+          <div class="stat"><b>72%</b><span>スマホ</span></div>
+        </div>
+        <div class="bars">
+          <div class="bar"><em>Googleマップ</em><i style="width:62%"></i></div>
+          <div class="bar"><em>検索</em><i style="width:28%"></i></div>
+          <div class="bar"><em>Instagram</em><i style="width:14%"></i></div>
+        </div>
+        <p style="font-size:11.5px;color:var(--soft);margin:8px 0 0;">※数字は見え方の例です</p>
+      </div>
+    </div>
+    <div class="pane ng">
+      <div class="cap">❌ 入れていない場合</div>
+      <div class="body" style="color:var(--soft);font-size:14px;">
+        何も分かりません。<br><br>
+        「ホームページを作ってよかったのか」「どの宣伝が効いたのか」を、
+        <strong>誰も答えられない状態</strong>になります。
+      </div>
+    </div>
+  </div>
+
+  <div class="why"><strong>いちばん大事な注意。</strong>
+    <strong>後から入れても、それ以前の記録は永久に戻りません。</strong>
+    だから、公開する前に入れておきます。</div>
+
+  <div class="note"><strong>Cookieを使わない方式を選べば、「同意します」のバナーは要りません。</strong>
+    見に来た方に、余計な操作をさせずに済みます。</div>
+</section>
+
+<footer>
+  酒井梟（紀子）／ 2026年10月<br>
+  見本に使ったサイト：ライダーズイン四万十（2026年9月公開）
+</footer>
+</body>
+</html>
