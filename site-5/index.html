@@ -9,10 +9,13 @@
 <meta property="og:title" content="サイトの装備5点｜ホームページを公開する前に整えておくこと">
 <meta property="og:description" content="OGP・説明文・ファビコン・ホーム画面用アイコン・アクセス解析。無いとどう見えるかを、実際の画面で並べて説明します。">
 <meta property="og:url" content="https://tetiteti36-wq.github.io/portfolio/site-5/">
-<meta property="og:image" content="https://ridersin40010.github.io/images/ogp.jpg">
+<meta property="og:image" content="https://tetiteti36-wq.github.io/portfolio/site-5/ogp.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="サイトの装備5点 ホームページを公開する前に整えておくこと">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
   :root{
     color-scheme: light;
@@ -94,6 +97,16 @@
   .note strong{color:var(--gold);}
   .why{background:var(--bad-bg);border-left:4px solid var(--bad);border-radius:0 8px 8px 0;padding:12px 16px;font-size:14.5px;margin-top:14px;}
   .why strong{color:var(--bad);}
+  .first{background:var(--card);border:2px solid var(--gold);border-radius:12px;padding:22px 20px 8px;}
+  .first h2{color:var(--gold);}
+  .first .what{margin-top:8px;}
+  .item{border-top:1px solid var(--line);padding:14px 0;}
+  .item h3{font-size:16.5px;margin:0 0 6px;}
+  .item p{margin:0 0 6px;font-size:14.5px;}
+  .item .lag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--gold);background:var(--gold-bg);border-radius:4px;padding:1px 8px;margin-bottom:6px;}
+  .item .do{color:var(--green);font-weight:700;}
+  .order{margin:6px 0 14px;padding-left:1.4em;font-size:14.5px;}
+  .order li{margin-bottom:4px;}
   footer{border-top:1px solid var(--line);padding-top:18px;color:var(--soft);font-size:13.5px;}
   img{max-width:100%;}
 </style>
@@ -103,7 +116,7 @@
   <p class="eyebrow">ホームページを公開する前に</p>
   <h1>サイトの装備5点とは</h1>
   <p class="lead">どれも画面には出てこない、裏方の設定です。<br>
-    ただ、<strong>見つけてもらえるか・伝わるか</strong>が、ここでかなり変わります。</p>
+    ただ、<strong>伝わり方・見分けやすさ・公開後に確かめられること</strong>が、これらの設定で変わります。</p>
   <p class="sample"><strong>例として使うサイト：</strong>ライダーズイン四万十さま（高知県高岡郡四万十町・宿泊施設）<br>
     画面の見本は、実際のものを使っています。</p>
 </header>
@@ -111,7 +124,7 @@
 <section>
   <div class="head"><span class="n">1</span><h2>OGP</h2></div>
   <p class="en">オージーピー（Open Graph Protocol）</p>
-  <p class="what"><strong>LINEやFacebook、InstagramにURLを貼ったときに出る「カード」</strong>を決めるものです。
+  <p class="what"><strong>LINEやFacebookなどにURLを貼ったときに出る「カード」</strong>を決めるものです。
     写真・タイトル・説明の3つを、こちらから指定します。</p>
 
   <div class="demo">
@@ -126,7 +139,7 @@
       </div>
     </div>
     <div class="pane ng">
-      <div class="cap">❌ 入れていない場合</div>
+      <div class="cap">❌ 入れていない場合（一例）</div>
       <div class="body chat">
         <div class="bubble plain">https://ridersin40010.github.io/</div>
       </div>
@@ -134,21 +147,22 @@
   </div>
 
   <div class="why"><strong>無いとどうなる。</strong>
-    青い文字のURLだけが出ます。写真もお店の名前も出ないので、
-    <strong>SNSやLINEで配っても、見た人がどんなお店なのか分かりません。</strong>
-    せっかく配っても、開いてもらえる数が落ちます。</div>
+    サービスがページのタイトルや本文、画像から、カードを自動で作ることもあります。
+    ただ、どの写真や文が選ばれるかはこちらで決められず、上の例のようにURLだけになる場合もあります。
+    <strong>見た人に、リンク先がどんなお店か伝わりにくくなることがあります。</strong></div>
 
-  <div class="note"><strong>画像は1200×630。</strong>
-    ロゴが入っているほうが、ひと目で誰のお店か伝わります。
-    ⚠️ LINEやFacebookは一度読んだカードをしばらく覚えています。
-    <strong>配り始める前に画像を決めておく</strong>のが大事です。</div>
+  <div class="note"><strong>画像は1200×630が、よく使われる目安です。</strong>
+    ロゴが入っているほうが、ひと目で誰のお店か伝わりやすくなります。
+    ⚠️ LINEやFacebookは、一度読んだカードの情報をしばらく残すことがあります。
+    <strong>配り始める前に画像を決めておく</strong>と安心です。</div>
 </section>
 
 <section>
   <div class="head"><span class="n">2</span><h2>説明文</h2></div>
   <p class="en">メタディスクリプション（meta description）</p>
-  <p class="what"><strong>Googleで検索したときに、タイトルの下へ出る2〜3行</strong>です。
-    ここを用意しておかないと、Googleが本文から適当に抜き出します。</p>
+  <p class="what"><strong>Googleで検索したときに、タイトルの下へ出る2〜3行の「候補」</strong>です。
+    Googleは検索された言葉やページの中身に合わせて、この部分を自動で作ります。
+    説明文を入れておくと、それが使われることがあります（いつも使われるとは限りません）。</p>
 
   <div class="demo">
     <div class="pane ok">
@@ -160,7 +174,7 @@
       </div>
     </div>
     <div class="pane ng">
-      <div class="cap">❌ 入れていない場合</div>
+      <div class="cap">❌ 入れていない場合（一例）</div>
       <div class="body serp">
         <div class="u">ridersin40010.github.io</div>
         <div class="t">ライダーズイン四万十 | 高知県四万十町…</div>
@@ -170,10 +184,12 @@
   </div>
 
   <div class="why"><strong>無いとどうなる。</strong>
-    本文の上から順に抜かれるので、<strong>料金や連絡先が出ないことがあります。</strong>
-    検索した人は、知りたいことが分からないまま、別のお店を見に行ってしまいます。</div>
+    Googleが本文から文を選んで出すので、<strong>料金や連絡先など、伝えたいことが出ない場合があります。</strong>
+    説明文を用意しておくと、ページの要点をまとめた文を候補として渡せます。</div>
 
-  <div class="note"><strong>90文字前後。</strong>長すぎると途中で切れます。
+  <div class="note"><strong>長さに決まりはありません。</strong>
+    検索結果では、画面の幅などに合わせて途中で省略されることがあります。
+    このページでは、<strong>90文字前後を作るときの目安</strong>にしています（Googleの決まりではありません）。
     <strong>「どこにある・何がある・いくら・連絡先」</strong>を短く詰めるのがコツです。</div>
 </section>
 
@@ -195,7 +211,7 @@
       </div>
     </div>
     <div class="pane ng">
-      <div class="cap">❌ 入れていない場合</div>
+      <div class="cap">❌ 入れていない場合（一例）</div>
       <div class="body" style="padding:0;">
         <div class="tabs">
           <div class="tab"><div class="blank"></div><span>とある記事</span></div>
@@ -207,15 +223,15 @@
   </div>
 
   <div class="why"><strong>無いとどうなる。</strong>
-    白い紙のアイコンになります。タブをたくさん開く人には、
-    <strong>どれがお店のページか分からなくなります。</strong></div>
+    ブラウザ共通の標準アイコンなどが表示されます。タブをたくさん開く人には、
+    <strong>どれがお店のページか見分けにくくなることがあります。</strong></div>
 </section>
 
 <section>
   <div class="head"><span class="n">4</span><h2>ホーム画面用アイコン</h2></div>
   <p class="en">apple-touch-icon（アップル タッチ アイコン）</p>
-  <p class="what">スマホで<strong>「ホーム画面に追加」したときのアイコン</strong>です。
-    お客さまより、<strong>お店の方がご自身で開くとき</strong>に効きます
+  <p class="what"><strong>iPhone・iPadで「ホーム画面に追加」したときのアイコン</strong>です。
+    お客さまより、<strong>お店の方がご自身で開くとき</strong>に役立ちます
     （料金やご案内を、その場で確かめたいときなど）。</p>
 
   <div class="demo">
@@ -227,16 +243,17 @@
       </div>
     </div>
     <div class="pane ng">
-      <div class="cap">❌ 入れていない場合</div>
+      <div class="cap">❌ 入れていない場合（一例）</div>
       <div class="body home">
-        <div class="app"><div class="ic bad">ページの切れ端が<br>縮んで入る</div>ライダーズ</div>
+        <div class="app"><div class="ic bad">お店のロゴ<br>ではない絵</div>ライダーズ</div>
         <div class="app"><div class="ic" style="background:#4a8c3f;"></div>カメラ</div>
       </div>
     </div>
   </div>
 
-  <div class="note"><strong>ファビコンと同じ画像でまかなえます。</strong>
-    180×180のPNGが1枚あれば、3番とこれの両方に使えます。</div>
+  <div class="note"><strong>iPhone向けは、180×180のPNGが目安です。</strong>
+    この画像をファビコンにも使えば、1枚で3番とこれの両方をまかなえます。
+    Androidのホーム画面まで整える場合は、別に「Webアプリマニフェスト」という設定と、192×192・512×512などの画像が必要です（このページでは扱っていません）。</div>
 </section>
 
 <section>
@@ -265,24 +282,93 @@
     <div class="pane ng">
       <div class="cap">❌ 入れていない場合</div>
       <div class="body" style="color:var(--soft);font-size:14px;">
-        何も分かりません。<br><br>
-        「ホームページを作ってよかったのか」「どの宣伝が効いたのか」を、
-        <strong>誰も答えられない状態</strong>になります。
+        訪問数や、どこから来たかといった<strong>詳しい記録が残りにくくなります。</strong><br><br>
+        問い合わせの数や、Googleの「Search Console」など別の手がかりはありますが、
+        「どの宣伝が効いたのか」を数字で確かめるのは難しくなります。
       </div>
     </div>
   </div>
 
   <div class="why"><strong>いちばん大事な注意。</strong>
-    <strong>後から入れても、それ以前の記録は永久に戻りません。</strong>
-    だから、公開する前に入れておきます。</div>
+    <strong>入れる前の記録は、後からこの解析に戻すことはできません。</strong>
+    だから、公開する前に入れておくのがおすすめです。</div>
 
-  <div class="note"><strong>Cookieを使わない方式を選べば、「同意します」のバナーは要りません。</strong>
-    見に来た方に、余計な操作をさせずに済みます。</div>
+  <div class="note"><strong>Cloudflare ウェブ分析は、Cookieを使わない仕組みだと、Cloudflareが説明しています。</strong>
+    訪問者の個人データも集めない・使わない、としています。
+    この解析だけであれば、「同意します」のバナーを設けずに運用しやすくなります
+    （必要かどうかの最終判断は、ほかに入れている仕組みも含めて確認してください）。</div>
+</section>
+
+<section class="first">
+  <div class="head"><h2>最初に決めるとき、気をつけておくこと</h2></div>
+  <p class="what">ここまでの設定は、あとから直すこともできます。
+    ただ、<strong>一度世の中に出ると、直してもすぐには反映されないもの</strong>があります。
+    LINEやGoogle、見た人のブラウザやスマホに、前の情報が残ることがあるためです。
+    なので、<strong>公開する前・配り始める前に決めておく</strong>と、あとの手間が少なくて済みます。</p>
+
+  <div class="item">
+    <h3>サイトの住所（URL）</h3>
+    <span class="lag">変えると：対策しなければ、古いURLからはつながらない</span>
+    <p>何も対策しなければ、古いURLを開いた人は目当てのページにたどり着けません。
+      置き場所の側で<strong>恒久リダイレクト</strong>（古いURLから新しいURLへ自動で案内する設定）ができれば、新しいURLへ案内できます。
+      置き場所によってはこの設定ができない場合もあり、そのときはページの中で新しいURLへ案内する方法をとります。</p>
+    <p>そのうえで、印刷したチラシや名刺のQRコードは、あとから直せません。
+      Googleマップやほかのサイトの紹介ページなど、ネット上のリンクは書き換えをお願いする必要があります。</p>
+    <p class="do">→ チラシや名刺を刷る前に決めるのがおすすめです。独自ドメインを持ち続けていれば、置き場所を移しても同じURLを保ちやすくなります。</p>
+  </div>
+
+  <div class="item">
+    <h3>OGP（LINE・SNSのカード）</h3>
+    <span class="lag">反映まで：すぐには変わらないことがある</span>
+    <p>サービス側に古い情報が残り、画像や文を差し替えても、変更がすぐに反映されないことがあります。
+      すでに送ったメッセージや投稿のカードがどうなるかは、サービスによって異なります。
+      Facebookは画像をファイルの住所ごとに覚えるため、差し替えるときは<strong>画像のファイル名を変える</strong>よう案内しています。</p>
+    <p class="do">→ 配り始める前に、画像・タイトル・説明を決めておくと安心です。</p>
+  </div>
+
+  <div class="item">
+    <h3>サイト名（タイトル）と説明文</h3>
+    <span class="lag">反映まで：数日〜数週間かかることも（目安・一定ではありません）</span>
+    <p>Googleの検索結果は、Googleがページをもう一度読み込み（再クロール）、処理し直したあとに変わります。
+      Googleは、この読み込みに数日から数週間かかることがあると説明しています。直してすぐには反映されない場合があります。</p>
+    <p class="do">→ 名前の表記（正式名・ふりがな・肩書き）は、公開前にそろえておくのがおすすめです。</p>
+  </div>
+
+  <div class="item">
+    <h3>ファビコン・ホーム画面用アイコン</h3>
+    <span class="lag">反映まで：端末やブラウザしだい</span>
+    <p>端末やブラウザによっては古い画像が残り、更新に時間がかかったり、
+      「ホーム画面に追加」し直す必要があったりします。
+      Googleの検索結果に出る小さなアイコンも、変更が出るまで数日〜数週間かかることがあります。</p>
+    <p class="do">→ ロゴが決まってから入れるのが近道です。</p>
+  </div>
+
+  <div class="item">
+    <h3>アクセス解析</h3>
+    <span class="lag">取り返し：入れる前の記録は戻せない</span>
+    <p>入れる前の記録は、あとからこの解析に取り込むことはできません。途中で別の解析サービスに乗り換えると、
+      数え方が違うため、前後の数字を単純には比べにくくなります。</p>
+    <p class="do">→ 公開する前に入れて、同じものを使い続けるのがおすすめです。</p>
+  </div>
+
+  <div class="item">
+    <h3>決める順番のおすすめ</h3>
+    <ol class="order">
+      <li>サイトの住所（URL）</li>
+      <li>サイト名と説明文</li>
+      <li>OGPの画像（ロゴ入り）</li>
+      <li>ファビコン・ホーム画面用アイコン</li>
+      <li>アクセス解析を入れて、公開</li>
+      <li>そのあとで、チラシ・名刺・SNSで配り始める</li>
+    </ol>
+  </div>
 </section>
 
 <footer>
   酒井梟（紀子）／ 2026年10月<br>
-  見本に使ったサイト：ライダーズイン四万十さま（2026年9月公開）
+  見本に使ったサイト：ライダーズイン四万十さま（2026年9月公開）<br>
+  各サービスの仕組みは、2026年10月時点の公式資料（Google・LINE・Apple・Cloudflareなど）で確かめています。仕様は変わることがあります。<br>
+  このページ自身にも、5点すべてを入れています。
 </footer>
 <!-- アクセス解析（Cloudflare ウェブ分析・Cookieなし） -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js"
